@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<!--
+	Copyright (C) 2017 Ericka Menchen-Trevino & contributors, info@webhistorian.org
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License along
+	with this program; if not, write to the Free Software Foundation, Inc.,
+	51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Web Historian | Community Edition</title>
+		<link rel="stylesheet" type="text/css" href="core/css/d3-context-menu.css" />
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap-material-design.css" />
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/ripples.css" />
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap-datepicker3.min.css" />
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap-table.min.css">
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/ion.rangeSlider.css">
+		<link rel="stylesheet" type="text/css" href="core/vendor/css/ion.rangeSlider.skinHTML5.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="core/css/style.css" />
+		<script data-main="js/app/community-edition.js" src="core/js/lib/require.js"></script>
+		<style>
+			h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+				line-height: 1.25;
+			}
+		</style>		
+	</head>
+	<body>
+		<div id="main">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<span class="navbar-brand"><img src="images/icon-light-48.png" style="width: 24px; height: 24px; border: none; display: inline-block; padding-bottom: 4px;" /> Web Historian: Community Edition</span>
+					</div>
+					<div id="navbar_participate">
+						<ul class="nav navbar-nav navbar-right">
+							<li id="nav_wizard_settings"><a href="#" data-toggle="tooltip" data-placement="bottom" title="User Settings" id="wizard_settings"><i class="material-icons">face</i></a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+					<div id="navbar_explore">
+						<ul class="nav navbar-nav navbar-right">
+							<li id="nav_txt"><span class="navbar-brand"><p style="display: inline-block;">Navigation: </p></span></li> 
+							<li id="nav_home"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Home" id="explore_home"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li id="nav_sites_visited"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Web Visits" id="explore_visits"><span class="glyphicon glyphicon-globe"></span></a></li>
+							<li id="nav_search_terms"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Search Terms" id="explore_search"><span class="glyphicon glyphicon-search"></span></a></li>
+							<li id="nav_network"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Network" id="explore_network"><span class="glyphicon glyphicon-link"></span></a></li>
+							<li id="nav_time"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Time Heatmap" id="explore_time"><span class="glyphicon glyphicon-calendar"></span></a></li>
+							<li id="nav_all_data"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Data Table" id="explore_table"><span class="glyphicon glyphicon-list"></span></a></li>
+							<li id="nav_review"><a href="#" id="explore_server" data-toggle="tooltip" data-placement="bottom" title="View on Server"><span class="glyphicon glyphicon-export"></span></a></li>
+							<li id="nav_explore_settings"><a href="#" data-toggle="tooltip" data-placement="bottom" title="User Settings" id="explore_settings"><i class="material-icons">face</i></a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</nav>
+
+			<div style="margin-top: 80px;" id="exploration_mode">
+				<div class="row" id="progress_bars">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-8">
+									<h4 style="font-weight: bold;">Web Historian: Explore Your Data</h4>
+								</div>
+								<div class="col-md-4" style="padding-top: 15px;">
+									<div class="progress">
+										<div class="progress-bar sync_progress" id="visit_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-body" id="exploration_body" style="overflow: scroll;">
+							<div id="exploration_home">
+							<div class="row">
+								<div class="col-sm-6 col-md-3">
+									<div id="web_visit_card" class="panel panel-default">
+										<div class="panel-body">
+											<img src="images/visit.png" alt="Web Visits" style="width: 100%" />
+											<div class="caption"> 
+												<h3>Web Visits</h3> 
+												<p>Circles sized by number of days a site was visited, or total visits to the site.</p> 
+											</div> 
+										</div> 
+									</div> 
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<div id="search_words_card" class="panel panel-default">
+										<div class="panel-body">
+											<img src="images/wordCloud.png" alt="Search Words" style="width: 100%"/>
+											<div class="caption">
+												<h3>Search Terms</h3> 
+												<p> Words used in multiple web searches are larger.</p> 
+											</div> 
+										</div> 
+									</div> 
+								</div> 
+								<div class="col-sm-6 col-md-3"> 
+									<div id="network_card" class="panel panel-default">
+										<div class="panel-body">
+											<img src="images/network.png" alt="Network" style="width: 100%" /> 
+											<div class="caption"> 
+												<h3>Network</h3> 
+												<p>Links between websites browsed from - to.</p> 
+											</div> 
+										</div> 
+									</div> 
+								</div> 
+								<div class="col-sm-6 col-md-3"> 
+									<div id="time_card" class="panel panel-default">
+										<div class="panel-body">
+											<img src="images/time.png" alt="Time" style="width: 100%"> 
+												<div class="caption"> 
+													<h3>Time Heatmap</h3> 
+													<p> Hours of the day and days of the week when you browse the web the most.</p> 
+												</div> 
+											</div> 
+										</div> 
+									</div>
+								</div>
+							</div>
+							<div id="exploration_visits">
+								<div class="row">
+									<div class="col-md-3">
+										<select id="explore_visits_type" class="form-control" name="visit_type">
+											<option id="visits">My Visits</option>
+											<option id="habits">My Habits</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<div class="md-form">
+											<input id="explore_visits_search" type="search" class="form-control" placeholder="Search" />
+										</div>
+									</div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span class="pull-right visits_slider_earliest">START</span>
+									</div>
+									<div class="col-md-4">
+										<div class="slider shor" id="explore_visits_slider"></div>
+									</div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span class="visits_slider_latest">NOW</span>
+									</div>
+								</div>
+							
+								<center><div id="explore_visits_visualization"></div></center>
+							</div>
+							<div id="exploration_search">
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span class="pull-right" id="explore_search_slider_earliest">START</span>
+									</div>
+									<div class="col-md-4">
+										<div class="slider shor" id="explore_search_slider"></div>
+									</div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span id="explore_search_slider_latest">NOW</span>
+									</div>
+									<div class="col-md-3"></div>
+								</div>
+
+								<center><div id="explore_search_visualization"></div></center>
+							</div>
+							<div id="exploration_network">
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span class="pull-right" id="explore_network_slider_earliest">START</span>
+									</div>
+									<div class="col-md-4">
+										<div class="slider shor" id="explore_network_slider"></div>
+									</div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span id="explore_network_latest">NOW</span>
+									</div>
+									<div class="col-md-3"></div>
+								</div>
+
+								<center><div id="explore_network_visualization"></div></center>
+							</div>
+							<div id="exploration_time">
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span class="pull-right" id="explore_time_slider_earliest">START</span>
+									</div>
+									<div class="col-md-4">
+										<div class="slider shor" id="explore_time_slider"></div>
+									</div>
+									<div class="col-md-1" style="padding-top: 6px;">
+										<span id="explore_time_slider_latest">NOW</span>
+									</div>
+									<div class="col-md-3"></div>
+								</div>
+								<center><div id="explore_time_visualization"></div></center>
+							</div>
+							<div id="exploration_table">
+								<ul class="nav nav-pills" id="explore_data_table_pills">
+									<li><a href="#" id="explore_data_table_tab_pages">Pages</a></li>
+									<li><a href="#" id="explore_data_table_tab_domains">Domains</a></li>
+								</ul>
+							
+								<table id="explore_data_table"></table>								
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-md-12">
+									<a href="#" id="exploration_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Upload Data</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="margin-top: 80px;" id="participation_mode">
+				<div class="row" id="progress_bars">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="col-md-8">
+									<h4 id="step_title" style="font-weight: bold;"></h4>
+								</div>
+								
+                <div class="col-md-4" style="padding-top: 15px;" id="load_bar">
+                  <p>Loading</p>
+									<div class="progress">
+										<div class="progress-bar sync_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+									</div>
+								</div>
+                
+							</div>
+						</div>
+						<div class="panel-body" id="wizard_body" style="overflow: scroll;">
+							<div id="wizard_step_1">
+								<div id="volunteer">
+									<ul>
+										<li><h4>[your research project overview]  </h4>
+                    <li><h4>[info about the researcher]</a></h4></li>
+                    <li><h4><b>Your data is yours</b>. No data will leave your computer unless you choose "Participate" at the end of this step-by-step review.</h4></li>
+    								<h4><strong>Participation involves</strong>:
+    								<ol>
+    									<li>Reviewing the information in this step-by-step process and deciding whether to participate.</li>
+    									<li>Completing a survey about [your study].</li>
+    								</ol>
+    								</h4>
+                    <h4>If you choose to complete this study [compensation]. </h4>
+                    
+									</ul>
+								
+									<!-- <h4 style="text-align: center; font-weight: bold; margin-top: 1em;">Visualization Types</h4> style="width:900px;height:198px;" -->
+									<center><img src="../images/hand.jpg" ></center> 
+								</div>
+							</div>
+							<div id="wizard_step_2">
+								<h2>What is this study about?</h2>
+                <h3>[your study info here]</h3>
+                <h4>[description]. </h4>
+							</div>
+							<div id="wizard_step_3">
+								<h4>If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it. </h4>
+								<h4>Your web browsing history is on your computer, your ISP, and part of it is on every website you visit.</h4> 
+								<p><center><img src="../images/where1.png" style="width:751px;height:376px;"></center></p>
+								<h4>You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href="https://www.torproject.org/projects/torbrowser.html.en" target="_blank">Tor</a>, which can slow your browsing speed.</h4>
+								<p><center><img src="../images/where2.png" style="width:751px;height:376px;"></center></p>
+								<h4>If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once. </h4>
+								<p><center><img src="../images/whereWH.png" style="width:751px;height:376px;"></center></p>
+								<h4>In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href="https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/" target="_blank">This article</a> has more details. The <a href="http://eff.org/" target="_blank">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world.</h4>
+							  <h4>Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical.</h4>
+                <h4 id="wait_msg"><strong>Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes.</h4>
+              </div>
+							<div id="wizard_step_4">
+								<p id="step_4_desc">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain.</p>
+								<p id="step_4_desc_nd" style="display: none;">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. </p>
+								<p id="step_4_desc_sample" style="display: none;">This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example.</p>
+                <div id="wizard_websites_visited">
+									<div class="row">
+										<div class="col-md-3">
+											<select class="form-control" id="visit_type">
+												<option id="visits">Visits</option>
+												<option id="habits">Habits</option>
+											</select>
+										</div>
+										<div class="col-md-3">
+											<div class="md-form">
+												<input id="visit_search" type="search" class="form-control" placeholder="Search" />
+											</div>
+										</div>
+										<br/>
+					                    <div class="col-md-1" style="padding-top: 6px;">
+											<span class="pull-right visits_slider_earliest">START</span>
+										</div>
+										<div class="col-md-4">
+											<div class="slider shor" id="visits_slider"></div>
+										</div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span class="visits_slider_latest">NOW</span>
+										</div>
+									</div>
+								
+									<center><div id="websites_visited_visualization"></div></center>
+								</div>
+							</div>
+							<div id="wizard_step_5">
+								<p id="step_5_desc">This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain.</p>
+							  <p id="step_5_desc_nd" style="display: none;">This is a visualization of the sites that link you to other sites.</p>
+								<p id="step_5_desc_sample" style="display: none;">This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data. </p>
+							  
+								<div id="wizard_network">
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span class="pull-right" id="network_slider_earliest">START</span>
+										</div>
+										<div class="col-md-4">
+											<div class="slider shor" id="network_slider"></div>
+										</div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span id="network_slider_latest">NOW</span>
+										</div>
+										<div class="col-md-3"></div>
+									</div>
+
+									<center><div id="websites_network_visualization"></div></center>
+								</div>
+							</div>
+							<div id="wizard_step_6">
+								<p id="step_6_desc">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term.</p>
+								<p id="step_6_desc_nd" style="display: none;">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger.</p>
+								<p id="step_6_desc_sample" style="display: none;">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data. </p>
+                
+								<div id="wizard_word_cloud">
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span class="pull-right" id="word_cloud_slider_earliest">START</span>
+										</div>
+										<div class="col-md-4">
+											<div class="slider shor" id="word_cloud_slider"></div>
+										</div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span id="word_cloud_slider_latest">NOW</span>
+										</div>
+										<div class="col-md-3"></div>
+									</div>
+
+									<center><div id="websites_word_cloud_visualization"></div></center>
+								</div>
+							</div>
+							<div id="wizard_step_7">
+								<p>This is the time of day and day of the week when you use this web browser. </p>
+								<p id="step_7_desc_sample" style="display: none;">This shows the time of day and day of the week when the sample user used this web browser.</p>
+
+								<div id="wizard_time">
+									<div class="row">
+										<div class="col-md-3"></div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span class="pull-right" id="time_slider_earliest">START</span>
+										</div>
+										<div class="col-md-4">
+											<div class="slider shor" id="time_slider"></div>
+										</div>
+										<div class="col-md-1" style="padding-top: 6px;">
+											<span id="time_slider_latest">NOW</span>
+										</div>
+										<div class="col-md-3"></div>
+									</div>
+									<center><div id="websites_time_visualization"></div></center>
+								</div>
+							</div>
+							<div id="wizard_step_8">
+								<div class="wizard_data_table">
+									<ul class="nav nav-pills" id="wizard_data_table_pills">
+										<li><a href="#" id="data_table_tab_pages">Pages</a></li>
+										<li><a href="#" id="data_table_tab_domains">Domains</a></li>
+									</ul>
+								
+									<table id="data_table"></table>								
+								</div>
+							</div>
+							<div id="wizard_step_9">
+								<h1>[Your Consent Form]</h1>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-md-6">
+									<ul class="pagination pagination-sm" style="margin-top: 4px; margin-bottom: 0px;">
+										<li><a id="wizard_page_1" href="javascript:void(0)">1</a></li>
+										<li><a id="wizard_page_2" href="javascript:void(0)">2</a></li>
+										<li><a id="wizard_page_3" href="javascript:void(0)">3</a></li>
+										<li><a id="wizard_page_4" href="javascript:void(0)">4</a></li>
+										<li><a id="wizard_page_5" href="javascript:void(0)">5</a></li>
+										<li><a id="wizard_page_6" href="javascript:void(0)">6</a></li>
+										<li><a id="wizard_page_7" href="javascript:void(0)">7</a></li>
+										<li><a id="wizard_page_8" href="javascript:void(0)">8</a></li>
+										<li><a id="wizard_page_9" href="javascript:void(0)">9</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<a href="#" id="wizard_next" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Next</a>
+									<a href="#" id="wizard_participate_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Participate</a>
+									<a href="#" id="wizard_no_participate" class="btn btn-raised btn-default pull-right" style="margin: 0px 20px 0px 0px;" data-toggle="popover" data-placement="top" data-content="Do not participate in this study.">Return to Consent Study</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="upload_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Upload Data to the Research Project</h4>
+					</div>
+					<div class="modal-body">
+						<div id="modal_overview"></div>
+						<div class="progress">
+              
+							<div class="progress-bar" id="upload_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; min-width: 3em;"></div>
+						</div>
+
+						<div id='par1'><p id='par1'>Click Participate to begin.</p></div>
+
+						<div id="progress_actions">
+							<h6>Survey</h6>
+
+							<p>You can begin the research survey that just opened in a new tab while your data uploads.</p>
+
+							<ul id="progress_actions_list"></ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-warning" id="upload_data">Participate</button>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="modal fade" tabindex="-1" role="dialog" id="identifier_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Your Identifier</h4>
+					</div>
+					<div class="modal-body" id="id-body"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" id="back" style="display: none;">Back</button><button type="button" class="btn btn-info" id="chose_identifier">Continue&#8230;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="welcome_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Welcome!</h4>
+					</div>
+					<div class="modal-body" id="welcome-body">
+						<p>Were you given a Web Historian ID to use as part of a research project?
+							<label class="radio-inline"><input type="radio" name="optProj" value="1" id="yesProjId">Yes</label>
+							<label class="radio-inline"><input type="radio" name="optProj" value="0" id="noProjId" checked>No</label>
+						</p>
+						<p>Have you installed Web Historian on another web browser previously?
+							<label class="radio-inline"><input type="radio" name="optBefore" value="1" id="yesBefore">Yes</label>
+							<label class="radio-inline"><input type="radio" name="optBefore" value="0" id="noBefore" checked>No</label>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" id="choose_welcome">Continue&#8230;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="confirm_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="confirm_modal_title">Modal title</h4>
+					</div>
+					<div class="modal-body" id="confirm_modal_body">
+						<p>One fine body…</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" id="confirm_modal_cancel">Close</button>
+						<button type="button" class="btn btn-primary" id="confirm_modal_confirm">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="loading_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Loading Content&#8230;</h4>
+					</div>
+					<div class="modal-body">
+						<div class="progress progress-striped active">
+							<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" tabindex="-1" role="dialog" id="wizard_id_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Web Historian Settings</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="wizard_user_id">User ID</label>
+
+							<div class="input-group">
+								<input type="text" class="form-control" id="wizard_user_id" placeholder="User ID">
+								<div class="input-group-addon">
+									<a href="#" class="material-icons" id="wizard_settings_random_id">autorenew</a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="form-group">
+							<label for="wizard_user_id">Study Condition</label>
+							<select class="form-control" id="wizard_user_condition">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="5">5</option>
+								<option value="7">7</option>
+							</select>
+						</div> -->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" id="confirm_wizard_settings_update">Save Changes</button>
+						<!-- <button type="button" class="btn btn-danger pull-left" id="confirm_wizard_settings_reset">Reset</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="resetting_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Resetting Web Historian&#8230;</h4>
+					</div>
+					<div class="modal-body">
+						<div class="progress progress-striped active">
+							<div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="confirm_upload_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Confirm Participation</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?</p>
+						</p>
+            <p> A new tab will open with the survey.
+            </p>
+						
+						<!-- <p>
+							Your ID: <span id="confirm_upload_modal_id"></span> 
+							(<span id="confirm_upload_modal_condition"></span>) 
+						</p>-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" id="confirm_upload_modal_button">Upload</button>
+					</div>
+				</div>
+      </div>
+    </div>
+        
+    		<div class="modal fade" id="confirm_return_modal">
+    			<div class="modal-dialog">
+    				<div class="modal-content">
+    					<div class="modal-header">
+    						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    						<h4 class="modal-title">Return to Consent Study Survey</h4>
+    					</div>
+    					<div class="modal-body">
+    						<p>
+    							Do NOT participate in the "Understanding Access to Information Online and in Context" study, return to the survey to complete the "Consent to Research: Evaluating Informed Consent" study?</p>
+    						</p> 
+                <p> A new tab will open with the survey.
+                </p>
+					
+    					</div>
+    					<div class="modal-footer">
+    						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    						<button type="button" class="btn btn-primary" id="return_modal_button">Return</button>
+    					</div>
+    				</div>
+        
+			</div>
+		</div>
+  </div>
+</div>	
+	</body>
+</html>
