@@ -163,10 +163,6 @@ main.page = function() {
                                 $("#wizard_page_8").show();
                                 $("#wizard_page_9").show();
                                 $("#wizard_page_10").show();
-
-                             });
-
-                                $("#confirm_modal").modal("show");
                             }
                         }
                     }, function() {
