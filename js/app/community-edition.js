@@ -52,7 +52,10 @@ window.sessionId = guid();
 
 main.page = function() {
     requirejs(["core/database", "greg", "crypto-js-md5", 'app/config'], function(database, greg, CryptoJS, config) {
-        main.database = database;
+        
+		$("#loading_modal_main").modal("show");
+		
+		main.database = database;
         
         var fetchUrlParameter = function(url, key) {
             key = key.replace(/[\[\]]/g, "\\$&");
@@ -156,6 +159,7 @@ main.page = function() {
                         
                             if (foundCondition == '1') {
                                 $("#wait_msg").hide();
+								$("#loading_modal_main").modal("hide");
                                 $("#wizard_page_4").show();
                                 $("#wizard_page_5").show();
                                 $("#wizard_page_6").show();
@@ -927,7 +931,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                     $("#wizard_next").addClass("disabled");
                 } else {
                     $("#wizard_next").removeClass("disabled");
-                    $("#load_bar").html("");
+					$("#load_bar").html("");
                 }
 
                 window.webHistorianPage = 3;
@@ -945,7 +949,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 resetPages();
 
                 $("#step_title").html("Step 4: Review Your Data: Visits &amp; Habits");
-        $("#load_bar").html("");
+				$("#load_bar").html("");
 
                 $("#wizard_step_4").show();
                 $("#wizard_page_4").parent().addClass("active");
@@ -1000,13 +1004,10 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                             }
                             
                             if (condition == '2'){
-                                $("#step_4_desc").hide();
-                                $("#step_4_desc_nd").show();
+								//
                             }
                             if (condition == '5'){
-                                $("#step_4_desc").hide();
-                                $("#step_4_desc_sample").show();
-                                $("#step_title").html("Step 4: Review Example Data: Visits &amp; Habits");
+                                //
                             }
 
                             websites_visited.display("#websites_visited_visualization", menu, false, "#visits_slider", "#visit_type", "#visit_search", new Date(result["visitTime"]));
@@ -1081,13 +1082,10 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                             if (condition != '1') {
                                 menu = [];
                             } else if (condition == '2') {
-                                $("#step_5_desc").hide();
-                                $("#step_5_desc_nd").show();
+                                //
                             }
                             else if (condition == '5') {
-                                $("#step_5_desc").hide();
-                                $("#step_5_desc_sample").show();
-                                $("#step_title").html("Step 5: Review Example Data: Site Links");
+                                //
                             }
 
                             websites_network.display("#websites_network_visualization", menu, "#network_slider", new Date(result["visitTime"]));
@@ -1165,13 +1163,10 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                             }
                             
                             if (condition == '2') {
-                                $("#step_6_desc").hide();
-                                $("#step_6_desc_nd").show();
+                                //
                             }
                             if (condition == '5') {
-                                $("#step_6_desc").hide();
-                                $("#step_6_desc_sample").show();
-                                $("#step_title").html("Step 6: Review Example Data: Web Searches");
+                                //
                             }
 
                             websites_network.display("#websites_word_cloud_visualization", menu, "#word_cloud_slider", new Date(result["visitTime"]));
@@ -1228,9 +1223,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                         var condition = result['web_historian_condition'];
             
                         if (condition == '5') {
-                            $("#step_7_desc").hide();
-                            $("#step_7_desc_sample").show();
-                            $("#step_title").html("Step 7: When the example data was collected");
+                            //
                         }
             
                     });
@@ -1265,7 +1258,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 eventObj.preventDefault();
         
                 resetPages();
-                $("#load_bar").html("");
+				$("#load_bar").html("");
 
                 $("#step_title").html("Step 8: Your Web Usage History");
           
@@ -1286,10 +1279,10 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                         var condition = result['web_historian_condition'];
 
                         if (condition == '3') {
-                            $("#step_title").html("Step 4: Your Web Usage History");
+                            //
                         }
                         if (condition == '5') {
-                            $("#step_title").html("Step 8: Example Web Usage History");
+                            //
                         }
             
                         document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -1318,7 +1311,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 eventObj.preventDefault();
         
                 resetPages();
-                $("#load_bar").html("");
+				$("#load_bar").html("");
 
                 $("#step_title").html("Step 9");
 
@@ -1338,9 +1331,9 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                     var condition = result['web_historian_condition'];
 
                     if (condition == '3') {
-                        $("#step_title").html("Step 5");
+                        //
                     } else if (condition == '4') {
-                        $("#step_title").html("Step 4");
+                        //
                     }
           
                 });
