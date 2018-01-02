@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--
-	Copyright (C) 2017 Ericka Menchen-Trevino & contributors, info@webhistorian.org
+	Copyright (C) 2018 Ericka Menchen-Trevino & contributors, info@webhistorian.org
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -223,7 +223,9 @@
 						<div class="panel-footer">
 							<div class="row">
 								<div class="col-md-12">
-									<a href="#" id="exploration_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Upload Data</a>
+									<!--
+									<a href="#" id="exploration_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Upload Data</a> 
+									-->
 								</div>
 							</div>
 						</div>
@@ -253,16 +255,16 @@
 							<div id="wizard_step_1">
 								<div id="volunteer">
 									<ul>
-										<li><h4>[your research project overview]  </h4>
-                    <li><h4>[info about the researcher]</a></h4></li>
+										<li><h4>[Your Study]</h4>
+                    <li><h4>[Info about the researcher]</h4></li>
                     <li><h4><b>Your data is yours</b>. No data will leave your computer unless you choose "Participate" at the end of this step-by-step review.</h4></li>
     								<h4><strong>Participation involves</strong>:
     								<ol>
     									<li>Reviewing the information in this step-by-step process and deciding whether to participate.</li>
-    									<li>Completing a survey about [your study].</li>
+    									<li>Completing a survey about [your study topic] (about [] minutes).</li>
     								</ol>
     								</h4>
-                    <h4>If you choose to complete this study [compensation]. </h4>
+                    <h4>[Compensation for finishing your study, if applicable]</h4>
                     
 									</ul>
 								
@@ -272,8 +274,9 @@
 							</div>
 							<div id="wizard_step_2">
 								<h2>What is this study about?</h2>
-                <h3>[your study info here]</h3>
-                <h4>[description]. </h4>
+                				<h3>[Your main RQ]</h3>
+				                <h4>[Research purpose and motivation]</h4>
+								<h4>[Participant eligibility info - e.g. age or residency restrictions]</h4>
 							</div>
 							<div id="wizard_step_3">
 								<h4>If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it. </h4>
@@ -557,7 +560,7 @@
 						<h4 class="modal-title">Web Historian Settings</h4>
 					</div>
 					<div class="modal-body">
-						<p>There is no need to change your User ID unless you were asked to do so as part of a research study.</p>
+						<p>You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device.</p>
 						<div class="form-group">
 							<label for="wizard_user_id">User ID</label>
 
@@ -580,9 +583,9 @@
 						</div> -->
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
 						<button type="button" class="btn btn-primary" id="confirm_wizard_settings_update">Save Changes</button>
-						<!-- <button type="button" class="btn btn-danger pull-left" id="confirm_wizard_settings_reset">Reset</button> -->
+						<button type="button" class="btn btn-danger pull-left" id="confirm_wizard_settings_reset">Reset</button>
 					</div>
 				</div>
 			</div>

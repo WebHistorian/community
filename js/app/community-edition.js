@@ -175,6 +175,8 @@ main.page = function() {
                 } 
                 else {
                     $("#navbar_explore").show();
+					$("#loading_modal_main").modal("hide");
+					$("#confirm_wizard_settings_reset").show()
 
 //                  $("#web_historian_id").html(result['upload_identifier']);
 //                  $("#web_historian_condition").html('&nbsp;(' + result['web_historian_condition'] + ')');
@@ -721,19 +723,16 @@ main.page = function() {
                 $("#wizard_user_id").val(greg.sentence().replace(/ /g, '-'));
             });
 
-/*          $("#confirm_wizard_settings_reset").click(function(eventObj) {
+          $("#confirm_wizard_settings_reset").click(function(eventObj) {
                 eventObj.preventDefault();
                 
-                if (confirm("Reset Web Historian? (Your history will be retained.)")) {
+                if (confirm("Reset Web Historian to step-by-step mode to participate in research? This may take a few moments to complete. Your history will be retained.")) {
                     $("#wizard_id_modal").modal("hide");
 
                     $("#resetting_modal").modal("show");
                     
                     chrome.storage.local.remove([
-                        'upload_identifier',
-                        'web_historian_condition',
                         'participation_mode',
-                        'identifier_updated'
                     ], function() {
                         database.filter('visits', 'transmitted', null, null, function(cursor) {
                             if (cursor) {
@@ -761,7 +760,7 @@ main.page = function() {
                 
                 return false;
             });
-*/
+
 
             if (main.database != undefined) {
                 main.database.uploadEvents(null, null, null);
@@ -812,6 +811,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
             $("#wizard_page_8").hide();
             $("#wizard_page_9").hide();
             $("#wizard_page_10").hide();
+			$("#confirm_wizard_settings_reset").hide()
 
             var resetPages = function() {
                 for (var i = 1; i <= 10; i++) {

@@ -7,7 +7,6 @@ define([], function ()
     config.reviewUrl = "REVIEW URL HERE";
     config.fetchIdUrl = "ID GEN URL HERE";
     config.categoriesUrl = "CATEGORIES JSON URL"; 
-    config.sampleDataUrl = "SAMPLE DATA URL";
     
     config.conditionUrl = function(participate, par, metadata) {
         var url = '';
@@ -17,13 +16,6 @@ define([], function ()
             url += metadata['web_historian_condition'];
             url += '&idRcvd=';
             url += metadata['upload_identifier'];
-            
-        } else {
-            url += 'SURVEY URL FOR NON-PARTICIPANTS' + par + '&conditionRcvd=';
-            url += metadata['web_historian_condition'];
-            url += '&idRcvd=';
-            url += metadata['upload_identifier'];
-        }
         
         return url;
     }
