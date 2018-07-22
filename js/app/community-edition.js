@@ -56,6 +56,102 @@ main.page = function() {
 		$("#loading_modal_main").modal("show");
 		
 		main.database = database;
+		
+		var tellNotEnough = false;
+		
+		function enough(weekAgo, firstDate, size) {
+			
+			function notEnough() {
+
+				tellNotEnough = true;
+
+				window.setTimeout(function() {
+					$("#wait_msg").hide();
+					$("#loading_modal_main").modal("hide");
+					$("#wizard_page_1").hide();
+					$("#wizard_page_2").hide();
+					$("#wizard_page_3").hide();
+					$("#wizard_page_3").hide();
+					$("#wizard_page_4").hide();
+					$("#wizard_page_5").hide();
+					$("#wizard_page_6").hide();
+					$("#wizard_page_7").hide();
+					$("#wizard_page_8").hide();
+					$("#wizard_page_9").hide();
+
+					$("#wizard_step_1").hide();
+					$("#wizard_step_2").hide();
+					$("#wizard_step_3").hide();
+					$("#wizard_step_4").hide();
+					$("#wizard_step_5").hide();
+					$("#wizard_step_6").hide();
+					$("#wizard_step_7").hide();
+					$("#wizard_step_8").hide();
+					$("#wizard_step_9").hide();
+
+					$("#wizard_next").hide();
+				    $("#step_title").html("Insufficient data");
+					$("#not_enough_data").show();
+				}, 500);
+			}
+			
+			if (firstDate > weekAgo || firstDate == null){
+				//notEnough();
+				console.log("Less than 1 week of records");
+				
+				database.logEvent("less than one week data", {
+	                'session_id': window.sessionId
+	            });
+
+	            chrome.storage.local.get({
+	                'upload_identifier': 'unknown-user',
+	                'web_historian_condition': 'unknown'
+	            }, function(result) {
+					//
+	            });
+
+	            if (main.database != undefined) {
+	                main.database.uploadEvents(null, null, null);
+	            }
+			}
+			else if (size < 100) {
+				//notEnough();
+				console.log("Less than 100 records");
+				database.logEvent("less than 100 records", {
+	                'session_id': window.sessionId
+	            });
+
+	            chrome.storage.local.get({
+	                'upload_identifier': 'unknown-user',
+	                'web_historian_condition': 'unknown'
+	            }, function(result) {
+					//
+	            });
+
+	            if (main.database != undefined) {
+	                main.database.uploadEvents(null, null, null);
+	            }
+			}
+		}
+
+		function getDataTestEnough(weekAgo) {
+			database.earliestDate(function(result) {
+				if(result != null) {
+					var first = new Date(result["visitTime"]); 
+					database.fetchRecords(null,null,function(result){
+						size = result.length;
+						enough(weekAgo, first.getTime(),size);
+					});
+				}
+				else {
+					enough(weekAgo, new Date(),0);
+				}
+
+			});
+		}
+		
+		var now = new Date();
+		weekAgo = now.getTime() - 604800000;
         
         var fetchUrlParameter = function(url, key) {
             key = key.replace(/[\[\]]/g, "\\$&");
@@ -99,6 +195,7 @@ main.page = function() {
             });
             
             window.webHistorianLoaded = true;
+			$("#load_bar").html("");
             
             if (window.webHistorianPage == 3) {
                 $("#wizard_next").removeClass("disabled");
@@ -110,7 +207,9 @@ main.page = function() {
                 'participation_mode': 'unknown',
                 'identifier_updated': '0',
             }, function(result) {
-                if (result['participation_mode'] == 'unknown') {
+				//should be != explore or == unknown - placeholder to keep always participation mode
+                if (result['participation_mode'] != 'bunt') {
+					console.log('participation mode')
                     var timestamp = 0;
             
                     var foundId = null;
@@ -129,7 +228,7 @@ main.page = function() {
                                     foundId = id;
                                     foundCondition = cond;
                                     timestamp = visit["visitTime"];
-                  console.log('Condition: '+foundCondition);
+                  					console.log('Condition: '+foundCondition);
                                 }
                             }
                     
@@ -156,10 +255,12 @@ main.page = function() {
 
                                 });
                             }
-                        
-                            if (foundCondition == '1') {
+							//foundCondition == '1'
+							if (tellNotEnough != true) { 
                                 $("#wait_msg").hide();
 								$("#loading_modal_main").modal("hide");
+								//load the change ID modal
+								//$("#wizard_settings").trigger( "click" );
                                 $("#wizard_page_4").show();
                                 $("#wizard_page_5").show();
                                 $("#wizard_page_6").show();
@@ -174,12 +275,10 @@ main.page = function() {
                     });
                 } 
                 else {
+					console.log("explore mode");
                     $("#navbar_explore").show();
 					$("#loading_modal_main").modal("hide");
 					$("#confirm_wizard_settings_reset").show()
-
-//                  $("#web_historian_id").html(result['upload_identifier']);
-//                  $("#web_historian_condition").html('&nbsp;(' + result['web_historian_condition'] + ')');
 
                     $("#explore_home").click(function(eventObj) {
                         eventObj.preventDefault();
@@ -227,7 +326,7 @@ main.page = function() {
                         $("#explore_visits_visualization").width(side);
 
                         requirejs(["core/websites-visited", "core/database"], function(websites_visited, database) {
-                            database.earliestDate(function(result) {
+							database.earliestDate(function(result) {
                                 var menu = [{
                                     title: 'View in Data Table',
                                     action: function(d) {
@@ -524,6 +623,8 @@ main.page = function() {
                                     console.log('CE COMPLETE');
                                     
                                     alert("Data upload complete.");
+									//rm upload progress indicator!! 
+									
                                 }, function(reason) {
                                     console.log('CE FAILED: ' + reason);
                                 });
@@ -578,6 +679,7 @@ main.page = function() {
                     $("#explore_home").click();
                 }
             });
+			getDataTestEnough(weekAgo);
         };
             
         database.onSyncProgress = function(length, index) {
@@ -589,7 +691,7 @@ main.page = function() {
             }
         };
 
-        $("#wizard_participate_upload").click(function(eventObj) { //look here
+        $("#wizard_participate_upload").click(function(eventObj) { 
             database.logEvent("clicked_participate", {
                 'session_id': window.sessionId
             });
@@ -600,28 +702,10 @@ main.page = function() {
             }, function(result) {
                 $("#confirm_upload_modal_button").off("click");
                 $("#confirm_upload_modal_button").click(function(eventObj) {
-                    $("#confirm_upload_modal").modal("hide");
+                    //$("#confirm_upload_modal").modal("hide");
+					$("#upload-notice").show();  
                     //rm ID condition
                     window.open(config.conditionUrl(true, '1', result), '_blank');
-                    
-                
-                    window.setTimeout(function() {
-                        $("#confirm_modal_title").html("Reload Web Historian?");
-                        $("#confirm_modal_body").html("Web Historian needs to reload to verify that you completed the survey.<br /><br />Continue?");
-                        $("#confirm_modal_cancel").html("No");
-                        $("#confirm_modal_confirm").html("Yes");
-                
-                        $("#confirm_modal_confirm").off("click");
-                
-                        $("#confirm_modal_confirm").click(function(e) {
-                            window.location.reload();
-                        });
-
-                        $("#confirm_modal").modal("show");
-                    }, (10 * 60 * 1000));
-
-                    // Exploration mode not enabled until survey is completed. 
-                    // Show modal if survey not completed with links before.
 
                     if (result['web_historian_condition'] == '1') {
                         console.log("REAL SUBMIT");
@@ -630,32 +714,39 @@ main.page = function() {
                             console.log('CE PROGRESS: ' + index + ' / ' + length);
                         }, function() {
                             console.log('CE COMPLETE');
-
+							
+							//$("#confirm_upload_modal").modal("hide");
                             chrome.storage.local.set({
                                 'participation_mode': 'explore'
                             }, function(bytesUsed) {
-                                window.location.reload();
+                                $("#upload-notice").hide();
+								$("#upload-complete-notice").show();
+								//window.location.reload();
                             });
                         }, function(reason) {
                             console.log('CE FAILED: ' + reason);
+							$("#upload-fail-notice").show();
                         });
                     } else if (result['web_historian_condition'] == '2') {
                         chrome.storage.local.set({
                             'participation_mode': 'explore'
                         }, function(bytesUsed) {
-                            window.location.reload();
+                            //window.location.reload();
                         });
                     } else {
                         console.log("FAKE SUBMIT");
 
-                        window.location.reload();
+                        //window.location.reload();
                     }
                 });
 
                 $("#confirm_upload_modal_id").html(result["upload_identifier"]);
                 // $("#confirm_upload_modal_condition").html(result["web_historian_condition"]);
 
-                $("#confirm_upload_modal").modal("show");
+               $("#confirm_upload_modal").modal("show");
+			   $("#upload-notice").hide();
+			   $("#upload-complete-notice").hide();
+			   $("#upload-fail-notice").hide();
             });
 
             if (main.database != undefined) {
@@ -707,9 +798,12 @@ main.page = function() {
                     eventObj.preventDefault();
                     
                     // console.log("COND: " + $("#wizard_user_condition").val());
+					var we = $("#wizard_user_id").val();
+					console.log(we);
+					var stripped = we.replace(/\s/g, "");
                     
                     chrome.storage.local.set({
-                        'upload_identifier': $("#wizard_user_id").val(),
+                        'upload_identifier': stripped,
                         //'web_historian_condition': $("#wizard_user_condition").val(),
                         'identifier_updated': '' + Date.now()
                     }, function(bytesUsed) {
@@ -731,9 +825,9 @@ main.page = function() {
 
                     $("#resetting_modal").modal("show");
                     
-                    chrome.storage.local.remove([
-                        'participation_mode',
-                    ], function() {
+                    chrome.storage.local.set({
+                        'participation_mode': 'reset'
+                    }, function() {
                         database.filter('visits', 'transmitted', null, null, function(cursor) {
                             if (cursor) {
                                 var updateItem = cursor.value;
@@ -784,7 +878,8 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
     chrome.storage.local.get({
         'participation_mode': 'unknown'
     }, function(result) {
-        if (result['participation_mode'] == 'unknown') {
+        
+		if (result['participation_mode'] == 'unknown') {
             $("#participation_mode").show();
             $("#exploration_mode").hide();
 
@@ -803,6 +898,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
             $("#wizard_step_8").hide();
             $("#wizard_step_9").hide();
             $("#wizard_step_10").hide();
+			$("#not_enough_data").hide();
 
             $("#wizard_page_4").hide();
             $("#wizard_page_5").hide();
@@ -811,7 +907,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
             $("#wizard_page_8").hide();
             $("#wizard_page_9").hide();
             $("#wizard_page_10").hide();
-			$("#confirm_wizard_settings_reset").hide()
+			$("#confirm_wizard_settings_reset").hide();
 
             var resetPages = function() {
                 for (var i = 1; i <= 10; i++) {
@@ -822,7 +918,8 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
             $("#wizard_next").show();
             $("#wizard_participate_upload").hide();
-            $("#wizard_no_participate").show().addClass("disabled");
+            $("#wizard_no_participate").hide()
+			//$("#wizard_no_participate").show().removeClass("disabled");
 
             $("#wizard_page_1").click(function(eventObj) {
                 eventObj.preventDefault();
@@ -839,7 +936,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 if (main.database != undefined) {
                     main.database.logEvent("clicked_step", { 
@@ -886,7 +983,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 2,
@@ -918,7 +1015,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 3,
@@ -1018,7 +1115,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 4,
@@ -1098,7 +1195,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 5,
@@ -1179,7 +1276,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 6,
@@ -1238,7 +1335,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 7,
@@ -1291,7 +1388,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 $("#wizard_next").show();
                 $("#wizard_participate_upload").hide();
-                $("#wizard_no_participate").show();
+                //$("#wizard_no_participate").show();
 
                 main.database.logEvent("clicked_step", { 
                     'step': 8,
@@ -1309,6 +1406,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
             $("#wizard_page_9").click(function(eventObj) {
                 eventObj.preventDefault();
+				$("#wizard_no_participate").show().removeClass("disabled");
         
                 resetPages();
 				$("#load_bar").html("");
