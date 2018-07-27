@@ -402,6 +402,11 @@
 							<div id="wizard_step_9">
 								<h1>[Your Consent Form]</h1>
 							</div>
+							
+							<div id="not_enough_data">
+									<h3 id="ned_desc">There is not enough web browsing data on this browser to continue the study. </h3><h3>The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. </h3><h3>If you use the web on a different computer or laptop you may be able to participate using that browser.</h3>
+							</div>
+							
 						</div>
 						<div class="panel-footer">
 							<div class="row">
@@ -421,7 +426,7 @@
 								<div class="col-md-6">
 									<a href="#" id="wizard_next" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Next</a>
 									<a href="#" id="wizard_participate_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Participate</a>
-
+									<a href="#" id="wizard_no_participate" class="btn btn-raised btn-default pull-right" style="margin: 0px 20px 0px 0px;" data-toggle="popover" data-placement="top" data-content="Continue without submitting any web browsing data.">Return to Survey</a>
 								</div>
 							</div>
 						</div>
@@ -567,7 +572,7 @@
 							<div class="input-group">
 								<input type="text" class="form-control" id="wizard_user_id" placeholder="User ID">
 								<div class="input-group-addon">
-									<a href="#" class="material-icons" id="wizard_settings_random_id">autorenew</a>
+									<!--<a href="#" class="material-icons" id="wizard_settings_random_id">autorenew</a>-->
 								</div>
 							</div>
 						</div>
@@ -633,6 +638,28 @@
 				</div>
       </div>
     </div>
+    
+            <div class="modal fade" id="confirm_return_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title">Return to Study Survey</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							I do NOT consent to upload any of my web browsing data to the study. </p>
+							<p>Choose "RETURN" to complete the survey.</p>
+						</p> 
+            <p> A new tab will open with the survey.
+            </p>
+				
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" id="return_modal_button">Return</button>
+					</div>
+				</div>
         
   </div>
 </div>	

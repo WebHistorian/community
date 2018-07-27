@@ -96,10 +96,10 @@ main.page = function() {
 			}
 			
 			if (firstDate > weekAgo || firstDate == null){
-				//notEnough();
-				console.log("Less than 1 week of records");
+				notEnough();
+				console.log("Less than minimum days set in config.js");
 				
-				database.logEvent("less than one week data", {
+				database.logEvent("oldest records less than minimum days set in config.js", {
 	                'session_id': window.sessionId
 	            });
 
@@ -114,10 +114,10 @@ main.page = function() {
 	                main.database.uploadEvents(null, null, null);
 	            }
 			}
-			else if (size < 100) {
-				//notEnough();
-				console.log("Less than 100 records");
-				database.logEvent("less than 100 records", {
+			else if (size < config.minRecords) {
+				notEnough();
+				console.log("Less than minimum records set in config.js");
+				database.logEvent("less than minimum records set in config.js", {
 	                'session_id': window.sessionId
 	            });
 
@@ -151,7 +151,9 @@ main.page = function() {
 		}
 		
 		var now = new Date();
-		weekAgo = now.getTime() - 604800000;
+		daysInSeconds = config.minDays * 86400000;
+		weekAgo = now.getTime() - daysInSeconds;
+		console.log("minimum date: "+weekAgo);
         
         var fetchUrlParameter = function(url, key) {
             key = key.replace(/[\[\]]/g, "\\$&");
@@ -259,8 +261,9 @@ main.page = function() {
 							if (tellNotEnough != true) { 
                                 $("#wait_msg").hide();
 								$("#loading_modal_main").modal("hide");
-								//load the change ID modal
-								//$("#wizard_settings").trigger( "click" );
+								if (config.askIdLoad == "Yes") {
+									$("#wizard_settings").trigger( "click" );
+								}
                                 $("#wizard_page_4").show();
                                 $("#wizard_page_5").show();
                                 $("#wizard_page_6").show();
@@ -874,7 +877,7 @@ main.page = function() {
 };
 
 // Start the main app logic.
-requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.cloud"], function(bs, bsdp, bst, d3lc) {
+requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.cloud", "app/config"], function(bs, bsdp, bst, d3lc, config) {
     chrome.storage.local.get({
         'participation_mode': 'unknown'
     }, function(result) {
@@ -1406,7 +1409,9 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
             $("#wizard_page_9").click(function(eventObj) {
                 eventObj.preventDefault();
-				$("#wizard_no_participate").show().removeClass("disabled");
+				if (config.allowNoUpload == "Yes") {
+					$("#wizard_no_participate").show().removeClass("disabled");
+				}
         
                 resetPages();
 				$("#load_bar").html("");
