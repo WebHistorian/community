@@ -1,3 +1,4 @@
 index-*
 manifest.json
 manifest.gecko.json
+*.DS_Store
