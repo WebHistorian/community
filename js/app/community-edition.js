@@ -886,7 +886,8 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
             $("#participation_mode").show();
             $("#exploration_mode").hide();
 
-            $("#navbar_participate").show();
+            //$("#navbar_participate").show();
+            $("#navbar_participate").html("<ul class='nav navbar-nav navbar-right'>	<li id='nav_wizard_settings'><a href='#' data-toggle='tooltip' data-placement='bottom' title='"+ chrome.i18n.getMessage('usrset') +"' id='wizard_settings'><i class='material-icons'>face</i></a></li></ul>");
             $("#navbar_explore").hide();
             
             $("#wizard_body").height($(window).height() - (60 + 40 + 59 + 57 + 40));
@@ -916,6 +917,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 for (var i = 1; i <= 10; i++) {
                     $("#wizard_page_" + i).parent().removeClass("active");
                     $("#wizard_step_" + i).hide();
+                    $("#step_" + i + "_title").hide();
                 }
             }
 
@@ -929,8 +931,8 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 1: Welcome to Web Historian - Community Edition");
-
+                $("#step_1_title").show();
+                
                 $("#wizard_step_1").show();
         
                 $("#wizard_page_1").parent().addClass("active");
@@ -964,7 +966,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 2: Research Project");
+                $("#step_2_title").show();
         
                 chrome.storage.local.get({
                     'upload_identifier': 'unknown-user',
@@ -1009,7 +1011,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 3: Where is your web browsing history?");
+                $("#step_3_title").show();
 
                 $("#wizard_step_3").show();
                 $("#wizard_page_3").parent().addClass("active");
@@ -1048,7 +1050,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 4: Review Your Data: Visits &amp; Habits");
+                $("#step_4_title").show();
 				$("#load_bar").html("");
 
                 $("#wizard_step_4").show();
@@ -1139,7 +1141,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 5: Review Your Data: Site Links");
+                $("#step_5_title").show();
 
                 $("#wizard_step_5").show();
                 $("#wizard_page_5").parent().addClass("active");
@@ -1219,7 +1221,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 6: Review Your Data: Web Searches");
+                $("#step_6_title").show();
 
                 $("#wizard_step_6").show();
                 $("#wizard_page_6").parent().addClass("active");
@@ -1300,7 +1302,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 7: When You Use the Web");
+                $("#step_7_title").show();
 
                 $("#wizard_step_7").show();
                 $("#wizard_page_7").parent().addClass("active");
@@ -1360,7 +1362,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 resetPages();
 				$("#load_bar").html("");
 
-                $("#step_title").html("Step 8: Your Web Usage History");
+                $("#step_8_title").show();
           
                 $("#wizard_step_8").show();
                 $("#wizard_page_8").parent().addClass("active");
@@ -1416,7 +1418,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                 resetPages();
 				$("#load_bar").html("");
 
-                $("#step_title").html("Step 9");
+                $("#step_9_title").show();
 
                 $("#wizard_step_9").show();
                 $("#wizard_page_9").parent().addClass("active");
@@ -1459,7 +1461,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                 resetPages();
 
-                $("#step_title").html("Step 10");
+                $("#step_10_title").show();
 
                 $("#wizard_step_10").show();
                 $("#wizard_page_10").parent().addClass("active");

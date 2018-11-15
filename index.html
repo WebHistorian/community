@@ -19,7 +19,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Web Historian | Community Edition</title>
+		<title data-i18n="__MSG_html0001__">Web Historian | Community Edition</title>
 		<link rel="stylesheet" type="text/css" href="core/css/d3-context-menu.css" />
 		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="core/vendor/css/bootstrap-material-design.css" />
@@ -43,21 +43,19 @@
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span>
+							<span class="sr-only" data-i18n="__MSG_html0002__">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<span class="navbar-brand"><img src="images/icon-light-48.png" style="width: 24px; height: 24px; border: none; display: inline-block; padding-bottom: 4px;" /> Web Historian: Community Edition</span>
+						<span class="navbar-brand"><img src="images/icon-light-48.png" style="width: 24px; height: 24px; border: none; display: inline-block; padding-bottom: 4px;" /> <span data-i18n="__MSG_html0003__">Web Historian: Community Edition</span></span>
 					</div>
 					<div id="navbar_participate">
-						<ul class="nav navbar-nav navbar-right">
-							<li id="nav_wizard_settings"><a href="#" data-toggle="tooltip" data-placement="bottom" title="User Settings" id="wizard_settings"><i class="material-icons">face</i></a></li>
-						</ul>
+						
 					</div><!--/.nav-collapse -->
 					<div id="navbar_explore">
 						<ul class="nav navbar-nav navbar-right">
-							<li id="nav_txt"><span class="navbar-brand"><p style="display: inline-block;">Navigation: </p></span></li> 
+							<li id="nav_txt"><span class="navbar-brand"><p style="display: inline-block;" data-i18n="__MSG_html0004__">Navigation: </p></span></li> 
 							<li id="nav_home"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Home" id="explore_home"><span class="glyphicon glyphicon-home"></span></a></li>
 							<li id="nav_sites_visited"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Web Visits" id="explore_visits"><span class="glyphicon glyphicon-globe"></span></a></li>
 							<li id="nav_search_terms"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Search Terms" id="explore_search"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -77,7 +75,7 @@
 						<div class="panel-heading">
 							<div class="row">
 								<div class="col-md-8">
-									<h4 style="font-weight: bold;">Web Historian: Explore Your Data</h4>
+									<h4 style="font-weight: bold;" data-i18n="__MSG_html0005__">Web Historian: Explore Your Data</h4>
 								</div>
 								<div class="col-md-4" style="padding-top: 15px;">
 									<div class="progress">
@@ -94,8 +92,8 @@
 										<div class="panel-body">
 											<img src="images/visit.png" alt="Web Visits" style="width: 100%" />
 											<div class="caption"> 
-												<h3>Web Visits</h3> 
-												<p>Circles sized by number of days a site was visited, or total visits to the site.</p> 
+												<h3 data-i18n="__MSG_html0006__">Web Visits</h3> 
+												<p data-i18n="__MSG_html0007__">Circles sized by number of days a site was visited, or total visits to the site.</p> 
 											</div> 
 										</div> 
 									</div> 
@@ -105,8 +103,8 @@
 										<div class="panel-body">
 											<img src="images/wordCloud.png" alt="Search Words" style="width: 100%"/>
 											<div class="caption">
-												<h3>Search Terms</h3> 
-												<p> Words used in multiple web searches are larger.</p> 
+												<h3 data-i18n="__MSG_html0008__">Search Terms</h3> 
+												<p data-i18n="__MSG_html0009__">Words used in multiple web searches are larger.</p> 
 											</div> 
 										</div> 
 									</div> 
@@ -116,8 +114,8 @@
 										<div class="panel-body">
 											<img src="images/network.png" alt="Network" style="width: 100%" /> 
 											<div class="caption"> 
-												<h3>Network</h3> 
-												<p>Links between websites browsed from - to.</p> 
+												<h3 data-i18n="__MSG_html0010__">Network</h3> 
+												<p data-i18n="__MSG_html0011__">Links between websites browsed from - to.</p> 
 											</div> 
 										</div> 
 									</div> 
@@ -127,8 +125,8 @@
 										<div class="panel-body">
 											<img src="images/time.png" alt="Time" style="width: 100%"> 
 												<div class="caption"> 
-													<h3>Time Heatmap</h3> 
-													<p> Hours of the day and days of the week when you browse the web the most.</p> 
+													<h3 data-i18n="__MSG_html0012__">Time Heatmap</h3> 
+													<p data-i18n="__MSG_html0013__">Hours of the day and days of the week when you browse the web the most.</p> 
 												</div> 
 											</div> 
 										</div> 
@@ -139,8 +137,8 @@
 								<div class="row">
 									<div class="col-md-3">
 										<select id="explore_visits_type" class="form-control" name="visit_type">
-											<option id="visits">My Visits</option>
-											<option id="habits">My Habits</option>
+											<option id="visits" data-i18n="__MSG_html0014__">My Visits</option>
+											<option id="habits" data-i18n="__MSG_html0015__">My Habits</option>
 										</select>
 									</div>
 									<div class="col-md-3">
@@ -149,13 +147,13 @@
 										</div>
 									</div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span class="pull-right visits_slider_earliest">START</span>
+										<span class="pull-right visits_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 									</div>
 									<div class="col-md-4">
 										<div class="slider shor" id="explore_visits_slider"></div>
 									</div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span class="visits_slider_latest">NOW</span>
+										<span class="visits_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 									</div>
 								</div>
 							
@@ -165,13 +163,13 @@
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span class="pull-right" id="explore_search_slider_earliest">START</span>
+										<span class="pull-right" id="explore_search_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 									</div>
 									<div class="col-md-4">
 										<div class="slider shor" id="explore_search_slider"></div>
 									</div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span id="explore_search_slider_latest">NOW</span>
+										<span id="explore_search_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 									</div>
 									<div class="col-md-3"></div>
 								</div>
@@ -182,13 +180,13 @@
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span class="pull-right" id="explore_network_slider_earliest">START</span>
+										<span class="pull-right" id="explore_network_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 									</div>
 									<div class="col-md-4">
 										<div class="slider shor" id="explore_network_slider"></div>
 									</div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span id="explore_network_latest">NOW</span>
+										<span id="explore_network_latest" data-i18n="__MSG_html0017__">NOW</span>
 									</div>
 									<div class="col-md-3"></div>
 								</div>
@@ -199,13 +197,13 @@
 								<div class="row">
 									<div class="col-md-3"></div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span class="pull-right" id="explore_time_slider_earliest">START</span>
+										<span class="pull-right" id="explore_time_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 									</div>
 									<div class="col-md-4">
 										<div class="slider shor" id="explore_time_slider"></div>
 									</div>
 									<div class="col-md-1" style="padding-top: 6px;">
-										<span id="explore_time_slider_latest">NOW</span>
+										<span id="explore_time_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 									</div>
 									<div class="col-md-3"></div>
 								</div>
@@ -213,8 +211,8 @@
 							</div>
 							<div id="exploration_table">
 								<ul class="nav nav-pills" id="explore_data_table_pills">
-									<li><a href="#" id="explore_data_table_tab_pages">Pages</a></li>
-									<li><a href="#" id="explore_data_table_tab_domains">Domains</a></li>
+									<li><a href="#" id="explore_data_table_tab_pages" data-i18n="__MSG_html0018__">Pages</a></li>
+									<li><a href="#" id="explore_data_table_tab_domains" data-i18n="__MSG_html0019__">Domains</a></li>
 								</ul>
 							
 								<table id="explore_data_table"></table>								
@@ -240,10 +238,19 @@
 							<div class="row">
 								<div class="col-md-8">
 									<h4 id="step_title" style="font-weight: bold;"></h4>
+									<h4 id="step_1_title" data-i18n="__MSG_step1title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_2_title" data-i18n="__MSG_step2title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_3_title" data-i18n="__MSG_step3title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_4_title" data-i18n="__MSG_step4title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_5_title" data-i18n="__MSG_step5title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_6_title" data-i18n="__MSG_step6title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_7_title" data-i18n="__MSG_step7title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_8_title" data-i18n="__MSG_step8title__" style="font-weight: bold;display: none;"></h4>
+									<h4 id="step_9_title" data-i18n="__MSG_step9title__" style="font-weight: bold;display: none;"></h4>
 								</div>
 								
                <div class="col-md-4" style="padding-top: 15px;" id="load_bar">
-                  <p>Loading</p>
+                  <p data-i18n="__MSG_html0020__">Loading</p>
 									<div class="progress">
 										<div class="progress-bar sync_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
 									</div>
@@ -255,16 +262,16 @@
 							<div id="wizard_step_1">
 								<div id="volunteer">
 									<ul>
-										<li><h4>[Your Study]</h4>
-                    <li><h4>[Info about the researcher]</h4></li>
-                    <li><h4><b>Your data is yours</b>. No data will leave your computer unless you choose "Participate" at the end of this step-by-step review.</h4></li>
-    								<h4><strong>Participation involves</strong>:
+										<li><h4 data-i18n="__MSG_html0021__">[Your Study]</h4>
+                    <li><h4 data-i18n="__MSG_html0022__">[Info about the researcher]</h4></li>
+                    <li><h4><b data-i18n="__MSG_html0023__">Your data is yours.</b> <span data-i18n="__MSG_html0024__"> No data will leave your computer unless you choose "Participate" at the end of this step-by-step review.</span></h4></li>
+    								<h4><strong data-i18n="__MSG_html0025__">Participation involves</strong>:
     								<ol>
-    									<li>Reviewing the information in this step-by-step process and deciding whether to participate.</li>
-    									<li>Completing a survey about [your study topic] (about [] minutes).</li>
+    									<li data-i18n="__MSG_html0026__">Reviewing the information in this step-by-step process and deciding whether to participate.</li>
+    									<li data-i18n="__MSG_html0027__">Completing a survey about [your study topic] (about [] minutes).</li>
     								</ol>
     								</h4>
-                    <h4>[Compensation for finishing your study, if applicable]</h4>
+                    <h4 data-i18n="__MSG_html0028__">[Compensation for finishing your study, if applicable]</h4>
                     
 									</ul>
 								
@@ -273,33 +280,34 @@
 								</div>
 							</div>
 							<div id="wizard_step_2">
-								<h2>What is this study about?</h2>
-                				<h3>[Your main RQ]</h3>
-				                <h4>[Research purpose and motivation]</h4>
-								<h4>[Participant eligibility info - e.g. age or residency restrictions]</h4>
+								<h2 data-i18n="__MSG_html0029__">What is this study about?</h2>
+                				<h3 data-i18n="__MSG_html0030__">[Your main RQ]</h3>
+				                <h4 data-i18n="__MSG_html0031__">[Research purpose and motivation]</h4>
+								<h4 data-i18n="__MSG_html0032__">[Participant eligibility info - e.g. age or residency restrictions]</h4>
 							</div>
 							<div id="wizard_step_3">
-								<h4>If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it. </h4>
-								<h4>Your web browsing history is on your computer, your ISP, and part of it is on every website you visit.</h4> 
+								<h4 data-i18n="__MSG_html0033__">If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it. </h4>
+								<h4 data-i18n="__MSG_html0034__">Your web browsing history is on your computer, your ISP, and part of it is on every website you visit.</h4> 
 								<p><center><img src="../images/where1.png" style="width:751px;height:376px;"></center></p>
-								<h4>You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href="https://www.torproject.org/projects/torbrowser.html.en" target="_blank">Tor</a>, which can slow your browsing speed.</h4>
-								<p><center><img src="../images/where2.png" style="width:751px;height:376px;"></center></p>
-								<h4>If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once. </h4>
+								<h4 style="font-weight: bold;" data-i18n="__MSG_imgtitles__"><center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"The Cloud" (the sites you visit)</center></h4>
+								<h4 data-i18n="__MSG_html0035__">You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href="https://www.torproject.org/projects/torbrowser.html.en" target="_blank">Tor</a>, which can slow your browsing speed.</h4>
+								<h4 data-i18n="__MSG_html0036__">If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once.</h4>
 								<p><center><img src="../images/whereWH.png" style="width:751px;height:376px;"></center></p>
-								<h4>In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href="https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/" target="_blank">This article</a> has more details. The <a href="http://eff.org/" target="_blank">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world.</h4>
-							  <h4>Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical.</h4>
-                <h4 id="wait_msg"><strong>Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes.</h4>
+								<h4 style="font-weight: bold;" data-i18n="__MSG_imgtitles__"><center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"The Cloud" (the sites you visit)</center></h4>
+								<h4 data-i18n="__MSG_html0037__">In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href="https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/" target="_blank">This article</a> has more details. The <a href="http://eff.org/" target="_blank">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world.</h4>
+							  <h4 data-i18n="__MSG_html0038__">Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical.</h4>
+                <h4 id="wait_msg"><strong data-i18n="__MSG_html0039__">Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes.</h4>
               </div>
 							<div id="wizard_step_4">
-								<p id="step_4_desc">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain.</p>
-								<p id="step_4_desc_nd" style="display: none;">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. </p>
-								<p id="step_4_desc_sample" style="display: none;">This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example.</p>
+								<p id="step_4_desc" data-i18n="__MSG_html0040__">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain.</p>
+								<p id="step_4_desc_nd" style="display: none;" data-i18n="__MSG_html0041__">This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. </p>
+								<p id="step_4_desc_sample" style="display: none;" data-i18n="__MSG_html0042__">This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example.</p>
                 <div id="wizard_websites_visited">
 									<div class="row">
 										<div class="col-md-3">
 											<select class="form-control" id="visit_type">
-												<option id="visits">Visits</option>
-												<option id="habits">Habits</option>
+												<option id="visits" data-i18n="__MSG_html0043__">Visits</option>
+												<option id="habits" data-i18n="__MSG_html0015__">Habits</option>
 											</select>
 										</div>
 										<div class="col-md-3">
@@ -309,13 +317,13 @@
 										</div>
 										<br/>
 					                    <div class="col-md-1" style="padding-top: 6px;">
-											<span class="pull-right visits_slider_earliest">START</span>
+											<span class="pull-right visits_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 										</div>
 										<div class="col-md-4">
 											<div class="slider shor" id="visits_slider"></div>
 										</div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span class="visits_slider_latest">NOW</span>
+											<span class="visits_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 										</div>
 									</div>
 								
@@ -323,21 +331,21 @@
 								</div>
 							</div>
 							<div id="wizard_step_5">
-								<p id="step_5_desc">This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain.</p>
-							  <p id="step_5_desc_nd" style="display: none;">This is a visualization of the sites that link you to other sites.</p>
-								<p id="step_5_desc_sample" style="display: none;">This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data. </p>
+								<p id="step_5_desc" data-i18n="__MSG_html0044__">This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain.</p>
+							  <p id="step_5_desc_nd" style="display: none;" data-i18n="__MSG_html0045__">This is a visualization of the sites that link you to other sites.</p>
+								<p id="step_5_desc_sample" style="display: none;" data-i18n="__MSG_html0046__">This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data. </p>
 							  
 								<div id="wizard_network">
 									<div class="row">
 										<div class="col-md-3"></div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span class="pull-right" id="network_slider_earliest">START</span>
+											<span class="pull-right" id="network_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 										</div>
 										<div class="col-md-4">
 											<div class="slider shor" id="network_slider"></div>
 										</div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span id="network_slider_latest">NOW</span>
+											<span id="network_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 										</div>
 										<div class="col-md-3"></div>
 									</div>
@@ -346,21 +354,21 @@
 								</div>
 							</div>
 							<div id="wizard_step_6">
-								<p id="step_6_desc">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term.</p>
-								<p id="step_6_desc_nd" style="display: none;">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger.</p>
-								<p id="step_6_desc_sample" style="display: none;">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data. </p>
+								<p id="step_6_desc" data-i18n="__MSG_html0047__">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term.</p>
+								<p id="step_6_desc_nd" style="display: none;" data-i18n="__MSG_html0048__">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger.</p>
+								<p id="step_6_desc_sample" style="display: none;" data-i18n="__MSG_html0049__">These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data. </p>
                 
 								<div id="wizard_word_cloud">
 									<div class="row">
 										<div class="col-md-3"></div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span class="pull-right" id="word_cloud_slider_earliest">START</span>
+											<span class="pull-right" id="word_cloud_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 										</div>
 										<div class="col-md-4">
 											<div class="slider shor" id="word_cloud_slider"></div>
 										</div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span id="word_cloud_slider_latest">NOW</span>
+											<span id="word_cloud_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 										</div>
 										<div class="col-md-3"></div>
 									</div>
@@ -369,20 +377,20 @@
 								</div>
 							</div>
 							<div id="wizard_step_7">
-								<p>This is the time of day and day of the week when you use this web browser. </p>
-								<p id="step_7_desc_sample" style="display: none;">This shows the time of day and day of the week when the sample user used this web browser.</p>
+								<p data-i18n="__MSG_html0050__">This is the time of day and day of the week when you use this web browser. </p>
+								<p id="step_7_desc_sample" style="display: none;" data-i18n="__MSG_html0051__">This shows the time of day and day of the week when the sample user used this web browser.</p>
 
 								<div id="wizard_time">
 									<div class="row">
 										<div class="col-md-3"></div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span class="pull-right" id="time_slider_earliest">START</span>
+											<span class="pull-right" id="time_slider_earliest" data-i18n="__MSG_html0016__">START</span>
 										</div>
 										<div class="col-md-4">
 											<div class="slider shor" id="time_slider"></div>
 										</div>
 										<div class="col-md-1" style="padding-top: 6px;">
-											<span id="time_slider_latest">NOW</span>
+											<span id="time_slider_latest" data-i18n="__MSG_html0017__">NOW</span>
 										</div>
 										<div class="col-md-3"></div>
 									</div>
@@ -392,19 +400,19 @@
 							<div id="wizard_step_8">
 								<div class="wizard_data_table">
 									<ul class="nav nav-pills" id="wizard_data_table_pills">
-										<li><a href="#" id="data_table_tab_pages">Pages</a></li>
-										<li><a href="#" id="data_table_tab_domains">Domains</a></li>
+										<li><a href="#" id="data_table_tab_pages" data-i18n="__MSG_html0052__">Pages</a></li>
+										<li><a href="#" id="data_table_tab_domains" data-i18n="__MSG_html0053__">Domains</a></li>
 									</ul>
 								
 									<table id="data_table"></table>								
 								</div>
 							</div>
 							<div id="wizard_step_9">
-								<h1>[Your Consent Form]</h1>
+								<h1 data-i18n="__MSG_html0054__">[Your Consent Form]</h1>
 							</div>
 							
 							<div id="not_enough_data">
-									<h3 id="ned_desc">There is not enough web browsing data on this browser to continue the study. </h3><h3>The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. </h3><h3>If you use the web on a different computer or laptop you may be able to participate using that browser.</h3>
+									<h3 id="ned_desc" data-i18n="__MSG_html0055__">There is not enough web browsing data on this browser to continue the study. </h3><h3 data-i18n="__MSG_html0056__">The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. </h3><h3 data-i18n="__MSG_html0057__">If you use the web on a different computer or laptop you may be able to participate using that browser.</h3>
 							</div>
 							
 						</div>
@@ -424,9 +432,9 @@
 									</ul>
 								</div>
 								<div class="col-md-6">
-									<a href="#" id="wizard_next" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Next</a>
-									<a href="#" id="wizard_participate_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;">Participate</a>
-									<a href="#" id="wizard_no_participate" class="btn btn-raised btn-default pull-right" style="margin: 0px 20px 0px 0px;" data-toggle="popover" data-placement="top" data-content="Continue without submitting any web browsing data.">Return to Survey</a>
+									<a href="#" id="wizard_next" class="btn btn-raised btn-primary pull-right" style="margin: 0px;" data-i18n="__MSG_html0058__">Next</a>
+									<a href="#" id="wizard_participate_upload" class="btn btn-raised btn-primary pull-right" style="margin: 0px;" data-i18n="__MSG_html0059__">Participate</a>
+									<a href="#" id="wizard_no_participate" class="btn btn-raised btn-default pull-right" style="margin: 0px 20px 0px 0px;" data-toggle="popover" data-placement="top" data-content="Continue without submitting any web browsing data." data-i18n="__MSG_html0060__">Return to Survey</a>
 								</div>
 							</div>
 						</div>
@@ -440,7 +448,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Upload Data to the Research Project</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0061__">Upload Data to the Research Project</h4>
 					</div>
 					<div class="modal-body">
 						<div id="modal_overview"></div>
@@ -449,19 +457,19 @@
 							<div class="progress-bar" id="upload_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; min-width: 3em;"></div>
 						</div>
 
-						<div id='par1'><p id='par1'>Click Participate to begin.</p></div>
+						<div id='par1'><p id='par1' data-i18n="__MSG_html0062__">Click Participate to begin.</p></div>
 
 						<div id="progress_actions">
-							<h6>Survey</h6>
+							<h6 data-i18n="__MSG_html0063__">Survey</h6>
 
-							<p>You can begin the research survey that just opened in a new tab while your data uploads.</p>
+							<p data-i18n="__MSG_html0064__">You can begin the research survey that just opened in a new tab while your data uploads.</p>
 
 							<ul id="progress_actions_list"></ul>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-warning" id="upload_data">Participate</button>
+						<button type="button" class="btn btn-default pull-left" data-dismiss="modal" data-i18n="__MSG_html0065__">Cancel</button>
+						<button type="button" class="btn btn-warning" id="upload_data" data-i18n="__MSG_html0066__">Participate</button>
 					</div>
 				</div>
 			</div>
@@ -472,11 +480,11 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Your Identifier</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0067__">Your Identifier</h4>
 					</div>
 					<div class="modal-body" id="id-body"></div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-info" id="back" style="display: none;">Back</button><button type="button" class="btn btn-info" id="chose_identifier">Continue&#8230;</button>
+						<button type="button" class="btn btn-info" id="back" style="display: none;" data-i18n="__MSG_html0068__">Back</button><button type="button" class="btn btn-info" id="chose_identifier" data-i18n="__MSG_html0069__">Continue&#8230;</button>
 					</div>
 				</div>
 			</div>
@@ -487,20 +495,20 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Welcome!</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0070__">Welcome!</h4>
 					</div>
 					<div class="modal-body" id="welcome-body">
-						<p>Were you given a Web Historian ID to use as part of a research project?
-							<label class="radio-inline"><input type="radio" name="optProj" value="1" id="yesProjId">Yes</label>
-							<label class="radio-inline"><input type="radio" name="optProj" value="0" id="noProjId" checked>No</label>
+						<p><span data-i18n="__MSG_html0071__">Were you given a Web Historian ID to use as part of a research project?</span>
+							<label class="radio-inline"><input type="radio" name="optProj" value="1" id="yesProjId" data-i18n="__MSG_html0072__">Yes</label>
+							<label class="radio-inline"><input type="radio" name="optProj" value="0" id="noProjId" checked data-i18n="__MSG_html0073__">No</label>
 						</p>
-						<p>Have you installed Web Historian on another web browser previously?
-							<label class="radio-inline"><input type="radio" name="optBefore" value="1" id="yesBefore">Yes</label>
-							<label class="radio-inline"><input type="radio" name="optBefore" value="0" id="noBefore" checked>No</label>
+						<p><span data-i18n="__MSG_html0074__">Have you installed Web Historian on another web browser previously?</span>
+							<label class="radio-inline"><input type="radio" name="optBefore" value="1" id="yesBefore" data-i18n="__MSG_html0072__">Yes</label>
+							<label class="radio-inline"><input type="radio" name="optBefore" value="0" id="noBefore" checked data-i18n="__MSG_html0073__">No</label>
 						</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-info" id="choose_welcome">Continue&#8230;</button>
+						<button type="button" class="btn btn-info" id="choose_welcome" data-i18n="__MSG_html0069__">Continue&#8230;</button>
 					</div>
 				</div>
 			</div>
@@ -511,14 +519,14 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title" id="confirm_modal_title">Modal title</h4>
+						<h4 class="modal-title" id="confirm_modal_title" data-i18n="__MSG_html0075__">Modal title</h4>
 					</div>
 					<div class="modal-body" id="confirm_modal_body">
-						<p>One fine body…</p>
+						<p data-i18n="__MSG_html0076__">One fine body…</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal" id="confirm_modal_cancel">Close</button>
-						<button type="button" class="btn btn-primary" id="confirm_modal_confirm">Save changes</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" id="confirm_modal_cancel" data-i18n="__MSG_html0077__">Close</button>
+						<button type="button" class="btn btn-primary" id="confirm_modal_confirm" data-i18n="__MSG_html0078__">Save changes</button>
 					</div>
 				</div>
 			</div>
@@ -529,7 +537,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">Loading Content&#8230;</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0079__">Loading Content&#8230;</h4>
 					</div>
 					<div class="modal-body">
 						<div class="progress progress-striped active">
@@ -545,11 +553,11 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">Loading Main Content&#8230;</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0080__">Loading Main Content&#8230;</h4>
 					</div>
 					<div class="modal-body">
-						<p>You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading.</p>
-						<p>Click anywhere to continue.</p>
+						<p data-i18n="__MSG_html0081__">You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading.</p>
+						<p data-i18n="__MSG_html0082__">Click anywhere to continue.</p>
 						<div class="progress">
 							<div class="progress-bar sync_progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
 						</div>
@@ -563,12 +571,12 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Web Historian Settings</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0083__">Web Historian Settings</h4>
 					</div>
 					<div class="modal-body">
-						<p>You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device.</p>
+						<p data-i18n="__MSG_html0084__">You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device.</p>
 						<div class="form-group">
-							<label for="wizard_user_id">User ID</label>
+							<label for="wizard_user_id" data-i18n="__MSG_html0085__">User ID</label>
 
 							<div class="input-group">
 								<input type="text" class="form-control" id="wizard_user_id" placeholder="User ID">
@@ -590,8 +598,8 @@
 					</div>
 					<div class="modal-footer">
 						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-						<button type="button" class="btn btn-primary" id="confirm_wizard_settings_update">Save Changes</button>
-						<button type="button" class="btn btn-danger pull-left" id="confirm_wizard_settings_reset">Reset</button>
+						<button type="button" class="btn btn-primary" id="confirm_wizard_settings_update" data-i18n="__MSG_html0086__">Save Changes</button>
+						<button type="button" class="btn btn-danger pull-left" id="confirm_wizard_settings_reset" data-i18n="__MSG_html0087__">Reset</button>
 					</div>
 				</div>
 			</div>
@@ -602,7 +610,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">Resetting Web Historian&#8230;</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0088__">Resetting Web Historian&#8230;</h4>
 					</div>
 					<div class="modal-body">
 						<div class="progress progress-striped active">
@@ -618,13 +626,13 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">Confirm Participation</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0089__">Confirm Participation</h4>
 					</div>
 					<div class="modal-body">
-						<p>
+						<p data-i18n="__MSG_html0090__">
 							Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?</p>
 						</p>
-            <p> A new tab will open with the survey.
+            <p data-i18n="__MSG_html0103__"> A new tab will open with the survey.
             </p>
 						<!--<p>
 							Your ID: <strong><span id="confirm_upload_modal_id"></span></strong>
@@ -633,20 +641,20 @@
 						<p>To change your ID, cancel and use the face icon (User Settings) at the top right.</p>
 						-->
 						<div id="upload-notice" style="display: none;">
-							<h2>UPLOADING <img src ="images/Jumbing-Ball-64px.gif"></h2>
+							<h2><span data-i18n="__MSG_html0091__">UPLOADING</span> <img src ="images/Jumbing-Ball-64px.gif"></h2>
 						</div>
 						<div id="upload-complete-notice" style="display: none;">
-							<h2>UPLOAD COMPLETE! THANK YOU!</h2>
+							<h2 data-i18n="__MSG_html0092__">UPLOAD COMPLETE! THANK YOU!</h2>
 						</div>
 						<div id="upload-fail-notice" style="display: none;">
-							<h2>UPLOAD FAILED - Check your Internet connection and try again.</h2>
+							<h2 data-i18n="__MSG_html0093__">UPLOAD FAILED - Check your Internet connection and try again.</h2>
 						</div>
-						<p><strong>Please do not close this tab until the upload is complete.</strong></p>
+						<p data-i18n="__MSG_html0094__"><strong>Please do not close this tab until the upload is complete.</strong></p>
 					
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-primary" id="confirm_upload_modal_button">Upload</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="__MSG_html0095__">Cancel</button>
+						<button type="button" class="btn btn-primary" id="confirm_upload_modal_button" data-i18n="__MSG_html0096__">Upload</button>
 					</div>
 				</div>
       </div>
@@ -657,24 +665,26 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4 class="modal-title">Return to Study Survey</h4>
+						<h4 class="modal-title" data-i18n="__MSG_html0097__">Return to Study Survey</h4>
 					</div>
 					<div class="modal-body">
-						<p>
+						<p data-i18n="__MSG_html0098__">
 							I do NOT consent to upload any of my web browsing data to the study. </p>
-							<p>Choose "RETURN" to complete the survey.</p>
+							<p data-i18n="__MSG_html0099__">Choose "RETURN" to complete the survey.</p>
 						</p> 
-            <p> A new tab will open with the survey.
+            <p data-i18n="__MSG_html0100__"> A new tab will open with the survey.
             </p>
 				
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button type="button" class="btn btn-primary" id="return_modal_button">Return</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal" data-i18n="__MSG_html0101__">Cancel</button>
+						<button type="button" class="btn btn-primary" id="return_modal_button" data-i18n="__MSG_html0102__">Return</button>
 					</div>
 				</div>
         
   </div>
 </div>	
-	</body>
+<script src="js/app/localize.js"></script>
+</body>
+
 </html>
