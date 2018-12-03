@@ -148,7 +148,7 @@
     "description":"Visits ... on ... ...  - Right-click to see what these visits are."
   },
   "utilsStopwordsRx": {
-    "message": "^(i|me|my|myself|we|us|our|ours|ourselves|you|your|yours|yourself|yourselves|he|him|his|himself|she|her|hers|herself|it|its|itself|they|them|their|theirs|themselves|what|which|who|whom|whose|this|that|these|those|am|is|are|was|were|be|been|being|have|has|had|having|do|does|did|doing|will|would|should|can|could|ought|i'm|you're|he's|she's|it's|we're|they're|i've|you've|we've|they've|i'd|you'd|he'd|she'd|we'd|they'd|i'll|you'll|he'll|she'll|we'll|they'll|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|doesn't|don't|didn't|won't|wouldn't|shan't|shouldn't|can't|cannot|couldn't|mustn't|let's|that's|who's|what's|here's|there's|when's|where's|why's|how's|a|an|the|and|but|if|or|because|as|until|while|of|at|by|for|with|about|against|between|into|through|during|before|after|above|below|to|from|up|upon|down|in|out|on|off|over|under|again|further|then|once|here|there|when|where|why|how|all|any|both|each|few|more|most|other|some|such|no|nor|not|only|own|same|so|than|too|very|say|says|said|shall|http|https|com)$", 
+    "message": "^( ja | moje | mój | moi | moja | my | nasz | nasze | ty | twoje | twojego | twój | on | jego | jemu | ona | jej | sami | oni | one | ich | co | | kto | którego | ten | który | ten | jest | był | było | byli | byliśmy | byliście | ma | miał | mają | mamy | miała | mieli | mieliśmy | robił | robili | robiła | robiłam | robiłem | zrobił | zrobili | zrobiła | zrobiłam | zrobiłem |  zrobiliśmy | zrobiliście | zrobicie | zrobili | zrobia | będzie | będziemy | będziecie | będa |  powinien | powinnam | powinienem | powinniśmy | mógł | mogłam | | mogła| mogłem | mogliśmy | mogli | był | jest | są | jesteśmy | jesteście  | ty | my | nasze | wasze | ich | oni | chcieliby, | że ona | ona | chcieliby, | że oni | będą | Będziemy | nie będą | nie będzie | nie powinno | nie może | nie możemy | nie możecie  | nie moga |nie moge | nie możesz | pozwolić | to jest | kto jest | co | jest | kiedy jest | gdzie jest | dlaczego | i | jeśli | lub | bo | jak | do | gdy | na | przed | dla | z | o | przeciw | pomiedzy | do | przez | podczas | wczesniej | po | wyżej | poniżej | do | od | do gory | w górze | do | w dół | w dole | pod | nad | obok | blisko | daleko | teraz | obecnie | pod | jeszcze | dalej | do | raz | tutaj | gdy | gdzie | dlaczego | jak | do wszystkiego | do | obu | każdy | kilka | więcej | najbardziej | inny | jakiś | taki | nie | tylko | własny | nasz | wasz | ich | taki | niż | też | bardzo | mówi | mówił | mówiła | mówiliśmy | mówili | powiedział | będzie | http | https | com)$", 
     "description":"regexp"
   },
   "wdtPanelTitle1": {
@@ -368,11 +368,11 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Twoje badanie - po polsku]", 
+    "message": "[Your Study] - Polski.", 
     "description":"[Your Study]"
   },
   "html0022": {
-    "message": "[Informacja o badaczu] Polski", 
+    "message": "[Info about the researcher] - Polski", 
     "description":"[Info about the researcher]"
   },
   "html0023": {
@@ -380,23 +380,23 @@
     "description":"Your data is yours."
   },
   "html0024": {
-    "message": "Żadne dane nie opuszczą komputera, chyba że wybierzesz \"Uczestniczyć \" pod koniec tej szczegółowej recenzji.", 
+    "message": "historia przeglądania sieci nie opuści Twojego komputera, dopóki nie naciśniesz na przycisk \"Uczestnicz w badaniu\" na końcu tych instrukcji.", 
     "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
   },
   "html0025": {
-    "message": " Uczestnictwo obejmuje ", 
+    "message": " ", 
     "description":"Participation involves"
   },
   "html0026": {
-    "message": "Przeglądanie informacji krok po kroku i podejmowanie decyzji czy bierzesz udział.", 
+    "message": " ", 
     "description":"Reviewing the information in this step-by-step process and deciding whether to participate."
   },
   "html0027": {
-    "message": " Wypełnienie ankiety na temat [twojego tematu badań] (około [] minut).", 
+    "message": " ", 
     "description":"Completing a survey about [your study topic] (about [] minutes)."
   },
   "html0028": {
-    "message": "[ Rekompensatę za ukończenie badania, jeśli dotyczy]", 
+    "message": " <center><img src=\"../images/hand.jpg\" ></center> ", 
     "description":"[Compensation for finishing your study, if applicable]"
   },
   "html0029": {
@@ -404,47 +404,47 @@
     "description":"What is this study about?"
   },
   "html0030": {
-    "message": "[Twoje główne pytanie badawcze]", 
+    "message": "[Your main RQ] Polski.", 
     "description":"[Your main RQ]"
   },
   "html0031": {
-    "message": "[ Cel badań i motywacja]", 
+    "message": "[Research purpose and motivation] Polski", 
     "description":"[Research purpose and motivation]"
   },
   "html0032": {
-    "message": "[Informacje o kryteriach kwalifikacji uczestników - np. Ograniczenia co do wieku lub miejsca zamieszkania]", 
+    "message": "[Participant eligibility info - e.g. age or residency restrictions] Polski", 
     "description":"[Participant eligibility info - e.g. age or residency restrictions]"
   },
   "html0033": {
-    "message": "IJeśli zdecydujesz się wziąć udział w badaniu, historia przeglądania twojego komputera zostanie bezpiecznie wysłana na serwer Web Historian raz po <strong> po </ strong> tym jak sprawdziłeś/sprawdziłaś i przefiltrowałeś/ przefiltrowałaś swoja historię.", 
+    "message": "Jeśli zdecydujesz się wziąć udział w badaniu, Twoja historia przeglądania zostanie bezpiecznie wysłana z twojego komputera na serwer Web Historian. Będziesz mógł/mogła ją sprawdzić i przefiltrować przed wysłaniem.", 
     "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
   },
   "html0034": {
-    "message": "Twoja historia przeglądania jest na twoim komputerze, twoim ISP, a część jej znajduje się na każdej odwiedzanej przez Ciebie stronie.", 
+    "message": "Twoja historia przeglądania jest na twoim komputerze, a jej część znajduje się na każdej odwiedzanej przez Ciebie stronie internetowej.", 
     "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
   },
   "html0035": {
-    "message": "Możesz wyczyścić historię przeglądania na swoim komputerze jeśli tak zdecydujesz, ale masz niewielką kontrolę nad historią przeglądania, którą posiada Twój ISP i inne strony internetowe, chyba że używasz niezawodnej sieci VPN, która zwykle pochodzi z miesięczną ceną, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, co może spowolnić szybkość przeglądania.", 
+    "message": "Gdy tylko zechcesz, możesz usunąć historię przeglądania ze swojego komputera, ale masz niewielką kontrolę nad historią, którą posiada Twój ISP i inne strony internetowe, chyba że używasz niezawodnej sieci VPN, za którą zwykle trzeba placić, lub <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, co może spowolnić szybkość przeglądania.", 
     "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
   },
   "html0036": {
-    "message": "Jeśli zdecydujesz się wziąć udział w badaniu, historia przeglądania Twojego komputera, którą sprawdziłeś i odfiltrowałeś, zostanie bezpiecznie wysłana na serwer Web Historian.", 
+    "message": "Jeśli zdecydujesz się wziąć udział w badaniu, Twoja historia przeglądania zostanie bezpiecznie wysłana na serwer Web Historian.", 
     "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
   },
   "html0037": {
-    "message": "W 2017 r. rząd USA odwołał nowe zasady, które regulowałyby sposób, w jaki dostawcy usług internetowych wykorzystują Twoje dane. Dostawcy internetowi twierdzili, że przepisy stawiają ich w gorszej sytuacji, ponieważ przepisy nie miały zastosowania do innych firm, które mają podobne dane, takie jak Google i Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">Ten artykuł </a> zawiera więcej szczegółów. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation </a> (EGG) to organizacja non-profit zajmująca się obroną swobód obywatelskich w świecie cyfrowym.", 
+    "message": "W 2017 r. rząd USA odwołał nowe zasady, które regulowałyby sposób, w jaki dostawcy usług internetowych wykorzystują Twoje dane. Dostawcy internetowi twierdzili, że przepisy stawiają ich w gorszej sytuacji, ponieważ te przepisy były stosowane w stosunku do innych firm, które mają podobne dane, takie jak Google i Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">Ten artykuł </a> zawiera więcej szczegółów. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation </a> (EGG) to organizacja non-profit zajmująca się obroną swobód obywatelskich w świecie cyfrowym.", 
     "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
   },
   "html0038": {
-    "message": "Narzędzia takie jak Web Historian pomagają ludziom lepiej zrozumieć dane przeglądania sieci, które są już na ich komputerach, ISP (dostawcach usług internetowych) i w różnych miejscach w internecie, dając ludziom konkretne zrozumienie kwestii, która jest często niejasna i hipotetyczna.", 
+    "message": "Narzędzia takie jak Web Historian pomagają ludziom lepiej zrozumieć ich własne dane przeglądania sieci z ich komputerów, ISP (dostawcy usług internetowych) i w różnych miejscach w internecie, dając ludziom konkretne informacje o tej skomplikowanej  kwestii.", 
     "description":"Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical."
   },
   "html0039": {
-    "message": "Proszę czekać na zielony pasek postępu u góry. </ strong> <br/> Następne kroki będą dostępne, gdy proces ładowania danych się zakończy.", 
+    "message": "Proszę czekać aż u góry pojawi się zielony pasek postępu. </ strong> <br/> Będziesz mógł przejść dalej, gdy Twoje dane się załadują.", 
     "description":"Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes."
   },
   "html0040": {
-    "message": " To jest wizualizacja twoich nawyków przeglądania. Większe witryny to te, z których najczęściej korzystasz w tej przeglądarce. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wszystkie wizyty w wybranej domenie.", 
+    "message": " To jest wizualizacja twoich nawyków przeglądania. Większe witryny to te, z których najczęściej korzystasz w tej przeglądarce. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wybrane wizyty w danej domenie.", 
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain."
   },
   "html0041": {
@@ -452,7 +452,7 @@
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser."
   },
   "html0042": {
-    "message": "Ta wizualizacja pokazuje przykład danych przeglądania sieci. Większe witryny są najczęściej odwiedzane w tym przykładzie.", 
+    "message": "Ta wizualizacja pokazuje przykładowe dane przeglądania sieci. W tym przykładzie, większe witryny są najczęściej odwiedzane.", 
     "description":"This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example."
   },
   "html0043": {
@@ -460,7 +460,7 @@
     "description":"Visits"
   },
   "html0044": {
-    "message": " To jest wizualizacja witryn, które łączą Cię z innymi stronami. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wszystkie wizyty które chcesz w wybranej domenie.", 
+    "message": " To jest wizualizacja witryn, które łączą Cię z innymi stronami. <br/> Kliknij prawym przyciskiem myszy, aby usunąć te wizyty które chcesz usunąć.", 
     "description":"This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain."
   },
   "html0045": {
@@ -468,27 +468,27 @@
     "description":"This is a visualization of the sites that link you to other sites."
   },
   "html0046": {
-    "message": " Jest to wizualizacja witryn, które łączyły przykładowego użytkownika z innymi witrynami. Ta wizualizacja wyświetla przykład danych przeglądania sieci.", 
+    "message": " Jest to wizualizacja witryn, które łączyły przykładowego użytkownika z innymi witrynami. Ta wizualizacja pokazuje przykładowe dane przeglądania sieci.", 
     "description":"This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data."
   },
   "html0047": {
-    "message": " Są to słowa wpisane w wyszukiwarkach takich jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wszystkie wyszukiwania które chcesz usunąć zawierające wybrane hasło.", 
+    "message": " To są słowa, które wpisujesz w wyszukiwarki takie jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wyszukiwania zawierające wybrane słowa.", 
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term."
   },
   "html0048": {
-    "message": " Są to słowa wpisane w wyszukiwarkach takich jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe.", 
+    "message": " To są słowa wpisane w wyszukiwarkach takich jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe.", 
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger."
   },
   "html0049": {
-    "message": "To są słowa wpisane w wyszukiwarkach takich jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. Ta wizualizacja wyświetla przykład danych przeglądania sieci.", 
+    "message": "To są słowa, które wpisujesz w wyszukiwarki takie jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. Ta wizualizacja pokazuje przykładowe dane przeglądania sieci.", 
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data."
   },
   "html0050": {
-    "message": "To jest pora dnia i dzień tygodnia, kiedy korzystasz z tej przeglądarki.", 
+    "message": "Tu widzisz pore dnia i dzień tygodnia, kiedy korzystasz z tej przeglądarki.", 
     "description":"This is the time of day and day of the week when you use this web browser."
   },
   "html0051": {
-    "message": "To pokazuje czas i dzień tygodnia, w którym przykładowy użytkownik korzystał z tej przeglądarki.", 
+    "message": "Tu widzisz czas i dzień tygodnia, w którym przykładowy użytkownik korzystał z tej przeglądarki.", 
     "description":"This shows the time of day and day of the week when the sample user used this web browser."
   },
   "html0052": {
@@ -500,15 +500,15 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[ Twój formularz zgody]", 
+    "message": "[Your Consent Form] Polski", 
     "description":"[Your Consent Form]"
   },
   "html0055": {
-    "message": "W tej przeglądarce jest za mało danych z historii przeglądania Internetu, aby kontynuować badanie ", 
+    "message": "W tej przeglądarce znajduje się za mało danych z historii przeglądania Internetu, aby kontynuować badanie ", 
     "description":"There is not enough web browsing data on this browser to continue the study."
   },
   "html0056": {
-    "message": " Być może niedawno wyczyściłeś historię przeglądarki lub przeglądarka była używana bardzo rzadko. ", 
+    "message": " Być może niedawno wyczyściłeś/wyczyściłaś historię przeglądarki lub używałeś/używałaś tej przeglądarki bardzo rzadko. ", 
     "description":"The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. "
   },
   "html0057": {
@@ -556,11 +556,11 @@
     "description":"Your Identifier"
   },
   "html0068": {
-    "message": " Z powrotem ", 
+    "message": " Cofnij ", 
     "description":"Back"
   },
   "html0069": {
-    "message": " dalej ", 
+    "message": " Dalej ", 
     "description":"Continue"
   },
   "html0070": {
@@ -568,7 +568,7 @@
     "description":"Welcome!"
   },
   "html0071": {
-    "message": " Czy dostałeś identyfikator Web Historian, który możesz wykorzystać jako część projektu badawczego?", 
+    "message": " Czy dostałeś/aś identyfikator Web Historian, który możesz wykorzystać do projektu badawczego?", 
     "description":"Were you given a Web Historian ID to use as part of a research project?"
   },
   "html0072": {
@@ -580,7 +580,7 @@
     "description":"No"
   },
   "html0074": {
-    "message": " Czy wcześniej zainstalowałeś/zainstalowałaś program Web Historian w innej przeglądarce internetowej??", 
+    "message": " Czy wcześniej zainstalowałeś/aś program Web Historian w innej przeglądarce internetowej??", 
     "description":"Have you installed Web Historian on another web browser previously?"
   },
   "html0075": {
@@ -644,8 +644,8 @@
     "description":"Confirm Participation"
   },
   "html0090": {
-    "message": "Weź udział w projekcie badawczym, przesyłając historię swojego przeglądania stron internetowych  do serwerów Web Historian i wypełniając ankietę?", 
-    "description":"Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?"
+    "message": "Weź udział w projekcie badawczym, który obejmuje przesłanie  historii Twojego przeglądania stron internetowych  do serwerów Web Historian i wypełnienie ankiety", 
+    "description":"Participate in the research project by uploading your web history to the Web Historian servers and completing the survey"
   },
   "html0091": {
     "message": " PRZESYŁANIE ", 
@@ -676,7 +676,7 @@
     "description":"Return to Study Survey"
   },
   "html0098": {
-    "message": " NIE zgadzam się przesłać żadnych danych z mojego przeglądania stron internetowych do badania. ", 
+    "message": " NIE zgadzam się na przesłanie żadnych danych z mojego przeglądania stron internetowych do badania. ", 
     "description":"I do NOT consent to upload any of my web browsing data to the study. "
   },
   "html0099": {
@@ -720,7 +720,7 @@
     "description":"Step 5: Review Your Data: Site Links"
   },
     "step6title": {
-    "message": "Step 6: Przejrzyj swoje dane: Wyszukiwania w Internecie", 
+    "message": "Step 6: Przejrzyj swoje dane: Wyszukiwanie w Internecie", 
     "description":"Step 6: Review Your Data: Web Searches"
   },
     "step7title": {
@@ -732,7 +732,7 @@
     "description":"Step 8: Your Web Usage History"
   },
     "step9title": {
-    "message": "Krok 9", 
+    "message": "Krok 9: Świadoma zgoda na badanie", 
     "description":"Step 9: Informed Consent"
   },
     "usrset": {
@@ -742,5 +742,13 @@
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Twój komputer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój dostawca usług internetowych&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Chmura' (odwiedzane strony)</center></h4>", 
     "description":"subtitles for image in step 3"
+  },
+    "svypar": {
+    "message": "http://your.svy/pl/",
+    "description":"base url for survey"
+  },
+    "svr": {
+    "message": "Wyświetl na serwerze", 
+    "description":"View on Server"
   }
 }

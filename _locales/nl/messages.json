@@ -368,11 +368,11 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Jouw Studie] - Nederlands", 
+    "message": "[Your Study]",
     "description":"[Your Study]"
   },
   "html0022": {
-    "message": "[Informatie over de onderzoeker] - Nederlands", 
+    "message": "[Info about the researcher]",
     "description":"[Info about the researcher]"
   },
   "html0023": {
@@ -380,39 +380,39 @@
     "description":"Your data is yours."
   },
   "html0024": {
-    "message": "Geen data verlaat uw computer tenzij u kiest voor \"Deelname\" aan het einde van deze stapsgewijze review.", 
+    "message": "Uw browsergeschiedenis verlaat uw computer niet voordat u op de knop \"Deelnemen aan de studie\" aan het einde van deze instructies klikt.", 
     "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
   },
   "html0025": {
-    "message": "Deelname houdt in", 
+    "message": "Participation involves", 
     "description":"Participation involves"
   },
   "html0026": {
-    "message": "Overwegen van de informatie in dit stapsgewijze process en een beslissing maken om wel dan wel niet deel te nemen.", 
+    "message": "Reviewing the information in this step-by-step process and deciding whether to participate.", 
     "description":"Reviewing the information in this step-by-step process and deciding whether to participate."
   },
   "html0027": {
-    "message": "Invullen van een survey over [uw studie onderwerp] (ongeveer [] minuten).", 
+    "message": "Completing a survey about [your study topic] (about [] minutes)", 
     "description":"Completing a survey about [your study topic] (about [] minutes)."
   },
   "html0028": {
-    "message": "[Vergoeding voor het voltooien van uw studie, indien van toepassing]", 
+    "message": "[Compensation for finishing your study, if applicable]", 
     "description":"[Compensation for finishing your study, if applicable]"
   },
   "html0029": {
-    "message": "Waar gaat deze studie over?", 
+    "message": "Waar gaat dit onderzoek over?", 
     "description":"What is this study about?"
   },
   "html0030": {
-    "message": "[Uw hoofdonderzoeksvraag]", 
+    "message": "[Your main RQ]",
     "description":"[Your main RQ]"
   },
   "html0031": {
-    "message": "[Onderzoeksdoeleinde en motivatie]", 
+    "message": "[Research purpose and motivation]", 
     "description":"[Research purpose and motivation]"
   },
   "html0032": {
-    "message": "[Deelnemers geschiktheid informatie - bijv. leeftijd of verblijfplaats restricties]", 
+    "message": " ", 
     "description":"[Participant eligibility info - e.g. age or residency restrictions]"
   },
   "html0033": {
@@ -500,7 +500,7 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[Uw Toestemmingsformulier]", 
+    "message": "[Your Consent Form] Nederlands",
     "description":"[Your Consent Form]"
   },
   "html0055": {
@@ -742,5 +742,13 @@
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center></h4>", 
     "description":"subtitles for image in step 3"
+  },
+    "svypar": {
+    "message": "http://your.svy/nl/",
+    "description":"base url for survey"
+  },	
+    "svr": {
+    "message": "Bekijken op server", 
+    "description":"View on Server"
   }
 }

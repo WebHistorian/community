@@ -129,7 +129,7 @@
   },
   "timeHeatmap4": {
     "message": "these steps", 
-    "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
+    "description":"these steps"
   },
   "timeHeatmap5": {
     "message": "Week", 
@@ -368,11 +368,11 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Your Study] - English", 
+    "message": "[Your Study]",
     "description":"[Your Study]"
   },
   "html0022": {
-    "message": "[Info about the researcher] - English", 
+    "message": "[Info about the researcher]",
     "description":"[Info about the researcher]"
   },
   "html0023": {
@@ -384,8 +384,8 @@
     "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
   },
   "html0025": {
-    "message": "Participation involves", 
-    "description":"Participation involves"
+    "message": "Participation involves:", 
+    "description":"Participation involves:"
   },
   "html0026": {
     "message": "Reviewing the information in this step-by-step process and deciding whether to participate.", 
@@ -396,7 +396,7 @@
     "description":"Completing a survey about [your study topic] (about [] minutes)."
   },
   "html0028": {
-    "message": "[Compensation for finishing your study, if applicable]", 
+    "message": "[Compensation for finishing your study, if applicable] <center><img src=\"../images/hand.jpg\" ></center>  ", 
     "description":"[Compensation for finishing your study, if applicable]"
   },
   "html0029": {
@@ -408,7 +408,7 @@
     "description":"[Your main RQ]"
   },
   "html0031": {
-    "message": "[Research purpose and motivation]", 
+    "message": "[Research purpose and motivation]",    
     "description":"[Research purpose and motivation]"
   },
   "html0032": {
@@ -500,7 +500,7 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[Your Consent Form]", 
+    "message": "[Your Consent Form]",
     "description":"[Your Consent Form]"
   },
   "html0055": {
@@ -742,5 +742,13 @@
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'The Cloud' (the sites you visit)</center></h4>", 
     "description":"subtitles for image in step 3"
+  },
+    "svypar": {
+    "message": "http://your.svy/",
+    "description":"base url for survey"
+  },
+    "svr": {
+    "message": "View on Server", 
+    "description":"View on Server"
   }
 }
