@@ -2,9 +2,9 @@ define([], function ()
 {
     var config = {};
     
-    config.actionsUrl = "YOUR ACTION URL HERE"; //from your PDK server
-    config.uploadUrl = "UPLOAD URL HERE";
-    config.reviewUrl = "REVIEW URL HERE";
+    config.actionsUrl = "https://your.server/historian/actions.json"; //from your PDK server
+    config.uploadUrl = "https://your.server/data/add-bundle.json";
+    config.reviewUrl = "https://your.server/historian/user/";
     config.fetchIdUrl = "ID GEN URL HERE"; //generate human-friendly random IDs for your project
     config.categoriesUrl = "https://historian.audacious-software.com/historian/categories.json";
     
@@ -18,13 +18,13 @@ define([], function ()
         //your survey MUST be able to accept data via URL strings to receive the ID to match the browsing data to the survey
         if (participate) {
         	//test survey url 
-            url += 'https://american.co1.qualtrics.com/jfe/form/SV_9TxEljYL39G8uI5/?par=1' + '&conditionRcvd=';
+            url += 'https://your.survey/?par=1' + '&conditionRcvd=';
 			url += metadata['web_historian_condition'];
             url += '&idRcvd=';
             url += metadata['upload_identifier'];
             
         } else {
-            url += 'https://american.co1.qualtrics.com/jfe/form/SV_9TxEljYL39G8uI5/?par=0' + '&conditionRcvd=';
+            url += 'https://your.survey/?par=0' + '&conditionRcvd=';
             url += metadata['web_historian_condition'];
             url += '&idRcvd=';
             url += metadata['upload_identifier'];
