@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "Web Historian - wydanie społecznościowe",
+    "message": "Web Historian - wydanie społecznościowe. Weź udział w badaniach. Zrozum siebie",
     "description": "The title of the application, displayed in the web store."
   },
   "appDesc": {
@@ -253,7 +253,7 @@
   },
   "wvTooltip4": {
     "message": ", Days Visited: ", 
-    "description":", Days Visited: "
+    "description":", Odwiedzone dni: "
   },
   "wvTooltip5": {
     "message": ", Kategoria: ", 
@@ -368,63 +368,23 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Your Study] - Polski.", 
-    "description":"[Your Study]"
-  },
-  "html0022": {
-    "message": "[Info about the researcher] - Polski", 
-    "description":"[Info about the researcher]"
-  },
-  "html0023": {
-    "message": "Twoje dane są twoje.", 
-    "description":"Your data is yours."
-  },
-  "html0024": {
-    "message": "historia przeglądania sieci nie opuści Twojego komputera, dopóki nie naciśniesz na przycisk \"Uczestnicz w badaniu\" na końcu tych instrukcji.", 
-    "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
-  },
-  "html0025": {
-    "message": " ", 
-    "description":"Participation involves"
-  },
-  "html0026": {
-    "message": " ", 
-    "description":"Reviewing the information in this step-by-step process and deciding whether to participate."
-  },
-  "html0027": {
-    "message": " ", 
-    "description":"Completing a survey about [your study topic] (about [] minutes)."
-  },
-  "html0028": {
-    "message": " <center><img src=\"../images/hand.jpg\" ></center> ", 
-    "description":"[Compensation for finishing your study, if applicable]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: Step 2 body"
   },
   "html0029": {
-    "message": " O czym jest to badanie?", 
-    "description":"What is this study about?"
-  },
-  "html0030": {
-    "message": "[Your main RQ] Polski.", 
-    "description":"[Your main RQ]"
-  },
-  "html0031": {
-    "message": "[Research purpose and motivation] Polski", 
-    "description":"[Research purpose and motivation]"
-  },
-  "html0032": {
-    "message": "[Participant eligibility info - e.g. age or residency restrictions] Polski", 
-    "description":"[Participant eligibility info - e.g. age or residency restrictions]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: Step 1 body"
   },
   "html0033": {
-    "message": "Jeśli zdecydujesz się wziąć udział w badaniu, Twoja historia przeglądania zostanie bezpiecznie wysłana z twojego komputera na serwer Web Historian. Będziesz mógł/mogła ją sprawdzić i przefiltrować przed wysłaniem.", 
+    "message": "Jeśli zdecydujesz się wziąć udział w badaniu, Twoja historia przeglądania zostanie bezpiecznie wysłana z Twojego komputera na serwer Web Historian. Przed wysłaniem jej do nas, będziesz mógł/mogła ją sprawdzić i przefiltrować.", 
     "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
   },
   "html0034": {
-    "message": "Twoja historia przeglądania jest na twoim komputerze, a jej część znajduje się na każdej odwiedzanej przez Ciebie stronie internetowej.", 
+    "message": " ", 
     "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
   },
   "html0035": {
-    "message": "Gdy tylko zechcesz, możesz usunąć historię przeglądania ze swojego komputera, ale masz niewielką kontrolę nad historią, którą posiada Twój ISP i inne strony internetowe, chyba że używasz niezawodnej sieci VPN, za którą zwykle trzeba placić, lub <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, co może spowolnić szybkość przeglądania.", 
+    "message": " ",    
     "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
   },
   "html0036": {
@@ -432,11 +392,11 @@
     "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
   },
   "html0037": {
-    "message": "W 2017 r. rząd USA odwołał nowe zasady, które regulowałyby sposób, w jaki dostawcy usług internetowych wykorzystują Twoje dane. Dostawcy internetowi twierdzili, że przepisy stawiają ich w gorszej sytuacji, ponieważ te przepisy były stosowane w stosunku do innych firm, które mają podobne dane, takie jak Google i Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">Ten artykuł </a> zawiera więcej szczegółów. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation </a> (EGG) to organizacja non-profit zajmująca się obroną swobód obywatelskich w świecie cyfrowym.", 
+    "message": " ", 
     "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
   },
   "html0038": {
-    "message": "Narzędzia takie jak Web Historian pomagają ludziom lepiej zrozumieć ich własne dane przeglądania sieci z ich komputerów, ISP (dostawcy usług internetowych) i w różnych miejscach w internecie, dając ludziom konkretne informacje o tej skomplikowanej  kwestii.", 
+    "message": " ", 
     "description":"Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical."
   },
   "html0039": {
@@ -444,11 +404,11 @@
     "description":"Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes."
   },
   "html0040": {
-    "message": " To jest wizualizacja twoich nawyków przeglądania. Większe witryny to te, z których najczęściej korzystasz w tej przeglądarce. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wybrane wizyty w danej domenie.", 
+    "message": " To jest wizualizacja twoich nawyków przeglądania sieci. Większe bąbelki z nazwą określonej strony internetowej to te, z których najczęściej korzystasz w tej przeglądarce. Kliknij prawym przyciskiem myszy, aby usunąć wybrane wizyty na danej stronie.", 
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain."
   },
   "html0041": {
-    "message": " To jest wizualizacja twoich nawyków przeglądania. Większe witryny to te, z których najczęściej korzystasz w tej przeglądarce.", 
+    "message": " To jest wizualizacja relacji pomiędzy stronami internetowymi, które najczęściej odwiedzasz. Kliknij prawym przyciskiem myszy, jeśli chcesz usunąć dane wizyty. ", 
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser."
   },
   "html0042": {
@@ -472,7 +432,7 @@
     "description":"This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data."
   },
   "html0047": {
-    "message": " To są słowa, które wpisujesz w wyszukiwarki takie jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. <br/> Kliknij prawym przyciskiem myszy, aby usunąć wyszukiwania zawierające wybrane słowa.", 
+    "message": " To są słowa, które wpisujesz w wyszukiwarki takie jak Google, Bing i Yahoo. Słowa użyte w różnych wyszukiwaniach są większe. Kliknij prawym przyciskiem myszy, aby usunąć wybrane słowa.", 
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term."
   },
   "html0048": {
@@ -484,7 +444,7 @@
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data."
   },
   "html0050": {
-    "message": "Tu widzisz pore dnia i dzień tygodnia, kiedy korzystasz z tej przeglądarki.", 
+    "message": "Tu widzisz porę dnia i dzień tygodnia, kiedy korzystasz z tej przeglądarki.", 
     "description":"This is the time of day and day of the week when you use this web browser."
   },
   "html0051": {
@@ -500,8 +460,8 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[Your Consent Form] Polski", 
-    "description":"[Your Consent Form]"
+    "message": "[fill in html for your study]",
+    "description":"Step 9 body - CUSTOM [Your Consent Form]"
   },
   "html0055": {
     "message": "W tej przeglądarce znajduje się za mało danych z historii przeglądania Internetu, aby kontynuować badanie ", 
@@ -700,35 +660,35 @@
     "description":" A new tab will open with the survey."
   },
     "step1title": {
-    "message": "Step 1: Witamy w Web Historian - wydanie społecznościowe", 
+    "message": "Krok 1: Witamy w Web Historian - wydanie społecznościowe", 
     "description":"Step 1: Welcome to Web Historian - Community Edition"
   },
     "step2title": {
-    "message": "Step 2: Projekt badawczy", 
+    "message": "Krok 2: Projekt badawczy", 
     "description":"Step 2: Research Project"
   },
     "step3title": {
-    "message": "Step 3: Gdzie jest twoja historia przeglądania sieci? ", 
+    "message": "Krok 3: Gdzie jest twoja historia przeglądania sieci? ", 
     "description":"Step 3: Where is your web browsing history?"
   },
     "step4title": {
-    "message": "Step 4: Przejrzyj swoje dane: odwiedziny i nawyki", 
+    "message": "Krok 4: Przejrzyj swoje dane: odwiedziny i nawyki", 
     "description":"Step 4: Review Your Data: Visits & Habits"
   },
     "step5title": {
-    "message": "Step 5: Przejrzyj swoje dane: linki do stron", 
+    "message": "Krok 5: Przejrzyj swoje dane: linki do stron", 
     "description":"Step 5: Review Your Data: Site Links"
   },
     "step6title": {
-    "message": "Step 6: Przejrzyj swoje dane: Wyszukiwanie w Internecie", 
+    "message": "Krok 6: Przejrzyj swoje dane: Wyszukiwanie w Internecie", 
     "description":"Step 6: Review Your Data: Web Searches"
   },
     "step7title": {
-    "message": "Step 7: Kiedy korzystasz z internetu", 
+    "message": "Krok 7: Kiedy korzystasz z internetu", 
     "description":"Step 7: When You Use the Web"
   },
     "step8title": {
-    "message": "Step 8: Twoja historia użytkowania sieci", 
+    "message": "Krok 8: Twoja historia użytkowania sieci", 
     "description":"Step 8: Your Web Usage History"
   },
     "step9title": {
@@ -739,13 +699,41 @@
     "message": "Ustawienia użytkownika", 
     "description":"User Settings"
   },
+    "tableDomain": {
+    "message": "Domeny", 
+    "description":"Domain"
+  },
+    "tableDate": {
+    "message": "Data", 
+    "description":"Date"
+  },
+    "tableTitle": {
+    "message": "Tytuł", 
+    "description":"Title"
+  },
+    "study": {
+    "message": "Studium:", 
+    "description":"Study"
+  },
+    "change_study": {
+    "message": "Zmień Studium", 
+    "description":"Change Study"
+  },
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Twój komputer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twój dostawca usług internetowych&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Chmura' (odwiedzane strony)</center></h4>", 
     "description":"subtitles for image in step 3"
   },
-    "svypar": {
-    "message": "http://your.svy/pl/",
-    "description":"base url for survey"
+    "study_set_title": {
+    "message": "Web Historian Ustawienia Badań",
+    "description":"Title of the pop-up when the study is unclear."
+  },
+    "study_set": {
+    "message": "[fill in only for projects with multiple studies]",
+    "description":"Question in the pop-up when the study is unclear. CUSTOM"
+  },
+    "par_again": {
+    "message": "Będziesz musiał ponownie wybrać opcję 'Weź udział'.",
+    "description":"Only for multi-study. You will need to choose 'Participate' again."
   },
     "svr": {
     "message": "Wyświetl na serwerze", 

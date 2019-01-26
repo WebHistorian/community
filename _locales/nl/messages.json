@@ -1,10 +1,10 @@
 {
   "appName": {
-    "message": "Web Historian - Community-Editie",
+    "message": "Web Historian - Community-Editie. Doe mee aan onderzoek. Leer jezelf kennen.",
     "description": "The title of the application, displayed in the web store."
   },
   "appDesc": {
-    "message": "Web Historian CE - Neem deel aan onderzoek. Begrijp jezelf.", 
+    "message": "Web Historian CE - Doe mee aan onderzoek. Leer jezelf kennen.", 
     "description":"The description of the application, displayed in the web store."
   },
   "appShortName": {
@@ -176,7 +176,7 @@
     "description":"No"
   },
   "wdtConfirmModalTitle2": {
-    "message": "Domeinen verwijderen?", 
+    "message": " verwijderen?", 
     "description":"Remove domains?"
   },
   "wdtConfirmModalBody2": {
@@ -288,7 +288,7 @@
     "description":" -- Right-click to see what these visits are."
   },
   "html0001": {
-    "message": "Web Historian | Maatschappij-Editie", 
+    "message": "Web Historian | Community Edition", 
     "description":"Web Historian | Community Edition"
   },
   "html0002": {
@@ -368,55 +368,15 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Your Study]",
-    "description":"[Your Study]"
-  },
-  "html0022": {
-    "message": "[Info about the researcher]",
-    "description":"[Info about the researcher]"
-  },
-  "html0023": {
-    "message": "Uw data is van u.", 
-    "description":"Your data is yours."
-  },
-  "html0024": {
-    "message": "Uw browsergeschiedenis verlaat uw computer niet voordat u op de knop \"Deelnemen aan de studie\" aan het einde van deze instructies klikt.", 
-    "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
-  },
-  "html0025": {
-    "message": "Participation involves", 
-    "description":"Participation involves"
-  },
-  "html0026": {
-    "message": "Reviewing the information in this step-by-step process and deciding whether to participate.", 
-    "description":"Reviewing the information in this step-by-step process and deciding whether to participate."
-  },
-  "html0027": {
-    "message": "Completing a survey about [your study topic] (about [] minutes)", 
-    "description":"Completing a survey about [your study topic] (about [] minutes)."
-  },
-  "html0028": {
-    "message": "[Compensation for finishing your study, if applicable]", 
-    "description":"[Compensation for finishing your study, if applicable]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: step 2 body"
   },
   "html0029": {
-    "message": "Waar gaat dit onderzoek over?", 
-    "description":"What is this study about?"
-  },
-  "html0030": {
-    "message": "[Your main RQ]",
-    "description":"[Your main RQ]"
-  },
-  "html0031": {
-    "message": "[Research purpose and motivation]", 
-    "description":"[Research purpose and motivation]"
-  },
-  "html0032": {
-    "message": " ", 
-    "description":"[Participant eligibility info - e.g. age or residency restrictions]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: Step 1 body"
   },
   "html0033": {
-    "message": "Als u besluit deel te nemen in het onderzoek, wordt de zoekgeschiedenis van uw computer eenmalig beveiligd verstuurd naar de Web Historian server <strong>nadat</strong> u het bekeken en aangepast heeft.", 
+    "message": "Als u besluit deel te nemen aan het onderzoek, wordt de zoekgeschiedenis van uw computer eenmalig beveiligd verstuurd naar de Web Historian server <strong>nadat</strong> u het bekeken en aangepast heeft.", 
     "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
   },
   "html0034": {
@@ -424,19 +384,19 @@
     "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
   },
   "html0035": {
-    "message": "U kunt uw zoekgeschiedenis op elk moment wissen, maar u heeft weinig controle over de zoekgeschiedenis die uw internetprovider en websites van u hebben tenzij u een beveiligde VPN verbinding gebruikt, waar u normaal gesproken een maandelijke prijs voor moet betalen, of <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, die mogelijke uw internetverbinding langzamer maakt.", 
+    "message": " ",
     "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
   },
   "html0036": {
-    "message": "Als u besluit om deel te nemen aan het onderzoek, wordt de zoekgeschiedenis, die u bekeken en aangepast heeft, eenmalig beveiligd verstuurd naar de server van Web Historian.", 
+    "message": "Als u besluit om deel te nemen aan het onderzoek, wordt de zoekgeschiedenis, die u bekeken en aangepast heeft, alleen verstuurd als u op 'Deelnemen' klikt, nooit op een ander moment. Alle gegevens worden beveiligd verstuurd naar de server van Web Historian.", 
     "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
   },
   "html0037": {
-    "message": "In 2017 heeft de Amerikaanse overheid de nieuwe regels die reguleren hoe uw data wordt gebruikt door internetproviders herroepen. Internetproviders claimden dat deze regels hen benadelen omdat dezelfde regels niet van toepassing waren op andere bedrijven die soortgelijke data bezitten zoals Google en Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">Dit artikel</a> bevat meer details. De <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is een nonprofit organisatie toegewijd aan het verdedigen van burgerlijke vrijheden in de digitale wereld.", 
+    "message": " ",
     "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
   },
   "html0038": {
-    "message": "Tools zoals deze browserextensies helpen mensen beter hun zoekgedrag data opgeslagen op hun computers, bij hun internetproviders en data verspreid over het internet te begrijpen, waardoor ze concreet begrip hebben van een kwestie die normaalgesproken vaag en speculatief is.", 
+    "message": "Tools zoals deze browserextensies helpen mensen gegevens over hun browsegedrag beter te begrijpen. Deze zijn al opgeslagen zijn op hun computers, bij hun internetprovider en verspreid over het internet. Hierdoor is het voor de gebruiker mogelijk om hun eigen gedrag op internet concreet begrijpen, iets dat normaalgesproken vaag en speculatief is.", 
     "description":"Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical."
   },
   "html0039": {
@@ -444,11 +404,11 @@
     "description":"Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes."
   },
   "html0040": {
-    "message": "Dit is een visualisatie van uw internet gewoontes. De grotere sites zijn degene die u het meest bezoekt op deze browser. <br/>Rechtsklik om all bezoeken in het geselecteerde domein te verwijderen.", 
+    "message": "Dit is een visualisatie van uw internetgewoontes. De grotere sites zijn degene die u het meest bezoekt op deze browser. <br/>Rechtsklik om all bezoeken in het geselecteerde domein te verwijderen.", 
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain."
   },
   "html0041": {
-    "message": "Dit is een visualisatie van uw internet gewoontes. De grotere sites zijn degene die u het meest bezoekt op deze browser.", 
+    "message": "Dit is een visualisatie van uw internetgewoontes. De grotere sites zijn degene die u het meest bezoekt met deze browser.", 
     "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser."
   },
   "html0042": {
@@ -500,8 +460,8 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[Your Consent Form] Nederlands",
-    "description":"[Your Consent Form]"
+    "message": "[fill in html for your study]",
+    "description":"Step 9 body - CUSTOM [Your Consent Form]"
   },
   "html0055": {
     "message": "Er is niet genoeg internetgedrag data beschikbaar van deze browser om de studie voort te zetten.", 
@@ -644,7 +604,7 @@
     "description":"Confirm Participation"
   },
   "html0090": {
-    "message": "Deelnemen aan het onderzoeksproject door uw Internet geschiedenis te uploaden op de servers van Web Historian en de vragenlijst afmaken?", 
+    "message": "Deelnemen aan het onderzoeksproject door uw browsergeschiedenis te uploaden op de servers van Web Historian en de vragenlijst af te maken?", 
     "description":"Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?"
   },
   "html0091": {
@@ -700,11 +660,11 @@
     "description":" A new tab will open with the survey."
   },
     "step1title": {
-    "message": "Stap 1: Welkom bij Web Historian - Community-Editie", 
+    "message": "Stap 1", 
     "description":"Step 1: Welcome to Web Historian - Community Edition"
   },
     "step2title": {
-    "message": "Stap 2: Onderzoeksproject", 
+    "message": "Stap 2", 
     "description":"Step 2: Research Project"
   },
     "step3title": {
@@ -739,14 +699,42 @@
     "message": "Gebruikersvoorkeuren", 
     "description":"User Settings"
   },
+    "tableDomain": {
+    "message": "Domeinen", 
+    "description":"Domain"
+  },
+    "tableDate": {
+    "message": "Datum", 
+    "description":"Date"
+  },
+    "tableTitle": {
+    "message": "Titel", 
+    "description":"Title"
+  },
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center></h4>", 
     "description":"subtitles for image in step 3"
   },
-    "svypar": {
-    "message": "http://your.svy/nl/",
-    "description":"base url for survey"
-  },	
+    "study": {
+    "message": "Studie:", 
+    "description":"Study"
+  },
+    "change_study": {
+    "message": "Verander Studie", 
+    "description":"Change Study"
+  },
+    "study_set_title": {
+    "message": "Web Historian Studie-instellingen",
+    "description":"Title of the pop-up when the study is unclear. "
+  },
+    "study_set": {
+    "message": "[fill in only for projects with multiple studies]",
+    "description":"Question in the pop-up when the study is unclear or not found. CUSTOM"
+  },
+    "par_again": {
+    "message": "U moet opnieuw 'Deelnemen' kiezen.",
+    "description":"Only for multi-study. You will need to choose 'Participate' again."
+  },
     "svr": {
     "message": "Bekijken op server", 
     "description":"View on Server"

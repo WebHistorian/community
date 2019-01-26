@@ -49,9 +49,11 @@ var guid = function() {
 window.webHistorianLoaded = false;
 window.webHistorianPage = 0;
 window.sessionId = guid();
+var actionUrls = "";
+var studyId = "";
 
 main.page = function() {
-    requirejs(["core/database", "greg", "crypto-js-md5", 'app/config'], function(database, greg, CryptoJS, config) {
+    requirejs(["core/database", "greg", "crypto-js-md5", 'app/config',"core/utils"], function(database, greg, CryptoJS, config,utils) {
         
 		$("#loading_modal_main").modal("show");
 		
@@ -68,27 +70,11 @@ main.page = function() {
 				window.setTimeout(function() {
 					$("#wait_msg").hide();
 					$("#loading_modal_main").modal("hide");
-					$("#wizard_page_1").hide();
-					$("#wizard_page_2").hide();
-					$("#wizard_page_3").hide();
-					$("#wizard_page_3").hide();
-					$("#wizard_page_4").hide();
-					$("#wizard_page_5").hide();
-					$("#wizard_page_6").hide();
-					$("#wizard_page_7").hide();
-					$("#wizard_page_8").hide();
-					$("#wizard_page_9").hide();
-
-					$("#wizard_step_1").hide();
-					$("#wizard_step_2").hide();
-					$("#wizard_step_3").hide();
-					$("#wizard_step_4").hide();
-					$("#wizard_step_5").hide();
-					$("#wizard_step_6").hide();
-					$("#wizard_step_7").hide();
-					$("#wizard_step_8").hide();
-					$("#wizard_step_9").hide();
-
+					
+					for (var i=1;i<=9;i++) {
+						$("#wizard_page_"+i).hide();
+						$("#wizard_step_"+i).hide();
+					}
 					$("#wizard_next").hide();
 				    $("#step_title").html("Insufficient data");
 					$("#not_enough_data").show();
@@ -133,6 +119,38 @@ main.page = function() {
 	            }
 			}
 		}
+		
+		function changeStudyModal () {
+			//for each study in the array returned by config.studies , create a button with a button id.
+			
+			var studies = config.studies;
+			$("#study_set_option_buttons").html("")
+			studies.forEach(function(item){
+				//add the html
+				$("#study_set_option_buttons").append("<p><a href='#' id='"+item+"_study_button' class='btn btn-raised btn-primary' style='margin: 0px;'>"+item+"</a></p>");
+				//add the on-click functions
+				$("#"+item+"_study_button").click(function(){
+					studyId = item;
+					$("#wizard_study").modal("hide");
+				});	
+			});
+			var ns = config.noneStudies
+			$("#study_set_option_buttons").append("<p><a href='#' id='none_study_button' class='btn btn-raised btn-primary' style='margin: 0px;'>"+ns+"</a></p>");
+				
+			$("#none_study_button").click(function(o){
+				studyId = "None";
+				$("#wizard_study").modal("hide");
+				for (var i=1;i<=9;i++) {
+					$("#wizard_page_"+i).hide();
+					$("#wizard_step_"+i).hide();
+				}
+				$("#wizard_next").hide();
+				$("#step_title").html("No Study Available");
+				$("#need_desc").show();
+				$("#no_study_available").show();
+			});
+			$("#wizard_study").modal("show");
+		}
 
 		function getDataTestEnough(weekAgo) {
 			database.earliestDate(function(result) {
@@ -153,7 +171,6 @@ main.page = function() {
 		var now = new Date();
 		daysInSeconds = config.minDays * 86400000;
 		weekAgo = now.getTime() - daysInSeconds;
-		console.log("minimum date: "+weekAgo);
         
         var fetchUrlParameter = function(url, key) {
             key = key.replace(/[\[\]]/g, "\\$&");
@@ -210,8 +227,8 @@ main.page = function() {
                 'identifier_updated': '0',
             }, function(result) {
 				//should be != explore or == unknown - placeholder to keep always participation mode
-                if (result['participation_mode'] != 'bunt') {
-					console.log('participation mode')
+				
+                if (1==1) {
                     var timestamp = 0;
             
                     var foundId = null;
@@ -225,7 +242,7 @@ main.page = function() {
                             var id = fetchUrlParameter(visit["url"], "id");
                             var cond = fetchUrlParameter(visit["url"], "cond");
               
-              if (id != null && cond != null) {
+              			if (id != null && cond != null) {
                                 if (visit["visitTime"] > timestamp) {
                                     foundId = id;
                                     foundCondition = cond;
@@ -264,425 +281,76 @@ main.page = function() {
 								if (config.askIdLoad == "Yes") {
 									$("#wizard_settings").trigger( "click" );
 								}
-                                $("#wizard_page_4").show();
-                                $("#wizard_page_5").show();
-                                $("#wizard_page_6").show();
-                                $("#wizard_page_7").show();
-                                $("#wizard_page_8").show();
-                                $("#wizard_page_9").show();
-                                $("#wizard_page_10").show();
+                                for (var i=4;i<=9;i++) {
+                                	$("#wizard_page_"+i).show();
+                                }
+                                
+                                var getSvyUrlBase = $.get(config.actions, function(a){
+									actionUrls = a;
+									  })
+								  .error(function(jqXHR, textStatus, errorThrown){
+									callback();//Need to fill in!!
+								  })
+                                
+                                if (config.getIDfromURL == "Yes"){
+                                	var idRegex = config.idBaseUrl; 
+									dayAgo = new Date(now.getTime() - 86400000);
+									var studyPair = config.studyPair;
+									var foundIDurl = 0;
+								
+									database.fetchRecords(dayAgo,null,function(result){
+										for (var i = result.length-1; i >= 0; i--) {
+											var urlC = result[i].url;
+											if (idRegex.test(urlC)) {
+												foundIDurl = 1;
+												var patt = /.*[\?\&](.*)=(.*)$/;
+  												var r = patt.exec(urlC);
+  												
+  												chrome.storage.local.set({
+  													'upload_identifier': r[2]
+												}, function() {
+													console.log("set user id from url: "+r[2]);
+												});
+  												if (config.multiStudy=="Yes") {
+  												  	for (var y = 0; y<= studyPair.study.length-1;y++) {
+														if(r[1]==studyPair.study[y].idKey){
+															studyId = studyPair.study[y].studyName;
+															break;
+														}
+													}
+  												}
+												break;
+											} 
+										}
+										if (foundIDurl == 0) {
+											//keep self-gen ID, providing config.js with language and domain info to make a back-up determination
+											
+											chrome.i18n.getAcceptLanguages(function (list) {
+												var lang = chrome.i18n.getUILanguage();
+												var langList = list;
+												database.fetchRecords(null,null,function(data){
+													var domains = utils.countPropDomains(data, "domain");
+													studyId = config.studyIdBackup(lang,domains,langList);
+													if (studyId == "None"){
+														changeStudyModal();
+													}
+													console.log("Individual ID and studyId not found in URL! Backup method routing to study: "+studyId);
+												});
+											});
+										}
+									});
+                                } 
                             }
                         }
                     }, function() {
-                        console.log('ID lookup filter failed.');
-                    });
-                } 
-                else {
-					console.log("explore mode");
-                    $("#navbar_explore").show();
-					$("#loading_modal_main").modal("hide");
-					$("#confirm_wizard_settings_reset").show()
 
-                    $("#explore_home").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_home").show();
-                        $("#exploration_visits").hide();
-                        $("#exploration_search").hide();
-                        $("#exploration_network").hide();
-                        $("#exploration_time").hide();
-                        $("#exploration_table").hide();
-                        
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                        
-                        return false;
-                    });
-
-                    $("#explore_visits").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_visits").show();
-                        $("#exploration_home").hide();
-                        $("#exploration_search").hide();
-                        $("#exploration_network").hide();
-                        $("#exploration_time").hide();
-                        $("#exploration_table").hide();
-
-                        var width = $("#exploration_body").width();
-                        var height = $("#exploration_body").height();
-        
-                        var side = height;
-        
-                        if (width < height) {
-                            side = width;
-                        }
-        
-                        side -= 75;
-        
-                        if (side < 600) {
-                            side = 600;
-                        }
-
-                        $("#explore_visits_visualization").height(side);
-                        $("#explore_visits_visualization").width(side);
-
-                        requirejs(["core/websites-visited", "core/database"], function(websites_visited, database) {
-							database.earliestDate(function(result) {
-                                var menu = [{
-                                    title: 'View in Data Table',
-                                    action: function(d) {
-                                        $("#explore_table").click();
-                                        
-                                        window.setTimeout(function() {
-                                            $("#explore_data_table_tab_domains").click();
-                                            $("#explore_data_table").bootstrapTable('resetSearch', d.__data__.className);
-                                        }, 2500);
-                                    },
-                                    disabled: false 
-                                }, {
-                                    title: 'Delete',
-                                    action: function(d) {
-                                        if (confirm('Do you want to remove ALL visits to URLs from ' + d.__data__.className + ' from Web Historian?')) {
-                                            var toDelete = [d.__data__.className];
-                                    
-                                            database.clearDomains(toDelete, function() {
-                                                database.logEvent("domains_deleted", { 
-                                                    'count': 1,
-                                                    'session_id': window.sessionId
-                                                });
-                                                
-                                                $("#explore_visits").click();
-                                            });
-                                        }
-                                    }
-                                }];
-                            
-                                websites_visited.display("#explore_visits_visualization", menu, true, "#explore_visits_slider", "#explore_visits_type", "#explore_visits_search", new Date(result["visitTime"]));
-                                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                            })
-                        });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-
-                        return false;
-                    });
-
-                    $("#web_visit_card").click(function(eventObj) {
-                        eventObj.preventDefault();
-                        
-                        $("#explore_visits").click();
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                    });
-
-                    $("#explore_search").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_search").show();
-                        $("#exploration_home").hide();
-                        $("#exploration_visits").hide();
-                        $("#exploration_network").hide();
-                        $("#exploration_time").hide();
-                        $("#exploration_table").hide();
-
-                        var height = $("#exploration_body").height();
-
-                        var side = height;
-        
-                        side -= 75;
-        
-                        if (side < 600) {
-                            side = 600;
-                        }
-
-                        $("#explore_search_visualization").height(side);
-
-                        requirejs(["core/websites-word-cloud", "core/database"], function(websites_network, database) {
-                            database.earliestDate(function(result) {
-                                var menu = [{
-                                    title: 'View in Data Table',
-                                    action: function(d) {
-                                        $("#explore_table").click();
-                                        
-                                        window.setTimeout(function() {
-                                            $("#explore_data_table").bootstrapTable('resetSearch', d.__data__.text);
-                                        }, 2500);
-                                    },
-                                    disabled: false 
-                                }];
-
-                                websites_network.display("#explore_search_visualization", menu, "#explore_search_slider", new Date(result["visitTime"]));
-                                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                            });
-
-                            document.body.scrollTop = document.documentElement.scrollTop = 0;
-                        });
-                        
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                        return false;
-                    });
-
-                    $("#search_words_card").click(function(eventObj) {
-                        eventObj.preventDefault();
-                        
-                        $("#explore_search").click();
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                    });
-
-                    $("#explore_network").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_network").show();
-                        $("#exploration_home").hide();
-                        $("#exploration_visits").hide();
-                        $("#exploration_search").hide();
-                        $("#exploration_time").hide();
-                        $("#exploration_table").hide();
-
-                        var height = $("#exploration_body").height();
-
-                        var side = height;
-        
-                        side -= 75;
-        
-                        if (side < 600) {
-                            side = 600;
-                        }
-
-                        $("#explore_network_visualization").height(side);
-
-                        requirejs(["core/websites-network", "core/database"], function(websites_network, database) {
-                            database.earliestDate(function(result) {
-                                var menu = [{
-                                    title: 'View in Data Table',
-                                    action: function(d) {
-                                        $("#explore_table").click();
-                                        
-                                        window.setTimeout(function() {
-                                            $("#explore_data_table_tab_domains").click();
-                                            $("#explore_data_table").bootstrapTable('resetSearch', d.__data__.name);
-                                        }, 2500);
-                                    },
-                                    disabled: false 
-                                }, {
-                                    title: 'Delete',
-                                    action: function(d) {
-                                        if (confirm('Do you want to remove ALL visits to URLs from ' + d.__data__.name + ' from Web Historian?')) {
-                                            var toDelete = [d.__data__.name];
-                                    
-                                            database.clearDomains(toDelete, function() {
-                                                database.logEvent("domains_deleted", {
-                                                    'count': 1,
-                                                    'session_id': window.sessionId
-                                                });
-                                                
-                                                $("#explore_network").click();
-                                            });
-                                        }
-                                    }
-                                }];
-                            
-                                websites_network.display("#explore_network_visualization", menu, "#explore_network_slider", new Date(result["visitTime"]));
-                                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                            })
-
-                            document.body.scrollTop = document.documentElement.scrollTop = 0;
-                        });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-
-                        return false;
-                    });
-
-                    $("#network_card").click(function(eventObj) {
-                        eventObj.preventDefault();
-                        
-                        $("#explore_network").click();
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                    });
-
-                    $("#explore_time").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_time").show();
-                        $("#exploration_home").hide();
-                        $("#exploration_visits").hide();
-                        $("#exploration_search").hide();
-                        $("#exploration_network").hide();
-                        $("#exploration_table").hide();
-
-                        var height = $("#exploration_body").height();
-
-                        var side = height;
-        
-                        side -= 75;
-        
-                        if (side < 600) {
-                            side = 600;
-                        }
-
-                        $("#explore_time_visualization").height(side);
-
-                        requirejs(["core/websites-time", "core/database"], function(websites_time, database) {
-                            database.earliestDate(function(result) {
-                                var menu = [{
-                                    title: 'View in Data Table',
-                                    action: function(d) {
-                                        $("#explore_table").click();
-                                        
-                                        window.setTimeout(function() {
-                                            console.log("SET DATE");
-                                            $("#explore_data_table").bootstrapTable('resetSearch', d.__data__.tableDate);
-                                        }, 2500);
-                                    },
-                                }];
-
-                                websites_time.display("#explore_time_visualization", menu, "#explore_time_slider", new Date(result["visitTime"]));
-                                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                            })
-
-                            document.body.scrollTop = document.documentElement.scrollTop = 0;
-                        });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                        
-                        return false;
-                    });
-
-                    $("#time_card").click(function(eventObj) {
-                        eventObj.preventDefault();
-                        
-                        $("#explore_time").click();
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                    });
-
-                    $("#explore_table").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        $("#exploration_table").show();
-                        $("#exploration_home").hide();
-                        $("#exploration_visits").hide();
-                        $("#exploration_search").hide();
-                        $("#exploration_network").hide();
-                        $("#exploration_time").hide();
-
-                        requirejs(["core/websites-data-table"], function(websites_table) {
-                            chrome.storage.local.get({
-                                'upload_identifier': 'unknown-user',
-                                'web_historian_condition': 'unknown'
-                            }, function(result) {
-                                var canDelete = (result['web_historian_condition'] != '2') && (result['web_historian_condition'] != '5');
-
-                                websites_table.display("#explore_data_table", "#explore_data_table_tab_pages", "#explore_data_table_tab_domains", "#explore_data_table_pills", canDelete);
-                                document.body.scrollTop = document.documentElement.scrollTop = 0;
-                            });
-                        });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-                        
-                        return false;
-                    });
-
-                    $("#exploration_upload").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        database.logEvent("clicked_upload", {
-                            'session_id': window.sessionId
-                        });
-
-                        chrome.storage.local.get({
-                            'upload_identifier': 'unknown-user',
-                            'web_historian_condition': 'unknown'
-                        }, function(result) {
-                            if (result['web_historian_condition'] == '1') {
-                                console.log("REAL SUBMIT");
-    
-                                database.uploadPending(function(index, length) {
-                                    console.log('CE PROGRESS: ' + index + ' / ' + length);
-                                }, function() {
-                                    console.log('CE COMPLETE');
-                                    
-                                    alert("Data upload complete.");
-									//rm upload progress indicator!! 
-									
-                                }, function(reason) {
-                                    console.log('CE FAILED: ' + reason);
-                                });
-                            } else {
-                                console.log("FAKE SUBMIT");
-                            }
-                        });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-
-                        return false;
-                    });
-
-                    $("#explore_server").click(function(eventObj) {
-                        eventObj.preventDefault();
-
-                        database.logEvent("clicked_server_review", {
-                            'session_id': window.sessionId
-                        });
-                        
-                        var now = new Date();
-                        var month = "" + (now.getMonth() + 1);
-                        var day = "" + now.getDate();
-
-                        if (month.length < 2) {
-                            month = '0' + month;
-                        }
-
-                        if (day.length < 2) {
-                            day = '0' + day;
-                        }
-
-                        var isoDate = now.getFullYear() + '-' +  month + '-' + day;
-
-                        var sourceId = CryptoJS.MD5(CryptoJS.MD5(result['upload_identifier']).toString() + isoDate).toString();
-
-                        var newURL = config.reviewUrl + sourceId;
-                        
-                        console.log("OPENING SERVER URL: " + newURL);
-                        
-                        chrome.tabs.create({ url: newURL });
-
-                        if (main.database != undefined) {
-                            main.database.uploadEvents(null, null, null);
-                        }
-
-                        return false;
                     });
                     
-                    $("#explore_home").click();
-                }
+                } 
+               
             });
 			getDataTestEnough(weekAgo);
+			
         };
             
         database.onSyncProgress = function(length, index) {
@@ -703,28 +371,43 @@ main.page = function() {
                 'upload_identifier': 'unknown-user',
                 'web_historian_condition': 'unknown'
             }, function(result) {
+            	//console.log(""+result.upload-identifier+""+);
+            	if ((config.multiStudy == "Yes")&&(studyId == "None" || studyId == "")) {
+            		changeStudyModal();
+            		$("#study_set_option_buttons").append("<p data-i18n='__par_again__'>You will need to choose 'Participate' again.</p>")
+            		//$("#confirm_upload_modal").modal("hide");
+            	} else  {
+            	var study_url = config.conditionUrl(true, '1', result,studyId,actionUrls);
+            	console.log(study_url);
                 $("#confirm_upload_modal_button").off("click");
                 $("#confirm_upload_modal_button").click(function(eventObj) {
                     //$("#confirm_upload_modal").modal("hide");
 					$("#upload-notice").show();  
                     //rm ID condition
-                    window.open(config.conditionUrl(true, '1', result), '_blank');
 
+                    //console.log("Country: "+country);
+                    window.open(study_url, '_blank');//need to update the country to a variable***!!!
+					window.addEventListener("beforeunload", functionToRun); 
+						function functionToRun(e) {
+    					var confirmationMessage = "You are still uploading data."; //This text doesn't actually show up in modern browsers, the default message is the only option.
+    					(e || window.event).returnValue = confirmationMessage; 
+    					return confirmationMessage; 
+					}
                     if (result['web_historian_condition'] == '1') {
                         console.log("REAL SUBMIT");
     
                         database.uploadPending(function(index, length) {
-                            console.log('CE PROGRESS: ' + index + ' / ' + length);
+                            //console.log('CE PROGRESS: ' + index + ' / ' + length);
                         }, function() {
                             console.log('CE COMPLETE');
-							
+							window.removeEventListener("beforeunload",functionToRun);
 							//$("#confirm_upload_modal").modal("hide");
                             chrome.storage.local.set({
-                                'participation_mode': 'explore'
+                                'participation_mode': 'prevPar'
                             }, function(bytesUsed) {
                                 $("#upload-notice").hide();
 								$("#upload-complete-notice").show();
-								//window.location.reload();
+								
                             });
                         }, function(reason) {
                             console.log('CE FAILED: ' + reason);
@@ -741,15 +424,17 @@ main.page = function() {
 
                         //window.location.reload();
                     }
-                });
+            	});
+					$("#confirm_upload_modal_id").html(result["upload_identifier"]);
+					// $("#confirm_upload_modal_condition").html(result["web_historian_condition"]);
 
-                $("#confirm_upload_modal_id").html(result["upload_identifier"]);
-                // $("#confirm_upload_modal_condition").html(result["web_historian_condition"]);
+				   $("#confirm_upload_modal").modal("show");
+				   $("#upload-notice").hide();
+				   $("#upload-complete-notice").hide();
+				   $("#upload-fail-notice").hide();
+                }
 
-               $("#confirm_upload_modal").modal("show");
-			   $("#upload-notice").hide();
-			   $("#upload-complete-notice").hide();
-			   $("#upload-fail-notice").hide();
+
             });
 
             if (main.database != undefined) {
@@ -784,7 +469,13 @@ main.page = function() {
 
         $("#wizard_settings").click(function(eventObj) {
             eventObj.preventDefault();
-            
+            if (config.multiStudy=="Yes") {
+            		$("#study_found").html("<br/><p><strong data-i18n='__MSG_study__'>Study:</strong> "+studyId+"</p> <a href='#' id='change_study_button' class='btn btn-raised btn-primary' style='margin: 0px;' data-i18n='__MSG_change_study__'>Change Study</a> <hr>");
+					$("#change_study_button").click(function(){
+						$("#wizard_id_modal").modal("hide");
+						changeStudyModal();
+					});
+            }
             chrome.storage.local.get({
                 'upload_identifier': 'unknown-user',
                 'web_historian_condition': 'unknown',
@@ -831,7 +522,7 @@ main.page = function() {
                     chrome.storage.local.set({
                         'participation_mode': 'reset'
                     }, function() {
-                        database.filter('visits', 'transmitted', null, null, function(cursor) {
+                         database.filter('visits', 'transmitted', null, null, function(cursor) {
                             if (cursor) {
                                 var updateItem = cursor.value;
                         
@@ -881,11 +572,11 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
     chrome.storage.local.get({
         'participation_mode': 'unknown'
     }, function(result) {
-        
-		if (result['participation_mode'] == 'unknown') {
+        //should be prevPar rather than alwaysPar, but this works.
+		if (result['participation_mode'] != 'alwasyPar') {
+			console.log("par mode: " + result['participation_mode']);
             $("#participation_mode").show();
             $("#exploration_mode").hide();
-
             //$("#navbar_participate").show();
             $("#navbar_participate").html("<ul class='nav navbar-nav navbar-right'>	<li id='nav_wizard_settings'><a href='#' data-toggle='tooltip' data-placement='bottom' title='"+ chrome.i18n.getMessage('usrset') +"' id='wizard_settings'><i class='material-icons'>face</i></a></li></ul>");
             $("#navbar_explore").hide();
@@ -1088,7 +779,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                                 action: function(d) {
                                     if (confirm('Do you want to remove ALL visits to URLs from ' + d.__data__.className + ' from Web Historian?')) {
                                         var toDelete = [d.__data__.className];
-                            
+                            			console.log(toDelete);
                                         database.clearDomains(toDelete, function() {
                                             database.logEvent("domains_deleted", { 
                                                 'count': 1,

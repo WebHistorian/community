@@ -129,7 +129,7 @@
   },
   "timeHeatmap4": {
     "message": "these steps", 
-    "description":"these steps"
+    "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
   },
   "timeHeatmap5": {
     "message": "Week", 
@@ -368,71 +368,31 @@
     "description":"Loading"
   },
   "html0021": {
-    "message": "[Your Study]",
-    "description":"[Your Study]"
-  },
-  "html0022": {
-    "message": "[Info about the researcher]",
-    "description":"[Info about the researcher]"
-  },
-  "html0023": {
-    "message": "Your data is yours.", 
-    "description":"Your data is yours."
-  },
-  "html0024": {
-    "message": "No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review.", 
-    "description":"No data will leave your computer unless you choose \"Participate\" at the end of this step-by-step review."
-  },
-  "html0025": {
-    "message": "Participation involves:", 
-    "description":"Participation involves:"
-  },
-  "html0026": {
-    "message": "Reviewing the information in this step-by-step process and deciding whether to participate.", 
-    "description":"Reviewing the information in this step-by-step process and deciding whether to participate."
-  },
-  "html0027": {
-    "message": "Completing a survey about [your study topic] (about [] minutes).", 
-    "description":"Completing a survey about [your study topic] (about [] minutes)."
-  },
-  "html0028": {
-    "message": "[Compensation for finishing your study, if applicable] <center><img src=\"../images/hand.jpg\" ></center>  ", 
-    "description":"[Compensation for finishing your study, if applicable]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: step 2 body"
   },
   "html0029": {
-    "message": "What is this study about?", 
-    "description":"What is this study about?"
-  },
-  "html0030": {
-    "message": "[Your main RQ]", 
-    "description":"[Your main RQ]"
-  },
-  "html0031": {
-    "message": "[Research purpose and motivation]",    
-    "description":"[Research purpose and motivation]"
-  },
-  "html0032": {
-    "message": "[Participant eligibility info - e.g. age or residency restrictions]", 
-    "description":"[Participant eligibility info - e.g. age or residency restrictions]"
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: Step 1 body"
   },
   "html0033": {
-    "message": "If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it.", 
-    "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
+    "message": "",
+    "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server <strong>after</strong> you have reviewed and filtered it."
   },
   "html0034": {
-    "message": "Your web browsing history is on your computer, your ISP, and part of it is on every website you visit.", 
-    "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
+    "message": "Now, your web browsing history is on your computer, your ISP, and part of it is on the websites you visit.", 
+    "description":"Now, your web browsing history is on your computer, your ISP (Internet Service Provider), and part of it is on every website you visit."
   },
   "html0035": {
-    "message": "You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed.", 
+    "message": " ", 
     "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
   },
   "html0036": {
-    "message": "If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once.", 
+    "message": "If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server only when you click 'Participate,' never any other time.", 
     "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
   },
   "html0037": {
-    "message": "In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world.", 
+    "message": " ", 
     "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
   },
   "html0038": {
@@ -480,8 +440,8 @@
     "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger."
   },
   "html0049": {
-    "message": "These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data.", 
-    "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data."
+    "message": "These are the words typed into search engines like Google, Bing and Yahoo. Words used in multiple searches are larger. This visualization displays an example of web browsing data.", 
+    "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in multiple searches are larger. This visualization displays an example of web browsing data."
   },
   "html0050": {
     "message": "This is the time of day and day of the week when you use this web browser.", 
@@ -500,8 +460,8 @@
     "description":"Domains"
   },
   "html0054": {
-    "message": "[Your Consent Form]",
-    "description":"[Your Consent Form]"
+    "message": "[fill in html for your study]",
+    "description":"Step 9 body - CUSTOM: [Your Consent Form]"
   },
   "html0055": {
     "message": "There is not enough web browsing data on this browser to continue the study", 
@@ -608,8 +568,8 @@
     "description":"Loading Main Content"
   },
   "html0081": {
-    "message": "You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading.", 
-    "description":"You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading."
+    "message": "You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data are finished loading.", 
+    "description":"You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data are finished loading."
   },
   "html0082": {
     "message": "Click anywhere to continue.", 
@@ -620,8 +580,8 @@
     "description":"Web Historian Settings"
   },
   "html0084": {
-    "message": "You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device.", 
-    "description":"You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device."
+    "message": "You may need to change your User ID or study if directed to do so by the researchers.", 
+    "description":"You may need to change your User ID or study if directed to do so by the researchers."
   },
   "html0085": {
     "message": "User ID", 
@@ -700,11 +660,11 @@
     "description":" A new tab will open with the survey."
   },
     "step1title": {
-    "message": "Step 1: Welcome to Web Historian - Community Edition", 
+    "message": "Step 1", 
     "description":"Step 1: Welcome to Web Historian - Community Edition"
   },
     "step2title": {
-    "message": "Step 2: Research Project", 
+    "message": "Step 2", 
     "description":"Step 2: Research Project"
   },
     "step3title": {
@@ -732,20 +692,48 @@
     "description":"Step 8: Your Web Usage History"
   },
     "step9title": {
-    "message": "Step 9: Informed Consent", 
+    "message": "Step 9: Consent Form", 
     "description":"Step 9: Informed Consent"
   },
     "usrset": {
     "message": "User Settings", 
     "description":"User Settings"
   },
+    "tableDomain": {
+    "message": "Domain", 
+    "description":"Domain"
+  },
+    "tableDate": {
+    "message": "Date", 
+    "description":"Date"
+  },
+    "tableTitle": {
+    "message": "Title", 
+    "description":"Title"
+  },
+    "study": {
+    "message": "Study:", 
+    "description":"Study"
+  },
+    "change_study": {
+    "message": "Change Study", 
+    "description":"Change Study"
+  },
     "imgtitles": {
     "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'The Cloud' (the sites you visit)</center></h4>", 
     "description":"subtitles for image in step 3"
   },
-    "svypar": {
-    "message": "http://your.svy/",
-    "description":"base url for survey"
+    "study_set_title": {
+    "message": "Web Historian Study Settings",
+    "description":"Title of the pop-up when the study is unclear."
+  },
+    "study_set": {
+    "message": "[fill in only for projects with multiple studies]",
+    "description":"Question in the pop-up when the study is unclear. CUSTOM"
+  },
+    "par_again": {
+    "message": "You will need to choose 'Participate' again.",
+    "description":"Only for multi-study. You will need to choose 'Participate' again."
   },
     "svr": {
     "message": "View on Server", 
