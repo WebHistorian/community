@@ -289,7 +289,7 @@ main.page = function() {
 									actionUrls = a;
 									  })
 								  .error(function(jqXHR, textStatus, errorThrown){
-									callback();//Need to fill in!!
+									console.log("Error getting survey urls!!");//Need to fill in!!
 								  })
                                 
                                 if (config.getIDfromURL == "Yes"){
