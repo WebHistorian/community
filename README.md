@@ -17,7 +17,7 @@ If you are interested in using Web Historian for your own research you will need
 * Make sure to clone this repository's submodule (core)
 
 * Customize Web Historian to describe your research in all of the languages your study supports 
- * Rename the file: _locales/en/messages.json-template.json to messages.json and update steps 1, 2 and 9.
+  * Rename the file: _locales/en/messages.json-template.json to messages.json and update steps 1, 2 and 9.
   * Remove the locales you do not support.
 
 * Customize the configuration settings
