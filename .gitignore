@@ -2,3 +2,6 @@ index-*
 manifest.json
 manifest.gecko.json
 *.DS_Store
+*.Icon?
+*messages.json
+*messages-w1.json
