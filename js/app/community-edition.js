@@ -781,8 +781,9 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                                         var toDelete = [d.__data__.className];
                             			console.log(toDelete);
                                         database.clearDomains(toDelete, function() {
-                                            database.logEvent("domains_deleted", { 
-                                                'count': 1,
+                                            database.logEvent("domain_urls_deleted_bubbles", { 
+                                                'count': d.__data__.value,
+                                                'domain_count': 1,
                                                 'session_id': window.sessionId
                                             });
                                         
@@ -861,8 +862,9 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                                         var toDelete = [d.__data__.name];
                         
                                         database.clearDomains(toDelete, function() {
-                                            database.logEvent("domains_deleted", { 
-                                                'count': 1,
+                                            database.logEvent("domain_urls_deleted_network", { 
+                                                'count': d.__data__.value,
+                                                'domain_count': 1,
                                                 'session_id': window.sessionId
                                             });
                                     
@@ -940,7 +942,8 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
                                     if (confirm('Do you want to remove ALL searches for ' + d.__data__.text + ' from Web Historian?')) {
                                         database.clearSearches(d.__data__.text, function() {
                                             database.logEvent("search_terms_deleted", { 
-                                                'count': 1,
+                                                'search_term_count': 1,
+                                                'count': d.__data__.value,
                                                 'session_id': window.sessionId
                                             });
                                     
@@ -1197,6 +1200,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
 
                         return;
                     }
+                    $(".wh-tooltip").remove();
                 }
         
                 main.database.logEvent("clicked_next", {
