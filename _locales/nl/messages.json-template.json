@@ -1,742 +1,742 @@
-{
-  "appName": {
-    "message": "Web Historian - Community-Editie",
-    "description": "The title of the application, displayed in the web store."
-  },
-  "appDesc": {
-    "message": "Web Historian CE - Doe mee aan onderzoek. Leer jezelf kennen.", 
-    "description":"The description of the application, displayed in the web store."
-  },
-  "appShortName": {
-    "message": "Web Historian CE", 
-    "description":"The name of the application."
-  },
-  "homeLoadingHome": {
-    "message": "Een ogenblik geduld alstublieft. De Home-pagina wordt geladen.", 
-    "description":"One moment please. Loading Home."
-  },
-  "homeLoadingVisits": {
-    "message": "Een ogenblik geduld alstublieft. De Web Bezoeken-pagina wordt geladen.", 
-    "description":"One moment please. Loading Web Visits."
-  },
-  "homeLoadingSearchWords": {
-    "message": "Een ogenblik geduld alstublieft. De Zoektermen-pagina wordt geladen.", 
-    "description":"One moment please. Loading Search Words."
-  },
-  "homeLoadingNetwork": {
-    "message": "Een ogenblik geduld alstublieft. De Netwerk-pagina wordt geladen.", 
-    "description":"One moment please. Loading Network."
-  },
-  "homeLoadingHeatmap": {
-    "message": "Een ogenblik geduld alstublieft. De Tijd Heatmap-pagina wordt geladen.", 
-    "description":"One moment please. Loading Time Heatmap."
-  },
-  "homeLoadingDataTable": {
-    "message": "Een ogenblik geduld alstublieft. De Gegevenstabel-pagina wordt geladen.", 
-    "description":"One moment please. Loading Data Table."
-  },
-  "databaseChromeExtension": {
-    "message": "Chrome Extensie", 
-    "description": "Chrome Extension"
-  },
-  "databaseExtension": {
-    "message": "Extensie", 
-    "description":"Extension"
-  },
-  "databaseFirefoxExtension": {
-    "message": "Firefox Extensie", 
-    "description": "Firefox Extension"
-  },
-  "databaseLocalFile": {
-    "message": "Lokaal Bestand", 
-    "description":"Local File"
-  },
-  "databaseUnknown": {
-    "message": "Onbekende Autoriteit", 
-    "description":"Unknown Authority"
-  },
-  "timeMenu1VizTitle1": {
-    "message": "Alle Bezoeken op ", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu1VizTitle2": {
-    "message": " om ", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu1VizTitle3": {
-    "message": ":00 (24-uursnotatie)", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu1Title": {
-    "message": " bezoek(en) - Gebruik de navigatie hierboven om terug te keren naar een visualisatie.", 
-    "description":"N visits - To return to a visualization please use the Navigation above."
-  },
-  "timeMenu1": {
-    "message": "Bekijken in Gegevenstabel", 
-    "description":"View in Data Table"
-  },
-  "timeMenu2": {
-    "message": "Bekijken in Web Bezoeken", 
-    "description":"View in Web Visits"
-  },
-  "timeMenu2VizTitle1": {
-    "message": "Alle Bezoeken op ", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu2VizTitle2": {
-    "message": " om ", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu2VizTitle3": {
-    "message": ":00 (24-uursnotatie)", 
-    "description":"All Visits on dd at hh:00 (24 hr format)"
-  },
-  "timeMenu2Title": {
-    "message": " bezoeken - Gebruik de navigatie hierboven om terug te keren naar een visualisatie.", 
-    "description":"N visits - To return to a visualization please use the Navigation above."
-  },  
-  "timeAllData1": {
-    "message": "Alle ", 
-    "description":"All x Weeks"
-  },
-  "timeAllData2": {
-    "message": " weken", 
-    "description":"All x Weeks"
-  },
-  "timeAllDataTitle": {
-    "message": "Internetgebruik per uur van de dag &amp; dag van de week, ", 
-    "description":"Browsing by hour of the day &amp; day of the week, start - end"
-  },
-  "timeThisWeek": {
-    "message": "Deze Week - Standaardinstelling", 
-    "description":"This Week - Default"
-  },
-  "timeWeek": {
-    "message": "Internetgebruik per uur van de dag & dag van de week, ", 
-    "description":"Browsing by hour of the day &amp; day of the week, x - x"
-  },
-  "timeHeatmap": {
-    "message": "Tijd Heatmap", 
-    "description":"Time Heatmap"
-  },
-  "timeHeatmap2": {
-    "message": "Internetgebruik per uur van de dag &amp; dag van de week, ", 
-    "description":"Browsing by hour of the day &amp; day of the week, "
-  },
-  "timeHeatmap3": {
-    "message": "Is deze visualisatie onvolledig? Als u Internet Explorer of Firefox gebruikt, kunt u uw zoekgeschiedenis importeren om de visualisatie compleet te maken. Volg deze stappen", 
-    "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
-  },
-  "timeHeatmap4": {
-    "message": "Is deze visualizatie onvolledig? Als u Internet Explorer of Firefox gebruikt, kunt u uw zoekgeschiedenis importeren om de visualisatie compleet te maken. Volg deze stappen", 
-    "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
-  },
-  "timeHeatmap5": {
-    "message": "Week", 
-    "description":"Week"
-  },
-  "timeHeatmapTooltip1": {
-    "message": "Bezoeken ", 
-    "description":"Visits ... on ... ...  - Right-click to see what these visits are."
-  },
-  "timeHeatmapTooltip2": {
-    "message": " op ", 
-    "description":"Visits ... on ... ...  - Right-click to see what these visits are."
-  },
-  "timeHeatmapTooltip3": {
-    "message": "Rechtsklik om de bezoeken te bekijken.", 
-    "description":"Visits ... on ... ...  - Right-click to see what these visits are."
-  },
-  "utilsStopwordsRx": {
-    "message": "^('aan|aangaande|aangezien|achte|achter|achterna|af|afgelopen|al|aldaar|aldus|alhoewel|alias|alle|allebei|alleen|alles|als|alsnog|altijd|altoos|ander|andere|anders|anderszins|beetje|behalve|behoudens|beide|beiden|ben|beneden|bent|bepaald|betreffende|bij|bijna|bijv|binnen|binnenin|blijkbaar|blijken|boven|bovenal|bovendien|bovengenoemd|bovenstaand|bovenvermeld|buiten|bv|daar|daardoor|daarheen|daarin|daarna|daarnet|daarom|daarop|daaruit|daarvanlangs|dan|dat|de|deden|deed|der|derde|derhalve|dertig|deze|dhr|die|dikwijls|dit|doch|doe|doen|doet|door|doorgaand|drie|duizend|dus|echter|een|eens|eer|eerdat|eerder|eerlang|eerst|eerste|eigen|eigenlijk|elk|elke|en|enig|enige|enigszins|enkel|er|erdoor|erg|ergens|etc|etcetera|even|eveneens|evenwel|gauw|ge|gedurende|geen|gehad|gekund|geleden|gelijk|gemoeten|gemogen|genoeg|geweest|gewoon|gewoonweg|haar|haarzelf|had|hadden|hare|heb|hebben|hebt|hedden|heeft|heel|hem|hemzelf|hen|het|hetzelfde|hier|hierbeneden|hierboven|hierin|hierna|hierom|hij|hijzelf|hoe|hoewel|honderd|hun|hunne|ieder|iedere|iedereen|iemand|iets|ik|ikzelf|in|inderdaad|inmiddels|intussen|inzake|is|ja|je|jezelf|jij|jijzelf|jou|jouw|jouwe|juist|jullie|kan|klaar|kon|konden|krachtens|kun|kunnen|kunt|laatst|later|liever|lijken|lijkt|maak|maakt|maakte|maakten|maar|mag|maken|me|meer|meest|meestal|men|met|mevr|mezelf|mij|mijn|mijnent|mijner|mijzelf|minder|miss|misschien|missen|mits|mocht|mochten|moest|moesten|moet|moeten|mogen|mr|mrs|mw|na|naar|nadat|nam|namelijk|nee|neem|negen|nemen|nergens|net|niemand|niet|niets|niks|noch|nochtans|nog|nogal|nooit|nu|nv|of|ofschoon|om|omdat|omhoog|omlaag|omstreeks|omtrent|omver|ondanks|onder|ondertussen|ongeveer|ons|onszelf|onze|onzeker|ooit|ook|op|opnieuw|opzij|over|overal|overeind|overige|overigens|paar|pas|per|precies|recent|redelijk|reeds|rond|rondom|samen|sedert|sinds|sindsdien|slechts|sommige|spoedig|steeds|tamelijk|te|tegen|tegenover|tenzij|terwijl|thans|tien|tiende|tijdens|tja|toch|toe|toen|toenmaals|toenmalig|tot|totdat|tussen|twee|tweede|u|uit|uitgezonderd|uw|vaak|vaakwat|van|vanaf|vandaan|vanuit|vanwege|veel|veeleer|veertig|verder|verscheidene|verschillende|vervolgens|via|vier|vierde|vijf|vijfde|vijftig|vol|volgend|volgens|voor|vooraf|vooral|vooralsnog|voorbij|voordat|voordezen|voordien|voorheen|voorop|voorts|vooruit|vrij|vroeg|waar|waarom|waarschijnlijk|wanneer|want|waren|was|wat|we|wederom|weer|weg|wegens|weinig|wel|weldra|welk|welke|werd|werden|werder|wezen|whatever|wie|wiens|wier|wij|wijzelf|wil|wilden|willen|word|worden|wordt|zal|ze|zei|zeker|zelf|zelfde|zelfs|zes|zeven|zich|zichzelf|zij|zijn|zijne|zijzelf|zo|zoals|zodat|zodra|zonder|zou|zouden|zowat|zulk|zulke|zullen|zult')$", 
-    "description":"regexp"
-  },
-  "wdtPanelTitle1": {
-    "message": "Web Historian: Verken uw data", 
-    "description":"Web Historian: Explore Your Data"
-  },
-  "wdtPanelTitle2": {
-    "message": "Web Historian: Verken data van ", 
-    "description":"Web Historian: Exploring data from domname"
-  },
-  "wdtConfirmModalTitle": {
-    "message": "Verwijder URLs?", 
-    "description":"Remove URLs?"
-  },
-  "wdtConfirmModalBody": {
-    "message": "Wilt u de geselecteerde pagina's van Web Historian verwijderen?", 
-    "description":"Would you like to remove the selected pages from Web Historian?"
-  },
-  "wdtConfirmModalConfirm": {
-    "message": "Ja", 
-    "description":"Yes"
-  },
-  "wdtConfirmModalCancel": {
-    "message": "Nee", 
-    "description":"No"
-  },
-  "wdtConfirmModalTitle2": {
-    "message": " verwijderen?", 
-    "description":"Remove domains?"
-  },
-  "wdtConfirmModalBody2": {
-    "message": "Wilt u de geselecteerde domeinen van Web Historian verwijderen?", 
-    "description":"Would you like to remove the selected domains from Web Historian?"
-  },  
-  "wwcMenu1Title": {
-    "message": "Permanent verwijderen", 
-    "description":"Permanently Delete"
-  },
-  "wwcConfirm1": {
-    "message": "Wilt u alle URLs met de zoekterm \"", 
-    "description":"Do you want to PERMANENTLY remove all URLs with the search term \"ccc\" from your local browser history?"
-  },
-  "wwcConfirm2": {
-    "message": "\" PERMANENT verwijderen van uw lokale zoekgeschiedenis?", 
-    "description":"Do you want to PERMANENTLY remove all URLs with the search term \"ccc\" from your local browser history?"
-  },
-  "wwcAlert": {
-    "message": "Er zijn geen URLs verwijderd. ", 
-    "description":"No URLs were removed. "
-  },
-  "wwcSearchTermsInc": {
-    "message": "Zoektermen inclusief \"", 
-    "description":"Search terms including \"ccc\""
-  },
-  "wvMenu1Title": {
-    "message": "Bekijk in Gegevenstabel", 
-    "description":"View in Data Table"
-  },
-  "wvMenu1VizTitle": {
-    "message": "Alle Bezoeken aan ", 
-    "description":"All Visits to "
-  },
-  "wvMenu1SubTitle": {
-    "message": "Gebruik alstublieft de Navigatie hierboven om terug te keren naar de visualisatie.", 
-    "description":"To return to a visualization please use the Navigation above."
-  },
-  "wvMenu2Title": {
-    "message": "Bekijk in Tijd Heatmap", 
-    "description":"View in Time Heatmap"
-  },
-  "wvMenu2VizTitle": {
-    "message": "Alle Bezoeken aan ", 
-    "description":"All Visits to "
-  },
-  "wvMenu2SubTitle": {
-    "message": "Gebruik alstublieft de Navigatie hierboven om terug te keren naar de visualisatie.", 
-    "description":"To return to a visualization please use the Navigation above."
-  },
-  "wvMenu3Title": {
-    "message": "Verwijder", 
-    "description":"Delete"
-  },
-  "wvMenu3Confirm1": {
-    "message": "Wilt u ALLE bezoeken aan URLs van ", 
-    "description":"Do you want to remove ALL visits to URLs from from Web Historian?"
-  },
-  "wvMenu3Confirm2": {
-    "message": " verwijderen van Web Historian?", 
-    "description":"Do you want to remove ALL visits to URLs from from Web Historian?"
-  },
-  "wvTooltip1": {
-    "message": ", Bezoeken: ", 
-    "description":", Visits: "
-  },
-  "wvTooltip2": {
-    "message": ", Categorie: ", 
-    "description":", Category: "
-  },
-  "wvTooltip3": {
-    "message": ". Rechtsklik voor meer opties", 
-    "description":". Right-click for more options"
-  },
-  "wvTooltip4": {
-    "message": ", Dagen Bezocht: ", 
-    "description":", Days Visited: "
-  },
-  "wvTooltip5": {
-    "message": ", Categorie: ", 
-    "description":", Category: "
-  },
-  "wnMenu1Title": {
-    "message": "Verwijder Permanent", 
-    "description":"Permanently Delete"
-  },
-  "wnMenu1Confirm1": {
-    "message": "Wilt u ALLE bezoeken aan URLs van ", 
-    "description":"Do you want to PERMANENTLY remove ALL visits to URLs from "
-  },
-  "wnMenu1Confirm2": {
-    "message": " PERMANENT van uw lokale zoekgeschiedenis verwijderen?", 
-    "description":" from your local browser history?"
-  },
-  "wnTooltip1": {
-    "message": " Categorie: ", 
-    "description":" Category: "
-  },
-  "wtTooltip1": {
-    "message": "Bezoeken: ", 
-    "description":"Visits: "
-  },
-  "wtTooltip2": {
-    "message": " op ", 
-    "description":"on"
-  },
-  "wtTooltip3": {
-    "message": " -- Rechtsklik om deze bezoeken te bekijken.", 
-    "description":" -- Right-click to see what these visits are."
-  },
-  "html0001": {
-    "message": "Web Historian | Community Edition", 
-    "description":"Web Historian | Community Edition"
-  },
-  "html0002": {
-    "message": "Navigatie switch", 
-    "description":"Toggle navigation"
-  },
-  "html0003": {
-    "message": "Web Historian: Maatschappij-Editie", 
-    "description":"Web Historian: Community Edition"
-  },
-  "html0004": {
-    "message": "Navigatie: ", 
-    "description":"Navigation: "
-  },
-  "html0005": {
-    "message": "Web Historian: Verken Uw Data", 
-    "description":"Web Historian: Explore Your Data"
-  },
-  "html0006": {
-    "message": "Web Bezoeken", 
-    "description":"Web Visits"
-  },
-  "html0007": {
-    "message": "Cirkels op basis van het aantal dagen dat een site werd bezocht, of het totale aantal bezoeken aan de site.", 
-    "description":"Circles sized by number of days a site was visited, or total visits to the site."
-  },
-  "html0008": {
-    "message": "Zoektermen", 
-    "description":"Search Terms"
-  },
-  "html0009": {
-    "message": "Woorden die in meerdere zoekopdrachten op het web worden gebruikt, zijn groter.", 
-    "description":"Words used in multiple web searches are larger."
-  },
-  "html0010": {
-    "message": "Netwerk", 
-    "description":"Network"
-  },
-  "html0011": {
-    "message": "Links tussen websites bezocht van - tot.", 
-    "description":"Links between websites browsed from - to."
-  },
-  "html0012": {
-    "message": "Tijd Heatmap", 
-    "description":"Time Heatmap"
-  },
-  "html0013": {
-    "message": "Uren van de dag en dagen van de week wanneer u het meest op het web surft.", 
-    "description":"Hours of the day and days of the week when you browse the web the most."
-  },
-  "html0014": {
-    "message": "Mijn Bezoeken", 
-    "description":"My Visits"
-  },
-  "html0015": {
-    "message": "Mijn Gewoontes", 
-    "description":"My Habits"
-  },
-  "html0016": {
-    "message": "START", 
-    "description":"START"
-  },
-  "html0017": {
-    "message": "NU", 
-    "description":"NOW"
-  },
-  "html0018": {
-    "message": "Pagina's", 
-    "description":"Pages"
-  },
-  "html0019": {
-    "message": "Domeinen", 
-    "description":"Domains"
-  },
-  "html0020": {
-    "message": "Laden", 
-    "description":"Loading"
+{ 
+  "html0029": {
+    "message": "[fill in html for your study]",
+    "description":"CUSTOM: Step 1 body"
   },
   "html0021": {
     "message": "[fill in html for your study]",
     "description":"CUSTOM: step 2 body"
   },
-  "html0029": {
-    "message": "[fill in html for your study]",
-    "description":"CUSTOM: Step 1 body"
-  },
-  "html0033": {
-    "message": "Als u besluit deel te nemen aan het onderzoek, wordt de zoekgeschiedenis van uw computer eenmalig beveiligd verstuurd naar de Web Historian server <strong>nadat</strong> u het bekeken en aangepast heeft.", 
-    "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
-  },
-  "html0034": {
-    "message": "Uw zoekgeschiedenis is gekoppeld aan uw computer, uw internetprovider en gedeeltelijk aan elke website die u bezoekt.", 
-    "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
-  },
-  "html0035": {
-    "message": " ",
-    "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
-  },
-  "html0036": {
-    "message": "Als u besluit om deel te nemen aan het onderzoek, wordt de zoekgeschiedenis, die u bekeken en aangepast heeft, alleen verstuurd als u op 'Deelnemen' klikt, nooit op een ander moment. Alle gegevens worden beveiligd verstuurd naar de server van Web Historian.", 
-    "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
-  },
-  "html0037": {
-    "message": " ",
-    "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
-  },
-  "html0038": {
-    "message": "Tools zoals deze browserextensies helpen mensen gegevens over hun browsegedrag beter te begrijpen. Deze zijn al opgeslagen zijn op hun computers, bij hun internetprovider en verspreid over het internet. Hierdoor is het voor de gebruiker mogelijk om hun eigen gedrag op internet concreet begrijpen, iets dat normaalgesproken vaag en speculatief is.", 
-    "description":"Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical."
-  },
-  "html0039": {
-    "message": "Een ogenblik geduld alstublieft voor de groene laadbalk bovenin. </strong><br/>De volgende stappen worden beschikbaar als het laden voltooid is.", 
-    "description":"Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes."
-  },
-  "html0040": {
-    "message": "Dit is een visualisatie van uw internetgewoontes. De grotere sites zijn degene die u het meest bezoekt op deze browser. <br/>Rechtsklik om all bezoeken in het geselecteerde domein te verwijderen.", 
-    "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain."
-  },
-  "html0041": {
-    "message": "Dit is een visualisatie van uw internetgewoontes. De grotere sites zijn degene die u het meest bezoekt met deze browser.", 
-    "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser."
-  },
-  "html0042": {
-    "message": "Deze visualisatie laat een voorbeeld zien van internetgedrag data. De grotere sites zijn degene die het meest bezocht worden in dit voorbeeld.", 
-    "description":"This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example."
-  },
-  "html0043": {
-    "message": "Bezoeken", 
-    "description":"Visits"
-  },
-  "html0044": {
-    "message": "Dit is een visualisatie van de websites die u linken aan andere websites. <br/>Rechtsklik om all bezoeken in het geselecteerde domein te verwijderen.", 
-    "description":"This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain."
-  },
-  "html0045": {
-    "message": "Dit is een visualisatie van de websites die u linken aan andere websites.", 
-    "description":"This is a visualization of the sites that link you to other sites."
-  },
-  "html0046": {
-    "message": "Dit is een visualisatie van de websites die een voorbeeld gebruiker linken aan andere websites. Deze visualisatie laat een voorbeeld zien van internetgedrag data.", 
-    "description":"This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data."
-  },
-  "html0047": {
-    "message": "Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter. <br/>Rechtsklik om alle zoekmomenten met de gekozen term te verwijderen.", 
-    "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term."
-  },
-  "html0048": {
-    "message": "Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter.", 
-    "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger."
-  },
-  "html0049": {
-    "message": "Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter. Deze visualisatie laat een voorbeeld van internetgedrag data zien.", 
-    "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data."
-  },
-  "html0050": {
-    "message": "Dit is de tijd van de dag en de dag van de week waarop u deze browser gebruikt.", 
-    "description":"This is the time of day and day of the week when you use this web browser."
-  },
-  "html0051": {
-    "message": "Dit laat de tijd van de dag en de dag van de week zien waarop een voorbeeld gebruiker deze browser heeft gebruikt.", 
-    "description":"This shows the time of day and day of the week when the sample user used this web browser."
-  },
-  "html0052": {
-    "message": "Pagina's", 
-    "description":"Pages"
-  },
-  "html0053": {
-    "message": "Domeinen", 
-    "description":"Domains"
-  },
-  "html0054": {
+    "html0054": {
     "message": "[fill in html for your study]",
     "description":"Step 9 body - CUSTOM [Your Consent Form]"
   },
-  "html0055": {
-    "message": "Er is niet genoeg internetgedrag data beschikbaar van deze browser om de studie voort te zetten.", 
-    "description":"There is not enough web browsing data on this browser to continue the study."
-  },
-  "html0056": {
-    "message": "De zoekgeschiedenis is mogelijk recentelijk verwijdered of de browser is heel onregelmatig gebruikt.", 
-    "description":"The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. "
-  },
-  "html0057": {
-    "message": "Als u het internet gebruikt op een andere computer of laptop is er een mogelijkheid deel te nemen met die browser.", 
-    "description":"If you use the web on a different computer or laptop you may be able to participate using that browser."
-  },
-  "html0058": {
-    "message": "Volgende", 
-    "description":"Next"
-  },
-  "html0059": {
-    "message": "Deelnemen", 
-    "description":"Participate"
-  },
-  "html0060": {
-    "message": "Terugkeren naar de Vragenlijst", 
-    "description":"Return to Survey"
-  },
-  "html0061": {
-    "message": "Upload Data naar het Onderzoeksproject", 
-    "description":"Upload Data to the Research Project"
-  },
-  "html0062": {
-    "message": "Klik Deelname om te beginnen.", 
-    "description":"Click Participate to begin."
-  },
-  "html0063": {
-    "message": "Vragenlijst", 
-    "description":"Survey"
-  },
-  "html0064": {
-    "message": "U kunt de vragenlijst starten die zojuist is geopend in een nieuw tabblad terwijl uw data wordt geüpload.", 
-    "description":"You can begin the research survey that just opened in a new tab while your data uploads."
-  },
-  "html0065": {
-    "message": "Cancel", 
-    "description":"Cancel"
-  },
-  "html0066": {
-    "message": "Deelnemen", 
-    "description":"Participate"
-  },
-  "html0067": {
-    "message": "Uw ID", 
-    "description":"Your Identifier"
-  },
-  "html0068": {
-    "message": "Terug", 
-    "description":"Back"
-  },
-  "html0069": {
-    "message": "Doorgaan", 
-    "description":"Continue"
-  },
-  "html0070": {
-    "message": "Welkom!", 
-    "description":"Welcome!"
-  },
-  "html0071": {
-    "message": "Heeft u eerder een Web Historian ID gekregen om te gebruiken voor een onderzoeksproject?", 
-    "description":"Were you given a Web Historian ID to use as part of a research project?"
-  },
-  "html0072": {
-    "message": "Ja", 
-    "description":"Yes"
-  },
-  "html0073": {
-    "message": "Nee", 
-    "description":"No"
-  },
-  "html0074": {
-    "message": "Heeft u voorheen Web Historian geïnstalleerd op een andere browser?", 
-    "description":"Have you installed Web Historian on another web browser previously?"
-  },
-  "html0075": {
-    "message": "Modaal titel", 
-    "description":"Modal title"
-  },
-  "html0076": {
-    "message": "Een fijne body…", 
-    "description":"One fine body…"
-  },
-  "html0077": {
-    "message": "Sluit", 
-    "description":"Close"
-  },
-  "html0078": {
-    "message": "Sla wijzigingen op", 
-    "description":"Save changes"
-  },
-  "html0079": {
-    "message": "Inhoud Laden", 
-    "description":"Loading Content"
-  },
-  "html0080": {
-    "message": "Kerninhoud Laden", 
-    "description":"Loading Main Content"
-  },
-  "html0081": {
-    "message": "U kunt de studie informatie bekijken (Stap 1-3) terwijl de data wordt geladen. Stappen 4-9 verschijnen wanneer de data volledig is geladen.", 
-    "description":"You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading."
-  },
-  "html0082": {
-    "message": "Klik ergens om door te gaan.", 
-    "description":"Click anywhere to continue."
-  },
-  "html0083": {
-    "message": "Web Historian Settings", 
-    "description":"Web Historian Settings"
-  },
-  "html0084": {
-    "message": "U moet mogelijk uw gebruikers ID wijzigen als onderdeel van een onderzoeksstudie of uw ID moet matchen aan de ID van uw vorige Web Historian installatie op een andere browser of apparaat.", 
-    "description":"You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device."
-  },
-  "html0085": {
-    "message": "Gebruikers ID", 
-    "description":"User ID"
-  },
-  "html0086": {
-    "message": "Sla Wijzigingen op", 
-    "description":"Save Changes"
-  },
-  "html0087": {
-    "message": "Reset", 
-    "description":"Reset"
-  },
-  "html0088": {
-    "message": "Web Historian wordt gereset", 
-    "description":"Resetting Web Historian"
-  },
-  "html0089": {
-    "message": "Bevestig Deelname", 
-    "description":"Confirm Participation"
-  },
-  "html0090": {
-    "message": "Deelnemen aan het onderzoeksproject door uw browsergeschiedenis te uploaden op de servers van Web Historian en de vragenlijst af te maken?", 
-    "description":"Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?"
-  },
-  "html0091": {
-    "message": "UPLOADEN", 
-    "description":"UPLOADING"
-  },
-  "html0092": {
-    "message": "HET UPLOADEN IS COMPLEET! BEDANKT!", 
-    "description":"UPLOAD COMPLETE! THANK YOU!"
-  },
-  "html0093": {
-    "message": "HET UPLOAD IS MISLUKT - Check uw Internetverbinding en probeer opnieuw.", 
-    "description":"UPLOAD FAILED - Check your Internet connection and try again."
-  },
-  "html0094": {
-    "message": "<strong>Sluit alstublieft dit tabblad niet tot het uploaden compleet is.</strong>", 
-    "description":"<strong>Please do not close this tab until the upload is complete.</strong>"
-  },
-  "html0095": {
-    "message": "Cancel", 
-    "description":"Cancel"
-  },
-  "html0096": {
-    "message": "Upload", 
-    "description":"Upload"
-  },
-  "html0097": {
-    "message": "Keer terug naar de Studie's Vragenlijst", 
-    "description":"Return to Study Survey"
-  },
-  "html0098": {
-    "message": "Ik stem NIET in met het uploaden van mijn Internetgedrag data naar de studie. ", 
-    "description":"I do NOT consent to upload any of my web browsing data to the study. "
-  },
-  "html0099": {
-    "message": "Klik \"TERUGKEREN\" om de vragenlijst af te ronden.", 
-    "description":"Choose \"RETURN\" to complete the survey."
-  },
-  "html0100": {
-    "message": "Een nieuw tabblad wordt geopend met de vragenlijst.", 
-    "description":"A new tab will open with the survey."
-  },
-  "html0101": {
-    "message": "Cancel", 
-    "description":"Cancel"
-  },
-  "html0102": {
-    "message": "Terugkeren", 
-    "description":"Return"
-  },
-  "html0103": {
-    "message": " Een nieuw tabblad wordt geopend met de vragenlijst.", 
-    "description":" A new tab will open with the survey."
-  },
-    "step1title": {
-    "message": "Stap 1", 
-    "description":"Step 1: Welcome to Web Historian - Community Edition"
-  },
-    "step2title": {
-    "message": "Stap 2", 
-    "description":"Step 2: Research Project"
-  },
-    "step3title": {
-    "message": "Stap 3: Waar vindt u uw browsergeschiedenis?", 
-    "description":"Step 3: Where is your web browsing history?"
-  },
-    "step4title": {
-    "message": "Stap 4: Bekijk uw data: Bezoek en gewoontes", 
-    "description":"Step 4: Review Your Data: Visits & Habits"
-  },
-    "step5title": {
-    "message": "Stap 5: Bekijk uw data: Links", 
-    "description":"Step 5: Review Your Data: Site Links"
-  },
-    "step6title": {
-    "message": "Stap 6: Bekijk uw data: Zoekopdrachten", 
-    "description":"Step 6: Review Your Data: Web Searches"
-  },
-    "step7title": {
-    "message": "Stap 7: Wanner gebruikt u het Web?", 
-    "description":"Step 7: When You Use the Web"
-  },
-    "step8title": {
-    "message": "Stap 8: Uw webgebruiksgeschiedenis", 
-    "description":"Step 8: Your Web Usage History"
-  },
-    "step9title": {
-    "message": "Stap 9", 
-    "description":"Step 9: Informed Consent"
-  },
-    "usrset": {
-    "message": "Gebruikersvoorkeuren", 
-    "description":"User Settings"
-  },
-    "tableDomain": {
-    "message": "Domeinen", 
-    "description":"Domain"
-  },
-    "tableDate": {
-    "message": "Datum", 
-    "description":"Date"
-  },
-    "tableTitle": {
-    "message": "Titel", 
-    "description":"Title"
-  },
-    "imgtitles": {
-    "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center></h4>", 
-    "description":"subtitles for image in step 3"
-  },
-    "study": {
-    "message": "Studie:", 
-    "description":"Study"
-  },
-    "change_study": {
-    "message": "Verander Studie", 
-    "description":"Change Study"
-  },
-    "study_set_title": {
-    "message": "Web Historian Studie-instellingen",
-    "description":"Title of the pop-up when the study is unclear. "
-  },
     "study_set": {
-    "message": "[fill in only for projects with multiple studies]",
-    "description":"Question in the pop-up when the study is unclear or not found. CUSTOM"
+    "message": "[ONLY used for projects with multiple studies]",
+    "description":"Question in the pop-up when the study is unclear or not found. For example, if the studies are by country, what country are you in? CUSTOM"
   },
-    "par_again": {
-    "message": "U moet opnieuw 'Deelnemen' kiezen.",
-    "description":"Only for multi-study. You will need to choose 'Participate' again."
-  },
-    "svr": {
-    "message": "Bekijken op server", 
-    "description":"View on Server"
-  }
+     "appName":{
+      "message":"Web Historian - Community-Editie",
+      "description":"The title of the application, displayed in the web store."
+   },
+   "appDesc":{
+      "message":"Web Historian CE - Doe mee aan onderzoek. Leer jezelf kennen.",
+      "description":"The description of the application, displayed in the web store."
+   },
+   "appShortName":{
+      "message":"Web Historian CE",
+      "description":"The name of the application."
+   },
+   "homeLoadingHome":{
+      "message":"Een ogenblik geduld alstublieft. De Home-pagina wordt geladen.",
+      "description":"One moment please. Loading Home."
+   },
+   "homeLoadingVisits":{
+      "message":"Een ogenblik geduld alstublieft. De Web Bezoeken-pagina wordt geladen.",
+      "description":"One moment please. Loading Web Visits."
+   },
+   "homeLoadingSearchWords":{
+      "message":"Een ogenblik geduld alstublieft. De Zoektermen-pagina wordt geladen.",
+      "description":"One moment please. Loading Search Words."
+   },
+   "homeLoadingNetwork":{
+      "message":"Een ogenblik geduld alstublieft. De Netwerk-pagina wordt geladen.",
+      "description":"One moment please. Loading Network."
+   },
+   "homeLoadingHeatmap":{
+      "message":"Een ogenblik geduld alstublieft. De Tijd Heatmap-pagina wordt geladen.",
+      "description":"One moment please. Loading Time Heatmap."
+   },
+   "homeLoadingDataTable":{
+      "message":"Een ogenblik geduld alstublieft. De Gegevenstabel-pagina wordt geladen.",
+      "description":"One moment please. Loading Data Table."
+   },
+   "databaseChromeExtension":{
+      "message":"Chrome Extensie",
+      "description":"Chrome Extension"
+   },
+   "databaseExtension":{
+      "message":"Extensie",
+      "description":"Extension"
+   },
+   "databaseFirefoxExtension":{
+      "message":"Firefox Extensie",
+      "description":"Firefox Extension"
+   },
+   "databaseLocalFile":{
+      "message":"Lokaal Bestand",
+      "description":"Local File"
+   },
+   "databaseUnknown":{
+      "message":"Onbekende Autoriteit",
+      "description":"Unknown Authority"
+   },
+   "timeMenu1VizTitle1":{
+      "message":"Alle Bezoeken op ",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu1VizTitle2":{
+      "message":" om ",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu1VizTitle3":{
+      "message":":00 (24-uursnotatie)",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu1Title":{
+      "message":" bezoek(en) - Gebruik de navigatie hierboven om terug te keren naar een visualisatie.",
+      "description":"N visits - To return to a visualization please use the Navigation above."
+   },
+   "timeMenu1":{
+      "message":"Bekijken in Gegevenstabel",
+      "description":"View in Data Table"
+   },
+   "timeMenu2":{
+      "message":"Bekijken in Web Bezoeken",
+      "description":"View in Web Visits"
+   },
+   "timeMenu2VizTitle1":{
+      "message":"Alle Bezoeken op ",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu2VizTitle2":{
+      "message":" om ",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu2VizTitle3":{
+      "message":":00 (24-uursnotatie)",
+      "description":"All Visits on dd at hh:00 (24 hr format)"
+   },
+   "timeMenu2Title":{
+      "message":" bezoeken - Gebruik de navigatie hierboven om terug te keren naar een visualisatie.",
+      "description":"N visits - To return to a visualization please use the Navigation above."
+   },
+   "timeAllData1":{
+      "message":"Alle ",
+      "description":"All x Weeks"
+   },
+   "timeAllData2":{
+      "message":" weken",
+      "description":"All x Weeks"
+   },
+   "timeAllDataTitle":{
+      "message":"Internetgebruik per uur van de dag &amp; dag van de week, ",
+      "description":"Browsing by hour of the day &amp; day of the week, start - end"
+   },
+   "timeThisWeek":{
+      "message":"Deze Week - Standaardinstelling",
+      "description":"This Week - Default"
+   },
+   "timeWeek":{
+      "message":"Internetgebruik per uur van de dag & dag van de week, ",
+      "description":"Browsing by hour of the day &amp; day of the week, x - x"
+   },
+   "timeHeatmap":{
+      "message":"Tijd Heatmap",
+      "description":"Time Heatmap"
+   },
+   "timeHeatmap2":{
+      "message":"Internetgebruik per uur van de dag &amp; dag van de week, ",
+      "description":"Browsing by hour of the day &amp; day of the week, "
+   },
+   "timeHeatmap3":{
+      "message":"Is deze visualisatie onvolledig? Als u Internet Explorer of Firefox gebruikt, kunt u uw zoekgeschiedenis importeren om de visualisatie compleet te maken. Volg deze stappen",
+      "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
+   },
+   "timeHeatmap4":{
+      "message":"Is deze visualizatie onvolledig? Als u Internet Explorer of Firefox gebruikt, kunt u uw zoekgeschiedenis importeren om de visualisatie compleet te maken. Volg deze stappen",
+      "description":"Is this visualization incomplete? If you also use Internet Explorer or Firefox, you can import your browsing history to include it. Just follow these steps"
+   },
+   "timeHeatmap5":{
+      "message":"Week",
+      "description":"Week"
+   },
+   "timeHeatmapTooltip1":{
+      "message":"Bezoeken ",
+      "description":"Visits ... on ... ...  - Right-click to see what these visits are."
+   },
+   "timeHeatmapTooltip2":{
+      "message":" op ",
+      "description":"Visits ... on ... ...  - Right-click to see what these visits are."
+   },
+   "timeHeatmapTooltip3":{
+      "message":"Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen om de bezoeken te bekijken.",
+      "description":"Visits ... on ... ...  - Right-click to see what these visits are."
+   },
+   "utilsStopwordsRx":{
+      "message":"^('aan|aangaande|aangezien|achte|achter|achterna|af|afgelopen|al|aldaar|aldus|alhoewel|alias|alle|allebei|alleen|alles|als|alsnog|altijd|altoos|ander|andere|anders|anderszins|beetje|behalve|behoudens|beide|beiden|ben|beneden|bent|bepaald|betreffende|bij|bijna|bijv|binnen|binnenin|blijkbaar|blijken|boven|bovenal|bovendien|bovengenoemd|bovenstaand|bovenvermeld|buiten|bv|daar|daardoor|daarheen|daarin|daarna|daarnet|daarom|daarop|daaruit|daarvanlangs|dan|dat|de|deden|deed|der|derde|derhalve|dertig|deze|dhr|die|dikwijls|dit|doch|doe|doen|doet|door|doorgaand|drie|duizend|dus|echter|een|eens|eer|eerdat|eerder|eerlang|eerst|eerste|eigen|eigenlijk|elk|elke|en|enig|enige|enigszins|enkel|er|erdoor|erg|ergens|etc|etcetera|even|eveneens|evenwel|gauw|ge|gedurende|geen|gehad|gekund|geleden|gelijk|gemoeten|gemogen|genoeg|geweest|gewoon|gewoonweg|haar|haarzelf|had|hadden|hare|heb|hebben|hebt|hedden|heeft|heel|hem|hemzelf|hen|het|hetzelfde|hier|hierbeneden|hierboven|hierin|hierna|hierom|hij|hijzelf|hoe|hoewel|honderd|hun|hunne|ieder|iedere|iedereen|iemand|iets|ik|ikzelf|in|inderdaad|inmiddels|intussen|inzake|is|ja|je|jezelf|jij|jijzelf|jou|jouw|jouwe|juist|jullie|kan|klaar|kon|konden|krachtens|kun|kunnen|kunt|laatst|later|liever|lijken|lijkt|maak|maakt|maakte|maakten|maar|mag|maken|me|meer|meest|meestal|men|met|mevr|mezelf|mij|mijn|mijnent|mijner|mijzelf|minder|miss|misschien|missen|mits|mocht|mochten|moest|moesten|moet|moeten|mogen|mr|mrs|mw|na|naar|nadat|nam|namelijk|nee|neem|negen|nemen|nergens|net|niemand|niet|niets|niks|noch|nochtans|nog|nogal|nooit|nu|nv|of|ofschoon|om|omdat|omhoog|omlaag|omstreeks|omtrent|omver|ondanks|onder|ondertussen|ongeveer|ons|onszelf|onze|onzeker|ooit|ook|op|opnieuw|opzij|over|overal|overeind|overige|overigens|paar|pas|per|precies|recent|redelijk|reeds|rond|rondom|samen|sedert|sinds|sindsdien|slechts|sommige|spoedig|steeds|tamelijk|te|tegen|tegenover|tenzij|terwijl|thans|tien|tiende|tijdens|tja|toch|toe|toen|toenmaals|toenmalig|tot|totdat|tussen|twee|tweede|u|uit|uitgezonderd|uw|vaak|vaakwat|van|vanaf|vandaan|vanuit|vanwege|veel|veeleer|veertig|verder|verscheidene|verschillende|vervolgens|via|vier|vierde|vijf|vijfde|vijftig|vol|volgend|volgens|voor|vooraf|vooral|vooralsnog|voorbij|voordat|voordezen|voordien|voorheen|voorop|voorts|vooruit|vrij|vroeg|waar|waarom|waarschijnlijk|wanneer|want|waren|was|wat|we|wederom|weer|weg|wegens|weinig|wel|weldra|welk|welke|werd|werden|werder|wezen|whatever|wie|wiens|wier|wij|wijzelf|wil|wilden|willen|word|worden|wordt|zal|ze|zei|zeker|zelf|zelfde|zelfs|zes|zeven|zich|zichzelf|zij|zijn|zijne|zijzelf|zo|zoals|zodat|zodra|zonder|zou|zouden|zowat|zulk|zulke|zullen|zult')$",
+      "description":"regexp"
+   },
+   "wdtPanelTitle1":{
+      "message":"Web Historian: Verken uw data",
+      "description":"Web Historian: Explore Your Data"
+   },
+   "wdtPanelTitle2":{
+      "message":"Web Historian: Verken data van ",
+      "description":"Web Historian: Exploring data from domname"
+   },
+   "wdtConfirmModalTitle":{
+      "message":"Verwijder URLs?",
+      "description":"Remove URLs?"
+   },
+   "wdtConfirmModalBody":{
+      "message":"Wilt u de geselecteerde pagina's van Web Historian verwijderen?",
+      "description":"Would you like to remove the selected pages from Web Historian?"
+   },
+   "wdtConfirmModalConfirm":{
+      "message":"Ja",
+      "description":"Yes"
+   },
+   "wdtConfirmModalCancel":{
+      "message":"Nee",
+      "description":"No"
+   },
+   "wdtConfirmModalTitle2":{
+      "message":" verwijderen?",
+      "description":"Remove domains?"
+   },
+   "wdtConfirmModalBody2":{
+      "message":"Wilt u de geselecteerde domeinen van Web Historian verwijderen?",
+      "description":"Would you like to remove the selected domains from Web Historian?"
+   },
+   "wwcMenu1Title":{
+      "message":"Permanent verwijderen",
+      "description":"Permanently Delete"
+   },
+   "wwcConfirm1":{
+      "message":"Wilt u alle URLs met de zoekterm \"",
+      "description":"Do you want to PERMANENTLY remove all URLs with the search term \"ccc\" from your local browser history?"
+   },
+   "wwcConfirm2":{
+      "message":"\" PERMANENT verwijderen van uw lokale zoekgeschiedenis?",
+      "description":"Do you want to PERMANENTLY remove all URLs with the search term \"ccc\" from your local browser history?"
+   },
+   "wwcAlert":{
+      "message":"Er zijn geen URLs verwijderd. ",
+      "description":"No URLs were removed. "
+   },
+   "wwcSearchTermsInc":{
+      "message":"Zoektermen inclusief \"",
+      "description":"Search terms including \"ccc\""
+   },
+   "wvMenu1Title":{
+      "message":"Bekijk in Gegevenstabel",
+      "description":"View in Data Table"
+   },
+   "wvMenu1VizTitle":{
+      "message":"Alle Bezoeken aan ",
+      "description":"All Visits to "
+   },
+   "wvMenu1SubTitle":{
+      "message":"Gebruik alstublieft de Navigatie hierboven om terug te keren naar de visualisatie.",
+      "description":"To return to a visualization please use the Navigation above."
+   },
+   "wvMenu2Title":{
+      "message":"Bekijk in Tijd Heatmap",
+      "description":"View in Time Heatmap"
+   },
+   "wvMenu2VizTitle":{
+      "message":"Alle Bezoeken aan ",
+      "description":"All Visits to "
+   },
+   "wvMenu2SubTitle":{
+      "message":"Gebruik alstublieft de Navigatie hierboven om terug te keren naar de visualisatie.",
+      "description":"To return to a visualization please use the Navigation above."
+   },
+   "wvMenu3Title":{
+      "message":"Verwijder",
+      "description":"Delete"
+   },
+   "wvMenu3Confirm1":{
+      "message":"Wilt u ALLE bezoeken aan URLs van ",
+      "description":"Do you want to remove ALL visits to URLs from from Web Historian?"
+   },
+   "wvMenu3Confirm2":{
+      "message":" verwijderen van Web Historian?",
+      "description":"Do you want to remove ALL visits to URLs from from Web Historian?"
+   },
+   "wvTooltip1":{
+      "message":", Bezoeken: ",
+      "description":", Visits: "
+   },
+   "wvTooltip2":{
+      "message":", Categorie: ",
+      "description":", Category: "
+   },
+   "wvTooltip3":{
+      "message":". Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen voor meer opties",
+      "description":". Right-click for more options"
+   },
+   "wvTooltip4":{
+      "message":", Dagen Bezocht: ",
+      "description":", Days Visited: "
+   },
+   "wvTooltip5":{
+      "message":", Categorie: ",
+      "description":", Category: "
+   },
+   "wnMenu1Title":{
+      "message":"Verwijder Permanent",
+      "description":"Permanently Delete"
+   },
+   "wnMenu1Confirm1":{
+      "message":"Wilt u ALLE bezoeken aan URLs van ",
+      "description":"Do you want to PERMANENTLY remove ALL visits to URLs from "
+   },
+   "wnMenu1Confirm2":{
+      "message":" PERMANENT van uw lokale zoekgeschiedenis verwijderen?",
+      "description":" from your local browser history?"
+   },
+   "wnTooltip1":{
+      "message":" Categorie: ",
+      "description":" Category: "
+   },
+   "wtTooltip1":{
+      "message":"Bezoeken: ",
+      "description":"Visits: "
+   },
+   "wtTooltip2":{
+      "message":" op ",
+      "description":"on"
+   },
+   "wtTooltip3":{
+      "message":" -- Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen om deze bezoeken te bekijken.",
+      "description":" -- Right-click to see what these visits are."
+   },
+   "html0001":{
+      "message":"Web Historian | Community-Editie",
+      "description":"Web Historian | Community Edition"
+   },
+   "html0002":{
+      "message":"Navigatie switch",
+      "description":"Toggle navigation"
+   },
+   "html0003":{
+      "message":"Web Historian: Community-Editie",
+      "description":"Web Historian: Community Edition"
+   },
+   "html0004":{
+      "message":"Navigatie: ",
+      "description":"Navigation: "
+   },
+   "html0005":{
+      "message":"Web Historian: Verken Uw Data",
+      "description":"Web Historian: Explore Your Data"
+   },
+   "html0006":{
+      "message":"Web Bezoeken",
+      "description":"Web Visits"
+   },
+   "html0007":{
+      "message":"Cirkels op basis van het aantal dagen dat een site werd bezocht, of het totale aantal bezoeken aan de site.",
+      "description":"Circles sized by number of days a site was visited, or total visits to the site."
+   },
+   "html0008":{
+      "message":"Zoektermen",
+      "description":"Search Terms"
+   },
+   "html0009":{
+      "message":"Woorden die in meerdere zoekopdrachten op het web worden gebruikt, zijn groter.",
+      "description":"Words used in multiple web searches are larger."
+   },
+   "html0010":{
+      "message":"Netwerk",
+      "description":"Network"
+   },
+   "html0011":{
+      "message":"Links tussen websites bezocht van - tot.",
+      "description":"Links between websites browsed from - to."
+   },
+   "html0012":{
+      "message":"Tijd Heatmap",
+      "description":"Time Heatmap"
+   },
+   "html0013":{
+      "message":"Uren van de dag en dagen van de week wanneer u het meest op het web surft.",
+      "description":"Hours of the day and days of the week when you browse the web the most."
+   },
+   "html0014":{
+      "message":"Mijn Bezoeken",
+      "description":"My Visits"
+   },
+   "html0015":{
+      "message":"Mijn Gewoontes",
+      "description":"My Habits"
+   },
+   "html0016":{
+      "message":"START",
+      "description":"START"
+   },
+   "html0017":{
+      "message":"NU",
+      "description":"NOW"
+   },
+   "html0018":{
+      "message":"Pagina's",
+      "description":"Pages"
+   },
+   "html0019":{
+      "message":"Domeinen",
+      "description":"Domains"
+   },
+   "html0020":{
+      "message":"Laden",
+      "description":"Loading"
+   },
+   "html0033":{
+      "message":"Uw browsergeschiedenis wordt van uw computer eenmalig beveiligd verstuurd naar de Web Historian server <strong>nadat</strong> u het bekeken en eventueel aangepast heeft.",
+      "description":"If you decide to participate in the research, the browsing history from your computer will be securely sent to the Web Historian server one time <strong>after</strong> you have reviewed and filtered it."
+   },
+   "html0034":{
+      "message":"Uw browsergeschiedenis is gekoppeld aan uw computer, uw internetprovider en gedeeltelijk aan elke website die u bezoekt.",
+      "description":"Your web browsing history is on your computer, your ISP, and part of it is on every website you visit."
+   },
+   "html0035":{
+      "message":" ",
+      "description":"You can clear the browsing history on your computer whenever you choose, but you have little control over the browsing history your ISP and other websites have unless you use a trustworthy VPN, which tends to come with a monthly price, or <a href=\"https://www.torproject.org/projects/torbrowser.html.en\" target=\"_blank\">Tor</a>, which can slow your browsing speed."
+   },
+   "html0036":{
+      "message":"Uw browsergeschiedenis, die u bekeken en aangepast heeft, wordt alleen verstuurd als u op 'Versturen' klikt, nooit op een ander moment. Alle gegevens worden beveiligd verstuurd naar de server van Web Historian.",
+      "description":"If you decide to participate in the research, the browsing history from your computer that you have reviewed and filtered will be securely sent to the Web Historian server once."
+   },
+   "html0037":{
+      "message":" ",
+      "description":"In 2017 the U.S. government revoked new rules that would have regulated how ISPs use your data. The ISPs claimed that the rules put them at a disadvantage since the rules did not apply to other companies that have similar data like Google and Facebook. <a href=\"https://www.washingtonpost.com/news/the-switch/wp/2017/03/28/republicans-are-poised-to-roll-back-landmark-fcc-privacy-rules-heres-what-you-need-to-know/\" target=\"_blank\">This article</a> has more details. The <a href=\"http://eff.org/\" target=\"_blank\">Electronic Frontier Foundation</a> (EFF) is a nonprofit organization dedicated to defending civil liberties in the digital world."
+   },
+   "html0038":{
+      "message":" ",
+      "description":"Tools like this browser extensions help people to better understand the web browsing data that is already on their computers, ISPs and in pieces throughout the web, giving people a concrete understanding of an issue that is often vague and hypothetical."
+   },
+   "html0039":{
+      "message":"Wacht alstublieft op de groene laadbalk bovenin. </strong><br/>De volgende stappen worden beschikbaar als het laden voltooid is.",
+      "description":"Please wait for the green progress bar at the top. </strong><br/>Next steps will become available when the data loading process completes."
+   },
+   "html0040":{
+      "message":"Dit is een visualisatie van uw internetgewoontes. De grotere bollen zijn sites die u het meest bezoekt met deze browser. <br/>Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen op een bol om het geselecteerde domein te verwijderen.",
+      "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser. <br/>Right-click to delete all visits to the selected domain."
+   },
+   "html0041":{
+      "message":"Dit is een visualisatie van uw internetgewoontes. De grotere bollen zijn sites die u het meest bezoekt met deze browser.",
+      "description":"This is a visualization of your browsing habits. The larger sites are the ones you use most regularly on this browser."
+   },
+   "html0042":{
+      "message":"Deze visualisatie laat een voorbeeld zien van internetgedrag data. De grotere sites zijn degene die het meest bezocht worden in dit voorbeeld.",
+      "description":"This visualization displays an example of web browsing data. Larger sites are visited most regularly in this example."
+   },
+   "html0043":{
+      "message":"Bezoeken",
+      "description":"Visits"
+   },
+   "html0044":{
+      "message":"Dit is een visualisatie van de websites die u linken aan andere websites. <br/>Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen om alle bezoeken in het geselecteerde domein te verwijderen.",
+      "description":"This is a visualization of the sites that link you to other sites. <br/>Right-click to delete all visits to the chosen domain."
+   },
+   "html0045":{
+      "message":"Dit is een visualisatie van de websites die u linken aan andere websites.",
+      "description":"This is a visualization of the sites that link you to other sites."
+   },
+   "html0046":{
+      "message":"Dit is een visualisatie van de websites die een voorbeeld gebruiker linken aan andere websites. Deze visualisatie laat een voorbeeld zien van internetgedrag data.",
+      "description":"This is a visualization of the sites that linked an example user to other sites. This visualization displays an example of web browsing data."
+   },
+   "html0047":{
+      "message":"Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter. <br/>Klik met de rechtermuisknop op een bol om het geselecteerde domein te verwijderen om alle zoekmomenten met de gekozen term te verwijderen.",
+      "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. <br/>Right click to delete all searches that contain the chosen term."
+   },
+   "html0048":{
+      "message":"Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter.",
+      "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger."
+   },
+   "html0049":{
+      "message":"Dit zijn de woorden die ingetypt zijn bij zoekmachines zoals Google, Bing en Yahoo. Woorden die gebruikt zijn op verschillende zoekmomenten zijn groter. Deze visualisatie laat een voorbeeld van internetgedrag data zien.",
+      "description":"These are the words typed into search engines like Google, Bing and Yahoo. Words used in different searches are larger. This visualization displays an example of web browsing data."
+   },
+   "html0050":{
+      "message":"Dit zijn de tijden van de dag en de dagen van de week waarop u deze browser gebruikt.",
+      "description":"This is the time of day and day of the week when you use this web browser."
+   },
+   "html0051":{
+      "message":"Dit laat de tijden van de dag en de dagen van de week zien waarop een voorbeeld gebruiker deze browser heeft gebruikt.",
+      "description":"This shows the time of day and day of the week when the sample user used this web browser."
+   },
+   "html0052":{
+      "message":"Pagina's",
+      "description":"Pages"
+   },
+   "html0053":{
+      "message":"Domeinen",
+      "description":"Domains"
+   },
+   "html0055":{
+      "message":"Er is niet genoeg internetgedrag data beschikbaar van deze browser om de studie voort te zetten.",
+      "description":"There is not enough web browsing data on this browser to continue the study."
+   },
+   "html0056":{
+      "message":"De zoekgeschiedenis is mogelijk recentelijk verwijdered of de browser is heel onregelmatig gebruikt.",
+      "description":"The browsing history may have been cleared recently, or the browser may have been used extremely infrequently. "
+   },
+   "html0057":{
+      "message":"Als u het internet gebruikt op een andere computer of laptop is er een mogelijkheid deel te nemen met die browser.",
+      "description":"If you use the web on a different computer or laptop you may be able to participate using that browser."
+   },
+   "html0058":{
+      "message":"Volgende",
+      "description":"Next"
+   },
+   "html0059":{
+      "message":"Versturen",
+      "description":"Participate"
+   },
+   "html0060":{
+      "message":"Terugkeren naar de Vragenlijst",
+      "description":"Return to Survey"
+   },
+   "html0061":{
+      "message":"Upload Data naar het Onderzoeksproject",
+      "description":"Upload Data to the Research Project"
+   },
+   "html0062":{
+      "message":"Klik op versturen om te beginnen.",
+      "description":"Click Participate to begin."
+   },
+   "html0063":{
+      "message":"Vragenlijst",
+      "description":"Survey"
+   },
+   "html0064":{
+      "message":"U kunt de vragenlijst invullen die zojuist is geopend in een nieuw tabblad terwijl uw data wordt geüpload.",
+      "description":"You can begin the research survey that just opened in a new tab while your data uploads."
+   },
+   "html0065":{
+      "message":"Cancel",
+      "description":"Cancel"
+   },
+   "html0066":{
+      "message":"Versturen",
+      "description":"Participate"
+   },
+   "html0067":{
+      "message":"Uw ID",
+      "description":"Your Identifier"
+   },
+   "html0068":{
+      "message":"Terug",
+      "description":"Back"
+   },
+   "html0069":{
+      "message":"Doorgaan",
+      "description":"Continue"
+   },
+   "html0070":{
+      "message":"Welkom!",
+      "description":"Welcome!"
+   },
+   "html0071":{
+      "message":"Heeft u eerder een Web Historian ID gekregen om te gebruiken voor een onderzoeksproject?",
+      "description":"Were you given a Web Historian ID to use as part of a research project?"
+   },
+   "html0072":{
+      "message":"Ja",
+      "description":"Yes"
+   },
+   "html0073":{
+      "message":"Nee",
+      "description":"No"
+   },
+   "html0074":{
+      "message":"Heeft u voorheen Web Historian geïnstalleerd op een andere browser?",
+      "description":"Have you installed Web Historian on another web browser previously?"
+   },
+   "html0075":{
+      "message":"Modaal titel",
+      "description":"Modal title"
+   },
+   "html0076":{
+      "message":"Een fijne body…",
+      "description":"One fine body…"
+   },
+   "html0077":{
+      "message":"Sluit",
+      "description":"Close"
+   },
+   "html0078":{
+      "message":"Sla wijzigingen op",
+      "description":"Save changes"
+   },
+   "html0079":{
+      "message":"Inhoud Laden",
+      "description":"Loading Content"
+   },
+   "html0080":{
+      "message":"Kerninhoud Laden",
+      "description":"Loading Main Content"
+   },
+   "html0081":{
+      "message":"U kunt de informatie bekijken (Stap 1-3) terwijl de data worden geladen. Stappen 4-9 verschijnen wanneer de data volledig zijn geladen.",
+      "description":"You can view study information (Step 1-3) while data loads. Steps 4-9 appear when data is finished loading."
+   },
+   "html0082":{
+      "message":"Klik ergens om door te gaan.",
+      "description":"Click anywhere to continue."
+   },
+   "html0083":{
+      "message":"Web Historian Settings",
+      "description":"Web Historian Settings"
+   },
+   "html0084":{
+      "message":"U moet mogelijk uw gebruikers ID wijzigen als onderdeel van een onderzoeksstudie of uw ID moet matchen aan de ID van uw vorige Web Historian installatie op een andere browser of apparaat.",
+      "description":"You may need to change your User ID as part of a research study, or to match your ID from your previous Web Historian installation on another browser or device."
+   },
+   "html0085":{
+      "message":"Gebruikers ID",
+      "description":"User ID"
+   },
+   "html0086":{
+      "message":"Sla Wijzigingen op",
+      "description":"Save Changes"
+   },
+   "html0087":{
+      "message":"Reset",
+      "description":"Reset"
+   },
+   "html0088":{
+      "message":"Web Historian wordt gereset",
+      "description":"Resetting Web Historian"
+   },
+   "html0089":{
+      "message":"Bevestig Deelname",
+      "description":"Confirm Participation"
+   },
+   "html0090":{
+      "message":"Deelnemen aan het onderzoeksproject door uw browsergeschiedenis te uploaden op de servers van Web Historian en de vragenlijst af te maken?",
+      "description":"Participate in the research project by uploading your web history to the Web Historian servers and completing the survey?"
+   },
+   "html0091":{
+      "message":"VERZENDEN",
+      "description":"UPLOADING"
+   },
+   "html0092":{
+      "message":"HET VERZENDEN IS COMPLEET! BEDANKT!",
+      "description":"UPLOAD COMPLETE! THANK YOU!"
+   },
+   "html0093":{
+      "message":"HET VERZENDEN IS MISLUKT - Check uw Internetverbinding en probeer opnieuw.",
+      "description":"UPLOAD FAILED - Check your Internet connection and try again."
+   },
+   "html0094":{
+      "message":"<strong>Sluit alstublieft dit tabblad niet tot het verzenden compleet is.</strong>",
+      "description":"<strong>Please do not close this tab until the upload is complete.</strong>"
+   },
+   "html0095":{
+      "message":"Cancel",
+      "description":"Cancel"
+   },
+   "html0096":{
+      "message":"Upload",
+      "description":"Upload"
+   },
+   "html0097":{
+      "message":"Keer terug naar de vragenlijst",
+      "description":"Return to Study Survey"
+   },
+   "html0098":{
+      "message":"Ik stem NIET in met het uploaden van mijn browsergeschiedenis. ",
+      "description":"I do NOT consent to upload any of my web browsing data to the study. "
+   },
+   "html0099":{
+      "message":"Klik \"TERUGKEREN\" om de vragenlijst af te ronden.",
+      "description":"Choose \"RETURN\" to complete the survey."
+   },
+   "html0100":{
+      "message":"Een nieuw tabblad wordt geopend met de vragenlijst.",
+      "description":"A new tab will open with the survey."
+   },
+   "html0101":{
+      "message":"Cancel",
+      "description":"Cancel"
+   },
+   "html0102":{
+      "message":"Terugkeren",
+      "description":"Return"
+   },
+   "html0103":{
+      "message":" Een nieuw tabblad wordt geopend met de vragenlijst.",
+      "description":" A new tab will open with the survey."
+   },
+   "step1title":{
+      "message":"Stap 1: Welkom bij Web Historian",
+      "description":"Step 1: Welcome to Web Historian - Community Edition"
+   },
+   "step2title":{
+      "message":"Stap 2: Hoe werkt het?",
+      "description":"Step 2: Research Project"
+   },
+   "step3title":{
+      "message":"Stap 3: Waar vindt u uw browsergeschiedenis?",
+      "description":"Step 3: Where is your web browsing history?"
+   },
+   "step4title":{
+      "message":"Stap 4: Bekijk uw data: Bezoek en gewoontes",
+      "description":"Step 4: Review Your Data: Visits & Habits"
+   },
+   "step5title":{
+      "message":"Stap 5: Bekijk uw data: Links",
+      "description":"Step 5: Review Your Data: Site Links"
+   },
+   "step6title":{
+      "message":"Stap 6: Bekijk uw data: Zoekopdrachten",
+      "description":"Step 6: Review Your Data: Web Searches"
+   },
+   "step7title":{
+      "message":"Stap 7: Wanneer gebruikt u het Internet?",
+      "description":"Step 7: When You Use the Web"
+   },
+   "step8title":{
+      "message":"Stap 8: Uw browsergeschiedenis",
+      "description":"Step 8: Your Web Usage History"
+   },
+   "step9title":{
+      "message":"Stap 9: Uw toestemming voor verzenden",
+      "description":"Step 9: Informed Consent"
+   },
+   "usrset":{
+      "message":"Gebruikersvoorkeuren",
+      "description":"User Settings"
+   },
+   "tableDomain":{
+      "message":"Domeinen",
+      "description":"Domain"
+   },
+   "tableDate":{
+      "message":"Datum",
+      "description":"Date"
+   },
+   "tableTitle":{
+      "message":"Titel",
+      "description":"Title"
+   },
+   "imgtitles":{
+      "message":"<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center></h4>",
+      "description":"subtitles for image in step 3"
+   },
+   "study":{
+      "message":"Studie:",
+      "description":"Study"
+   },
+   "change_study":{
+      "message":"Verander Studie",
+      "description":"Change Study"
+   },
+   "study_set_title":{
+      "message":"Web Historian Studie-instellingen",
+      "description":"Title of the pop-up when the study is unclear. "
+   },
+   "par_again":{
+      "message":"U moet opnieuw 'Verzenden' kiezen.",
+      "description":"Only for multi-study. You will need to choose 'Participate' again."
+   },
+   "svr":{
+      "message":"Bekijken op server",
+      "description":"View on Server"
+   }
 }
