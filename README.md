@@ -6,7 +6,7 @@ This is a research data collection tool created by 	[Ericka Menchen-Trevino](htt
 
 If you just want to run the extension localy to see the interface and visualizations:
 
-* Clone or download the repository
+* Clone or download the repository - including the core submodule
 * Rename _locales/en/messages.json-template.json to _locales/en/messages.json
 * Remove the folders _locales/nl/ and _locales/pl/
 * Rename the file: js/app/config.js-template.js to config.js
@@ -23,10 +23,10 @@ Menchen-Trevino, E., & Karr, C. (2018). Web Historian - Community Edition. Zenod
 ### If you are interested in using Web Historian for your own research you will need to:
 
 * Set up a server running [PassiveDataKit-Django](https://github.com/audaciouscode/PassiveDataKit-Django).
-* Make sure to clone this repository's submodule (core)
+* Clone or download the repository - including the core submodule
 * Customize Web Historian to describe your research in all of the languages your study supports 
   * Rename the file: _locales/en/messages.json-template.json to messages.json and update steps 1, 2 and 9.
-  * Remove the locales you do not support.
+  * Remove the locales you do not support e.g. nl and pl.
 * Customize the configuration settings
   * Rename the file: js/app/config.js-template.js to config.js and customize the settings and put in your PDK server address.
 * (Optional) Customize the categories of websites relevant to your research: core/js/app/categories.json
