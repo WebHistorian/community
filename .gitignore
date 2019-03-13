@@ -5,3 +5,6 @@ manifest.gecko.json
 *.Icon?
 *messages.json
 *messages-w1.json
+_locales/en/messages.json
+_locales/pl/messages.json
+_locales/nl/messages.json

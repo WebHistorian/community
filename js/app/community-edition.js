@@ -292,8 +292,9 @@ main.page = function() {
 									console.log("Error getting survey urls!!");//Need to fill in!!
 								  })
                                 
-                                if (config.getIDfromURL == "Yes"){
+                                if (config.getDatafromURL == "Yes"){
                                 	var idRegex = config.idBaseUrl; 
+                                	var otherVar = config.otherVar;
 									dayAgo = new Date(now.getTime() - 86400000);
 									var studyPair = config.studyPair;
 									var foundIDurl = 0;
@@ -303,13 +304,16 @@ main.page = function() {
 											var urlC = result[i].url;
 											if (idRegex.test(urlC)) {
 												foundIDurl = 1;
-												var patt = /.*[\?\&](.*)=(.*)$/;
+												var patt = new RegExp(".*\\?([RKPIDrkpid]{3})=([\\w]{1,})(\\&" + otherVar + ")?=?(.*)$");
+												
   												var r = patt.exec(urlC);
   												
   												chrome.storage.local.set({
-  													'upload_identifier': r[2]
+  													'upload_identifier': r[2],
+  													'other_url_data': r[4]
 												}, function() {
 													console.log("set user id from url: "+r[2]);
+													console.log("set "+otherVar+" from url: "+r[4]);
 												});
   												if (config.multiStudy=="Yes") {
   												  	for (var y = 0; y<= studyPair.study.length-1;y++) {
@@ -369,24 +373,21 @@ main.page = function() {
 
             chrome.storage.local.get({
                 'upload_identifier': 'unknown-user',
-                'web_historian_condition': 'unknown'
+                'web_historian_condition': 'unknown',
+                'other_url_data': 'unknown'
             }, function(result) {
-            	//console.log(""+result.upload-identifier+""+);
             	if ((config.multiStudy == "Yes")&&(studyId == "None" || studyId == "")) {
             		changeStudyModal();
             		$("#study_set_option_buttons").append("<p data-i18n='__par_again__'>You will need to choose 'Participate' again.</p>")
-            		//$("#confirm_upload_modal").modal("hide");
             	} else  {
             	var study_url = config.conditionUrl(true, '1', result,studyId,actionUrls);
             	console.log(study_url);
                 $("#confirm_upload_modal_button").off("click");
                 $("#confirm_upload_modal_button").click(function(eventObj) {
-                    //$("#confirm_upload_modal").modal("hide");
 					$("#upload-notice").show();  
                     //rm ID condition
 
-                    //console.log("Country: "+country);
-                    window.open(study_url, '_blank');//need to update the country to a variable***!!!
+                    window.open(study_url, '_blank');
 					window.addEventListener("beforeunload", functionToRun); 
 						function functionToRun(e) {
     					var confirmationMessage = "You are still uploading data."; //This text doesn't actually show up in modern browsers, the default message is the only option.
@@ -397,11 +398,10 @@ main.page = function() {
                         console.log("REAL SUBMIT");
     
                         database.uploadPending(function(index, length) {
-                            //console.log('CE PROGRESS: ' + index + ' / ' + length);
+                            //console.log('CE PROGRESS: ' + index + ' / ' + length); removed for speed
                         }, function() {
                             console.log('CE COMPLETE');
 							window.removeEventListener("beforeunload",functionToRun);
-							//$("#confirm_upload_modal").modal("hide");
                             chrome.storage.local.set({
                                 'participation_mode': 'prevPar'
                             }, function(bytesUsed) {
