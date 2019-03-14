@@ -257,7 +257,7 @@ main.page = function() {
                             
                             if (lastUpdated <= timestamp) {
                                 if (foundId == null) {
-                                    foundId = greg.sentence().replace(/ /g, '-');
+                                    foundId = "not-found-" + greg.sentence().replace(/ /g, '-');
                                 }
                     
                                 if (foundCondition == null) {
@@ -308,21 +308,35 @@ main.page = function() {
 												
   												var r = patt.exec(urlC);
   												
-  												chrome.storage.local.set({
-  													'upload_identifier': r[2],
-  													'other_url_data': r[4]
-												}, function() {
-													console.log("set user id from url: "+r[2]);
-													console.log("set "+otherVar+" from url: "+r[4]);
-												});
-  												if (config.multiStudy=="Yes") {
-  												  	for (var y = 0; y<= studyPair.study.length-1;y++) {
-														if(r[1]==studyPair.study[y].idKey){
-															studyId = studyPair.study[y].studyName;
-															break;
+  												if (r != null){
+													chrome.storage.local.set({
+														'upload_identifier': r[2],
+														'other_url_data': r[4]
+													}, function() {
+														console.log("set user id from url: "+r[2]);
+														console.log("set "+otherVar+" from url: "+r[4]);
+													});
+													if (config.multiStudy=="Yes") {
+														for (var y = 0; y<= studyPair.study.length-1;y++) {
+															if(r[1]==studyPair.study[y].idKey){
+																studyId = studyPair.study[y].studyName;
+																break;
+															}
 														}
 													}
   												}
+  												else {
+  													chrome.storage.local.set({
+														'upload_identifier': "not-found-in-url-" + greg.sentence().replace(/ /g, '-'),
+													}, function() {
+														console.log("user id not set from url");
+													});
+													if (config.multiStudy=="Yes") {
+														changeStudyModal();
+													}
+  												}
+  												
+
 												break;
 											} 
 										}
@@ -508,7 +522,13 @@ main.page = function() {
             
             $("#wizard_settings_random_id").off("click");
             $("#wizard_settings_random_id").click(function(eventObj) {
-                $("#wizard_user_id").val(greg.sentence().replace(/ /g, '-'));
+            	if (config.getDatafromURL == "Yes"){
+            		$("#wizard_user_id").val("not-found-" + greg.sentence().replace(/ /g, '-'));
+            	}
+            	else {
+            		$("#wizard_user_id").val(greg.sentence().replace(/ /g, '-'));
+            	}
+                
             });
 
           $("#confirm_wizard_settings_reset").click(function(eventObj) {
