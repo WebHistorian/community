@@ -83,40 +83,15 @@ main.page = function() {
 			
 			if (firstDate > weekAgo || firstDate == null){
 				notEnough();
+				assignID(false,"days");
 				console.log("Less than minimum days set in config.js");
 				
-				database.logEvent("oldest records less than minimum days set in config.js", {
-	                'session_id': window.sessionId
-	            });
 
-	            chrome.storage.local.get({
-	                'upload_identifier': 'unknown-user',
-	                'web_historian_condition': 'unknown'
-	            }, function(result) {
-					//
-	            });
-
-	            if (main.database != undefined) {
-	                main.database.uploadEvents(null, null, null);
-	            }
 			}
 			else if (size < config.minRecords) {
 				notEnough();
+				assignID(false,"size");
 				console.log("Less than minimum records set in config.js");
-				database.logEvent("less than minimum records set in config.js", {
-	                'session_id': window.sessionId
-	            });
-
-	            chrome.storage.local.get({
-	                'upload_identifier': 'unknown-user',
-	                'web_historian_condition': 'unknown'
-	            }, function(result) {
-					//
-	            });
-
-	            if (main.database != undefined) {
-	                main.database.uploadEvents(null, null, null);
-	            }
 			}
 		}
 		
@@ -152,7 +127,112 @@ main.page = function() {
 			$("#wizard_study").modal("show");
 		}
 
+		function assignID(enough,type) {
+			if (config.getDatafromURL == "Yes"){ 
+				var idRegex = config.idBaseUrl; 
+				var otherVar = config.otherVar;
+				threeDaysAgo = new Date(now.getTime() - 259200000);
+				var studyPair = config.studyPair;
+				var foundIDurl = 0;
+
+				database.fetchRecords(threeDaysAgo,null,function(result){
+					for (var i = result.length-1; i >= 0; i--) {
+						var urlC = result[i].url;
+						if (idRegex.test(urlC)) {
+							var patt = new RegExp(".*\\?([RKPIDrkpid]{3})=([\\w-]{1,})(\\&" + otherVar + ")?=?(.*)$");
+							var r = patt.exec(urlC);
+				
+							if (r != null){
+								foundIDurl = 1;
+								chrome.storage.local.set({
+									'upload_identifier': r[2],
+									'other_url_data': r[4]
+								}, function() {
+									console.log("set user id from url: "+r[2]);
+									console.log("set "+otherVar+" from url: "+r[4]);
+								});
+								if (config.multiStudy=="Yes") {
+									for (var y = 0; y<= studyPair.study.length-1;y++) {
+										if(r[1]==studyPair.study[y].idKey){
+											studyId = studyPair.study[y].studyName;
+											console.log("id assigned");
+											if (enough==false){
+												if (type=="days"){
+													database.logEvent("oldest records less than minimum days set in config.js", {
+														'session_id': window.sessionId
+													});
+
+													chrome.storage.local.get({
+														'upload_identifier': 'unknown-user',
+														'web_historian_condition': 'unknown'
+													}, function(result) {
+														//
+													});
+
+													if (main.database != undefined) {
+														main.database.uploadEvents(null, null, null);
+													}
+												}
+												else if (type=="size"){
+													database.logEvent("less than minimum records set in config.js", {
+														'session_id': window.sessionId
+													});
+
+													chrome.storage.local.get({
+														'upload_identifier': 'unknown-user',
+														'web_historian_condition': 'unknown'
+													}, function(result) {
+														//
+													});
+
+													if (main.database != undefined) {
+														main.database.uploadEvents(null, null, null);
+													}
+												}
+												
+											}
+											break;
+										}
+									}
+								}
+							}
+							else {
+								chrome.storage.local.set({
+									'upload_identifier': "not-found-in-url-" + greg.sentence().replace(/ /g, '-'),
+								}, function() {
+									console.log("user id not set from url");
+								});
+								if (config.multiStudy=="Yes") {
+									//changeStudyModal();
+								}
+							}
+							break;
+						} 
+					}
+					if (foundIDurl == 0) {
+						chrome.i18n.getAcceptLanguages(function (list) {
+							var lang = chrome.i18n.getUILanguage();
+							var langList = list;
+							database.fetchRecords(null,null,function(data){
+								var domains = utils.countPropDomains(data, "domain");
+								studyId = config.studyIdBackup(lang,domains,langList);
+								if (studyId == "None"){
+									changeStudyModal();
+								}
+								console.log("Individual ID and studyId not found in URL! Backup method routing to study: "+studyId);
+							});
+						});
+					}
+				});
+			} 
+			else {
+				$("#wizard_user_id").val(greg.sentence().replace(/ /g, '-'));
+			}
+		}
+		
 		function getDataTestEnough(weekAgo) {
+			assignID(true,"none");
+			
 			database.earliestDate(function(result) {
 				if(result != null) {
 					var first = new Date(result["visitTime"]); 
@@ -257,7 +337,7 @@ main.page = function() {
                             
                             if (lastUpdated <= timestamp) {
                                 if (foundId == null) {
-                                    foundId = "not-found-" + greg.sentence().replace(/ /g, '-');
+                                    assignID(true,"none");
                                 }
                     
                                 if (foundCondition == null) {
@@ -292,72 +372,6 @@ main.page = function() {
 									console.log("Error getting survey urls!!");//Need to fill in!!
 								  })
                                 
-                                if (config.getDatafromURL == "Yes"){
-                                	var idRegex = config.idBaseUrl; 
-                                	var otherVar = config.otherVar;
-									dayAgo = new Date(now.getTime() - 86400000);
-									var studyPair = config.studyPair;
-									var foundIDurl = 0;
-								
-									database.fetchRecords(dayAgo,null,function(result){
-										for (var i = result.length-1; i >= 0; i--) {
-											var urlC = result[i].url;
-											if (idRegex.test(urlC)) {
-												foundIDurl = 1;
-												var patt = new RegExp(".*\\?([RKPIDrkpid]{3})=([\\w]{1,})(\\&" + otherVar + ")?=?(.*)$");
-												
-  												var r = patt.exec(urlC);
-  												
-  												if (r != null){
-													chrome.storage.local.set({
-														'upload_identifier': r[2],
-														'other_url_data': r[4]
-													}, function() {
-														console.log("set user id from url: "+r[2]);
-														console.log("set "+otherVar+" from url: "+r[4]);
-													});
-													if (config.multiStudy=="Yes") {
-														for (var y = 0; y<= studyPair.study.length-1;y++) {
-															if(r[1]==studyPair.study[y].idKey){
-																studyId = studyPair.study[y].studyName;
-																break;
-															}
-														}
-													}
-  												}
-  												else {
-  													chrome.storage.local.set({
-														'upload_identifier': "not-found-in-url-" + greg.sentence().replace(/ /g, '-'),
-													}, function() {
-														console.log("user id not set from url");
-													});
-													if (config.multiStudy=="Yes") {
-														changeStudyModal();
-													}
-  												}
-  												
-
-												break;
-											} 
-										}
-										if (foundIDurl == 0) {
-											//keep self-gen ID, providing config.js with language and domain info to make a back-up determination
-											
-											chrome.i18n.getAcceptLanguages(function (list) {
-												var lang = chrome.i18n.getUILanguage();
-												var langList = list;
-												database.fetchRecords(null,null,function(data){
-													var domains = utils.countPropDomains(data, "domain");
-													studyId = config.studyIdBackup(lang,domains,langList);
-													if (studyId == "None"){
-														changeStudyModal();
-													}
-													console.log("Individual ID and studyId not found in URL! Backup method routing to study: "+studyId);
-												});
-											});
-										}
-									});
-                                } 
                             }
                         }
                     }, function() {
