@@ -26,7 +26,8 @@ Menchen-Trevino, E., & Karr, C. (2018). Web Historian - Community Edition. Zenod
 * Download the repository including the core submodule. You may use `git clone --recurse-submodules`.
 * Rename `manifest.json-template.json` to `manifest.json` and configure the version number and the default locale.
 * Customize Web Historian to describe your research in all of the languages your study supports
-	* Rename `_locales/xx_messages.json-template.json` to `xx/messages.json` for each language code `xx`.
+	* Rename `_locales/xx_messages.json-template.json` to `_locales/xx/messages.json` for each language code `xx`.
+	* Edit at least messages `html0021`, `html0029` and `html0054`.
 * Customize the configuration settings
 	* Rename `js/app/config.js-template.js` to `config.js` and customize the settings and put in your PDK server address.
 * (Optional) Customize the categories of websites relevant to your research by editing the file `core/js/app/categories.json`.
