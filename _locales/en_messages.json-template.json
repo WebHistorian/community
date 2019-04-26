@@ -720,7 +720,7 @@
     "description":"Change Study"
   },
     "imgtitles": {
-    "message": "<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'The Cloud' (the sites you visit)</center></h4>", 
+    "message": "<center>Your Computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ISP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'The Cloud' (the sites you visit)</center>", 
     "description":"subtitles for image in step 3"
   },
     "study_set_title": {

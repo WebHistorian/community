@@ -716,7 +716,7 @@
       "description":"Title"
    },
    "imgtitles":{
-      "message":"<h4 style='font-weight: bold;' data-i18n='__MSG_imgtitles__'><center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center></h4>",
+      "message":"<center>Uw computer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uw provider&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'De cloud' (sites die u bezoekt)</center>",
       "description":"subtitles for image in step 3"
    },
    "study":{
