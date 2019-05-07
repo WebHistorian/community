@@ -580,8 +580,8 @@
     "description":"Web Historian Settings"
   },
   "html0084": {
-    "message": "You may need to change your User ID or study if directed to do so by the researchers.", 
-    "description":"You may need to change your User ID or study if directed to do so by the researchers."
+    "message": "You may need to change your User ID or study <strong>if directed to do so by the research project or panel</strong>. If you change these settings without being directed to do so by the research project it may delay and complicate sending your compensation for this study.", 
+    "description":"You may need to change your User ID or study if directed to do so by the research project or panel. If you change these settings without being directed to do so by the research project it may delay and complicate sending your compensation for this study."
   },
   "html0085": {
     "message": "User ID", 
