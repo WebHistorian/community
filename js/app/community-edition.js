@@ -131,7 +131,8 @@ main.page = function() {
 			if (config.getDatafromURL == "Yes"){ 
 				var idRegex = config.idBaseUrl; 
 				var otherVar = config.otherVar;
-				threeDaysAgo = new Date(now.getTime() - 259200000);
+				var other2 = config.otherVar2;
+				threeDaysAgo = new Date(now.getTime() - 259200000); //milliseconds
 				var studyPair = config.studyPair;
 				var foundIDurl = 0;
 
@@ -139,26 +140,33 @@ main.page = function() {
 					for (var i = result.length-1; i >= 0; i--) {
 						var urlC = result[i].url;
 						if (idRegex.test(urlC)) {
-							var patt = new RegExp(".*\\?([RKPIDrkpid]{3})=([\\w-]{1,})(\\&" + otherVar + ")?=?(.*)$");
+							var patt = new RegExp(".*\\?("+config.studyPrefix+")=([^\\&]{1,})(\\&" + otherVar + "\\=)?([^\\&]{1,})?(\\&" + other2 + "\\=)?(.*)$");
 							var r = patt.exec(urlC);
 				
 							if (r != null){
 								foundIDurl = 1;
 								chrome.storage.local.set({
 									'upload_identifier': r[2],
-									'other_url_data': r[4]
+									'other_url_data': r[4],
+									'other_url_data2': r[6]
 								}, function() {
 									console.log("set user id from url: "+r[2]);
 									console.log("set "+otherVar+" from url: "+r[4]);
+									console.log("set "+other2+" from url: "+r[6]);
 								});
 								if (config.multiStudy=="Yes") {
 									for (var y = 0; y<= studyPair.study.length-1;y++) {
 										if(r[1]==studyPair.study[y].idKey){
 											studyId = studyPair.study[y].studyName;
+											
+											database.logEvent("study_assigned", {
+												'study': studyId
+											});
+											
 											console.log("id assigned");
 											if (enough==false){
 												if (type=="days"){
-													database.logEvent("oldest records less than minimum days set in config.js", {
+													database.logEvent("does_not_meet_min_days_config_setting", {
 														'session_id': window.sessionId
 													});
 
@@ -174,7 +182,7 @@ main.page = function() {
 													}
 												}
 												else if (type=="size"){
-													database.logEvent("less than minimum records set in config.js", {
+													database.logEvent("does_not_meet_min_visits_config_setting", {
 														'session_id': window.sessionId
 													});
 
@@ -210,18 +218,32 @@ main.page = function() {
 						} 
 					}
 					if (foundIDurl == 0) {
-						chrome.i18n.getAcceptLanguages(function (list) {
-							var lang = chrome.i18n.getUILanguage();
-							var langList = list;
-							database.fetchRecords(null,null,function(data){
-								var domains = utils.countPropDomains(data, "domain");
-								studyId = config.studyIdBackup(lang,domains,langList);
-								if (studyId == "None"){
-									changeStudyModal();
-								}
-								console.log("Individual ID and studyId not found in URL! Backup method routing to study: "+studyId);
+						chrome.storage.local.set({
+							'upload_identifier': "not-found-in-url-" + greg.sentence().replace(/ /g, '-'),
+						}, function() {
+							console.log("user id not set from url");
+							chrome.i18n.getAcceptLanguages(function (list) {
+								var lang = chrome.i18n.getUILanguage();
+								var langList = list;
+								database.fetchRecords(null,null,function(data){
+									var domains = utils.countPropDomains(data, "domain");
+									studyId = config.studyIdBackup(lang,domains,langList);
+									if (studyId == "None"){
+										changeStudyModal();
+									}
+									chrome.storage.local.get({
+										'upload_identifier': 'unknown-user',
+									}, function(result) {
+										console.log(result['upload_identifier']+" Individual ID and studyId not found in URL! Backup method routing to study: "+studyId);
+										chrome.storage.local.set({
+											'upload_identifier': result['upload_identifier']+'-'+studyId
+										});
+									});
+								});
 							});
 						});
+						
+
 					}
 				});
 			} 
@@ -231,6 +253,7 @@ main.page = function() {
 		}
 		
 		function getDataTestEnough(weekAgo) {
+			$("#wait_msg").show();
 			assignID(true,"none");
 			
 			database.earliestDate(function(result) {
@@ -289,6 +312,7 @@ main.page = function() {
         };
     
         database.onSyncEnd = function() {
+        	
             database.logEvent("url_sync_completed", {
                 'session_id': window.sessionId
             });
@@ -306,14 +330,14 @@ main.page = function() {
                 'participation_mode': 'unknown',
                 'identifier_updated': '0',
             }, function(result) {
-				//should be != explore or == unknown - placeholder to keep always participation mode
+				//always participation mode
 				
-                if (1==1) {
                     var timestamp = 0;
             
                     var foundId = null;
                     var foundCondition = null;
-
+                    $("#wait_msg").show();
+                    //database.filter("visits", "domain", IDBKeyRange.only(idDomain), null, function(cursor) {
                     database.filter("visits", "domain", IDBKeyRange.only(idDomain), null, function(cursor) {
                         if (cursor != null) {        
                 
@@ -322,15 +346,14 @@ main.page = function() {
                             var id = fetchUrlParameter(visit["url"], "id");
                             var cond = fetchUrlParameter(visit["url"], "cond");
               
-              			if (id != null && cond != null) {
-                                if (visit["visitTime"] > timestamp) {
-                                    foundId = id;
-                                    foundCondition = cond;
-                                    timestamp = visit["visitTime"];
-                  					console.log('Condition: '+foundCondition);
-                                }
-                            }
-                    
+							if (id != null && cond != null) {
+									if (visit["visitTime"] > timestamp) {
+										foundId = id;
+										foundCondition = cond;
+										timestamp = visit["visitTime"];
+										console.log('Condition: '+foundCondition);
+									}
+								}
                             cursor.continue();
                         } else {
                             var lastUpdated = Number(result['identifier_updated']);
@@ -377,8 +400,6 @@ main.page = function() {
                     }, function() {
 
                     });
-                    
-                } 
                
             });
 			getDataTestEnough(weekAgo);
@@ -402,7 +423,8 @@ main.page = function() {
             chrome.storage.local.get({
                 'upload_identifier': 'unknown-user',
                 'web_historian_condition': 'unknown',
-                'other_url_data': 'unknown'
+                'other_url_data': 'unknown',
+                'other_url_data2': 'unknown'
             }, function(result) {
             	if ((config.multiStudy == "Yes")&&(studyId == "None" || studyId == "")) {
             		changeStudyModal();
