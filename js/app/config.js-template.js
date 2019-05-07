@@ -9,7 +9,7 @@ define([], function ()
     config.allowNoUpload = "Yes"; //allows participants to opt-out of the browsing data collection component of the study
     config.askIdLoad = "No"; //ask for an ID (you have given them) when the extension loads
     config.minRecords = 0; //rejects potential participants if they do not have at least this many browsing records
-    config.minDays = 0; //rejects potential participants if they do not have records at least this old
+    config.minDays = 1; //rejects potential participants if they do not have records at least this old
     config.getDatafromURL = "No"; //gets a unique id from a URL string (e.g. from a panel provider)
     config.multiStudy = "No"; //run multiple studies (surveys) simultaniously
     config.multiStudyFromURL = "No"; //decide who is in which study (survey) via a URL string
