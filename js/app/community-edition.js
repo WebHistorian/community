@@ -288,7 +288,7 @@ main.page = function() {
                                 var getSvyUrlBase = $.get(config.actions, function(a){
 									actionUrls = a;
 									  })
-								  .error(function(jqXHR, textStatus, errorThrown){
+								  .fail(function(jqXHR, textStatus, errorThrown){
 									console.log("Error getting survey urls!!");//Need to fill in!!
 								  })
                                 
