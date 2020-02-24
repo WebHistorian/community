@@ -1,6 +1,6 @@
 # Web Historian - Community Edition
 
-This is a research data collection tool created by 	[Ericka Menchen-Trevino](http://ericka.cc/). 
+This is a research data collection tool created by [Ericka Menchen-Trevino](http://ericka.cc/). 
 
 ### Quick Start
 
