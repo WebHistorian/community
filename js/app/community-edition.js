@@ -629,7 +629,7 @@ requirejs(["material", "bootstrap-datepicker", "bootstrap-table", "d3.layout.clo
         'participation_mode': 'unknown'
     }, function(result) {
         //should be prevPar rather than alwaysPar, but this works.
-		if (result['participation_mode'] != 'alwasyPar') {
+		if (result['participation_mode'] != 'alwaysPar') {
 			console.log("par mode: " + result['participation_mode']);
             $("#participation_mode").show();
             $("#exploration_mode").hide();
